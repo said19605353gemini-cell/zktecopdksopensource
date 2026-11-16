@@ -1,0 +1,158 @@
+﻿================================================================================
+[CRASH DUMP] - 2026-11-17 00:40:53.090
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.Runtime.InteropServices.COMException
+Mesaj          : {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+HResult        : 0x80040154
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\zkteco\ZkService.cs içinde: satır 31
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 00:41:28.894
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.Runtime.InteropServices.COMException
+Mesaj          : {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+HResult        : 0x80040154
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\zkteco\ZkService.cs içinde: satır 31
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 00:43:20.653
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.Runtime.InteropServices.COMException
+Mesaj          : {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+HResult        : 0x80040154
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\zkteco\ZkService.cs içinde: satır 31
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 00:57:29.151
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.Runtime.InteropServices.COMException
+Mesaj          : {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+HResult        : 0x80040154
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\zkteco\ZkService.cs içinde: satır 31
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 00:57:54.013
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.Runtime.InteropServices.COMException
+Mesaj          : {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+HResult        : 0x80040154
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\zkteco\ZkService.cs içinde: satır 31
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 00:57:54.014
+Konum / Bağlam : BtnConnect_Click
+Hata Türü      : System.Exception
+Mesaj          : ZKTeco SDK başlatılamadı: {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+HResult        : 0x80131500
+StackTrace     :
+   konum: ZkService.Connect(String ipAddress, Int32 port) C:\Users\SaidNurs\Desktop\zkteco\ZkService.cs içinde: satır 54
+   konum: ZkPdksApp.MainWindow.BtnConnect_Click(Object sender, RoutedEventArgs e) C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 146
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 00:58:31.662
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.Runtime.InteropServices.COMException
+Mesaj          : {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+HResult        : 0x80040154
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\zkteco\ZkService.cs içinde: satır 31
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 00:58:31.663
+Konum / Bağlam : BtnConnect_Click
+Hata Türü      : System.Exception
+Mesaj          : ZKTeco SDK başlatılamadı: {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+HResult        : 0x80131500
+StackTrace     :
+   konum: ZkService.Connect(String ipAddress, Int32 port) C:\Users\SaidNurs\Desktop\zkteco\ZkService.cs içinde: satır 54
+   konum: ZkPdksApp.MainWindow.BtnConnect_Click(Object sender, RoutedEventArgs e) C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 146
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 01:21:26.709
+Konum / Bağlam : RefreshAllData
+Hata Türü      : System.Data.SQLite.SQLiteException
+Mesaj          : SQL logic error
+no such column: TcNo
+HResult        : 0x87AF001F
+StackTrace     :
+   konum: System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   konum: System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   konum: System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   konum: System.Data.SQLite.SQLiteDataReader.NextResult()
+   konum: System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   konum: System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   konum: System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   konum: ZkPdksApp.DatabaseService.GetAllEmployees() C:\Users\SaidNurs\Desktop\zkteco\DatabaseService.cs içinde: satır 188
+   konum: ZkPdksApp.MainWindow.RefreshAllData() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 97
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 01:22:45.439
+Konum / Bağlam : RefreshAllData
+Hata Türü      : System.Data.SQLite.SQLiteException
+Mesaj          : SQL logic error
+no such column: TcNo
+HResult        : 0x87AF001F
+StackTrace     :
+   konum: System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   konum: System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   konum: System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   konum: System.Data.SQLite.SQLiteDataReader.NextResult()
+   konum: System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   konum: System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   konum: System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   konum: ZkPdksApp.DatabaseService.GetAllEmployees() C:\Users\SaidNurs\Desktop\zkteco\DatabaseService.cs içinde: satır 188
+   konum: ZkPdksApp.MainWindow.RefreshAllData() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 97
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 01:22:52.546
+Konum / Bağlam : RefreshAllData
+Hata Türü      : System.Data.SQLite.SQLiteException
+Mesaj          : SQL logic error
+no such column: TcNo
+HResult        : 0x87AF001F
+StackTrace     :
+   konum: System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   konum: System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   konum: System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   konum: System.Data.SQLite.SQLiteDataReader.NextResult()
+   konum: System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   konum: System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   konum: System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   konum: ZkPdksApp.DatabaseService.GetAllEmployees() C:\Users\SaidNurs\Desktop\zkteco\DatabaseService.cs içinde: satır 188
+   konum: ZkPdksApp.MainWindow.RefreshAllData() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 97
+================================================================================

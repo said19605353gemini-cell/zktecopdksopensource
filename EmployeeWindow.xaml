@@ -1,0 +1,78 @@
+<Window x:Class="ZkPdksApp.EmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Personel ve Organizasyon Yönetimi (Özlük Kartı)" Height="680" Width="1050"
+        WindowStartupLocation="CenterOwner"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Üst Detaylı Özlük Kartı -->
+        <materialDesign:Card Grid.Row="0" Padding="15" Margin="0,0,0,15" UniformCornerRadius="10">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Personel Özlük &amp; Organizasyon Kartı" FontWeight="Bold" FontSize="16" Margin="0,0,0,12" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+                
+                <WrapPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBox x:Name="txtBadge" Width="100" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Cihaz ID *" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtName" Width="170" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Ad Soyad *" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtTcNo" Width="130" Margin="0,0,12,10" materialDesign:HintAssist.Hint="T.C. Kimlik No" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtCard" Width="110" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Kart No (RFID)" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtPhone" Width="120" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Telefon" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    
+                    <ComboBox x:Name="cbStatus" Width="110" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Durum">
+                        <ComboBoxItem Content="Aktif" IsSelected="True"/>
+                        <ComboBoxItem Content="Pasif (Ayrıldı)"/>
+                        <ComboBoxItem Content="Taşeron"/>
+                        <ComboBoxItem Content="Ziyaretçi"/>
+                    </ComboBox>
+                </WrapPanel>
+
+                <!-- Hiyerarşi & Vardiya Seçimi -->
+                <WrapPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBox x:Name="txtCompany" Width="130" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Şirket" Text="Merkez A.Ş." Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtBranch" Width="130" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Şube" Text="Ana Şube" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtDept" Width="130" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Departman" Text="Genel" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtUnit" Width="120" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Birim" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtTitle" Width="130" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Unvan" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    
+                    <ComboBox x:Name="cbShifts" Width="200" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Atanan Vardiya" DisplayMemberPath="Name" SelectedValuePath="Id"/>
+                </WrapPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,5,0,0">
+                    <Button Content="Cihazdan Personelleri Çek" Click="BtnFetchFromDevice_Click" Style="{StaticResource MaterialDesignOutlinedButton}" Margin="0,0,10,0"/>
+                    <Button Content="Temizle" Click="BtnClear_Click" Style="{StaticResource MaterialDesignFlatButton}" Margin="0,0,10,0"/>
+                    <Button Content="Personel Kaydet / Güncelle" Click="BtnSave_Click" Style="{StaticResource MaterialDesignRaisedButton}"/>
+                </StackPanel>
+            </StackPanel>
+        </materialDesign:Card>
+
+        <!-- Liste Kartı -->
+        <materialDesign:Card Grid.Row="1" Padding="15" UniformCornerRadius="10">
+            <DockPanel>
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="0,0,0,10">
+                    <TextBlock Text="Kayıtlı Personel Kadrosu" FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="txtEmployeeCount" Text="(0 Personel)" Foreground="Gray" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    <Button Content="Seçileni Sil" Click="BtnDelete_Click" Style="{StaticResource MaterialDesignFlatAccentButton}" Margin="20,0,0,0"/>
+                </StackPanel>
+                <DataGrid x:Name="dgEmployees" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False"
+                          SelectionChanged="DgEmployees_SelectionChanged" SelectionMode="Single">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Cihaz ID" Binding="{Binding Badgenumber}" Width="90"/>
+                        <DataGridTextColumn Header="Ad Soyad" Binding="{Binding Name}" Width="160"/>
+                        <DataGridTextColumn Header="Durum" Binding="{Binding Status}" Width="100"/>
+                        <DataGridTextColumn Header="Departman" Binding="{Binding Department}" Width="120"/>
+                        <DataGridTextColumn Header="Unvan" Binding="{Binding Title}" Width="110"/>
+                        <DataGridTextColumn Header="Kart No" Binding="{Binding CardNo}" Width="100"/>
+                        <DataGridTextColumn Header="T.C. No" Binding="{Binding TcNo}" Width="110"/>
+                        <DataGridTextColumn Header="Telefon" Binding="{Binding Phone}" Width="110"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+        </materialDesign:Card>
+    </Grid>
+</Window>

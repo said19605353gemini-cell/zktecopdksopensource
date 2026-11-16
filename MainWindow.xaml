@@ -1,0 +1,182 @@
+<Window x:Class="ZkPdksApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="ZKTeco PDKS Pro - Personel Devam, Vardiya, Limitli Mesai &amp; RTC Takip Sistemi" Height="820" Width="1380"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{materialDesign:MaterialDesignFont}" WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- 1. ÜST HEADER & BAĞLANTI KARTI -->
+        <materialDesign:Card Grid.Row="0" Padding="15" Margin="0,0,0,10" UniformCornerRadius="10">
+            <DockPanel LastChildFill="False">
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" VerticalAlignment="Center">
+                    <materialDesign:PackIcon Kind="Fingerprint" Width="40" Height="40" VerticalAlignment="Center" Margin="0,0,12,0" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="ZKTeco PDKS Enterprise" FontSize="20" FontWeight="Bold"/>
+                        <TextBlock Text="Firma Çalışma Saatleri, Günlük Mesai Limitleri &amp; Gece/Gündüz Ayrımı" FontSize="12" Foreground="Gray"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" VerticalAlignment="Center">
+                    <TextBox x:Name="txtIpAddress" Text="127.0.0.1" Width="110" materialDesign:HintAssist.Hint="Cihaz IP" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,0,10,0"/>
+                    <TextBox x:Name="txtPort" Text="4370" Width="55" materialDesign:HintAssist.Hint="Port" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,0,12,0"/>
+                    
+                    <Button Content="Cihaza Bağlan" Click="BtnConnect_Click" Style="{StaticResource MaterialDesignRaisedButton}" Margin="0,0,8,0"/>
+                    <Button Content="Logları Çek" Click="BtnGetLogs_Click" Style="{StaticResource MaterialDesignRaisedAccentButton}" Margin="0,0,8,0"/>
+                    <Button Content="Personel Özlük" Click="BtnEmployees_Click" Style="{StaticResource MaterialDesignOutlinedButton}" Margin="0,0,8,0"/>
+                    <Button Content="Firma Çalışma &amp; Mesai Kuralları" Click="BtnShifts_Click" Style="{StaticResource MaterialDesignOutlinedButton}"/>
+                </StackPanel>
+            </DockPanel>
+        </materialDesign:Card>
+
+        <!-- 2. ÖZET İSTATİSTİK & CİHAZ SAAT TAKİP KARTLARI -->
+        <Grid Grid.Row="1" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.2*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Kart 1: Bağlantı Durumu -->
+            <materialDesign:Card Grid.Column="0" Margin="0,0,6,0" Padding="12" UniformCornerRadius="8">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="LanConnect" Width="30" Height="30" VerticalAlignment="Center" Margin="0,0,10,0" Foreground="DodgerBlue"/>
+                    <StackPanel>
+                        <TextBlock Text="Cihaz Durumu" FontSize="11" Foreground="Gray"/>
+                        <TextBlock x:Name="txtConnectionStatus" Text="Bağlantı Yok" FontSize="14" FontWeight="Bold" Foreground="IndianRed"/>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:Card>
+
+            <!-- Kart 2: Cihaz Saati & RTC Takibi -->
+            <materialDesign:Card Grid.Column="1" Margin="3,0,3,0" Padding="12" UniformCornerRadius="8">
+                <DockPanel LastChildFill="True">
+                    <Button DockPanel.Dock="Right" Padding="4" Height="28" Click="BtnSyncTime_Click" ToolTip="Cihaz saatini bilgisayarla eşitle" Style="{StaticResource MaterialDesignIconButton}">
+                        <materialDesign:PackIcon Kind="Sync" Width="20" Height="20" Foreground="DodgerBlue"/>
+                    </Button>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <materialDesign:PackIcon Kind="ClockOutline" Width="30" Height="30" VerticalAlignment="Center" Margin="0,0,10,0" Foreground="Orange"/>
+                        <StackPanel>
+                            <TextBlock Text="Cihaz Dahili Saati (RTC)" FontSize="11" Foreground="Gray"/>
+                            <TextBlock x:Name="txtDeviceTime" Text="Bilinmiyor" FontSize="13" FontWeight="Bold"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DockPanel>
+            </materialDesign:Card>
+
+            <!-- Kart 3: Kayıtlı Personel -->
+            <materialDesign:Card Grid.Column="2" Margin="3,0,3,0" Padding="12" UniformCornerRadius="8">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="AccountGroup" Width="30" Height="30" VerticalAlignment="Center" Margin="0,0,10,0" Foreground="LimeGreen"/>
+                    <StackPanel>
+                        <TextBlock Text="Aktif Personel Kadrosu" FontSize="11" Foreground="Gray"/>
+                        <TextBlock x:Name="txtEmpCount" Text="0 Kişi" FontSize="14" FontWeight="Bold"/>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:Card>
+
+            <!-- Kart 4: Toplam Log & Durum -->
+            <materialDesign:Card Grid.Column="3" Margin="6,0,0,0" Padding="12" UniformCornerRadius="8">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="ShieldCheckOutline" Width="30" Height="30" VerticalAlignment="Center" Margin="0,0,10,0" Foreground="MediumPurple"/>
+                    <StackPanel>
+                        <TextBlock Text="Filtreli Geçişler &amp; Sistem" FontSize="11" Foreground="Gray"/>
+                        <TextBlock x:Name="txtStatus" Text="Hazır" FontSize="13" FontWeight="Bold"/>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:Card>
+        </Grid>
+
+        <!-- 3. TABLI İÇERİK ALANI -->
+        <TabControl Grid.Row="2" Style="{StaticResource MaterialDesignNavigationRailTabControl}">
+            <!-- TAB 1: GELİŞMİŞ VARDİYA, ÇALIŞMA VE FAZLA MESAİ LİMİT RAPORU -->
+            <TabItem Header="Vardiya &amp; Limitli Mesai Raporu">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Filtre Paneli -->
+                    <materialDesign:Card Grid.Row="0" Padding="10" Margin="0,0,0,10" UniformCornerRadius="8">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="Yıl:" VerticalAlignment="Center" Margin="0,0,8,0" FontWeight="Bold"/>
+                            <ComboBox x:Name="cbReportYear" Width="90" Margin="0,0,15,0"/>
+
+                            <TextBlock Text="Ay:" VerticalAlignment="Center" Margin="0,0,8,0" FontWeight="Bold"/>
+                            <ComboBox x:Name="cbReportMonth" Width="120" Margin="0,0,20,0"/>
+
+                            <Button Content="Firma Kurallarıyla Hesapla" Click="BtnCalculateReport_Click" Style="{StaticResource MaterialDesignRaisedButton}" Margin="0,0,10,0"/>
+                            <Button Content="Mesai ve Limit Raporunu Excel'e Aktar" Click="BtnExportMonthlyReport_Click" Style="{StaticResource MaterialDesignOutlinedButton}"/>
+                        </StackPanel>
+                    </materialDesign:Card>
+
+                    <!-- Rapor Tablosu -->
+                    <materialDesign:Card Grid.Row="1" Padding="10" UniformCornerRadius="8">
+                        <DataGrid x:Name="dgMonthlyReport" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Binding="{Binding UserId}" Width="65"/>
+                                <DataGridTextColumn Header="Ad Soyad" Binding="{Binding EmployeeName}" Width="145"/>
+                                <DataGridTextColumn Header="Vardiya / Kural" Binding="{Binding ShiftName}" Width="150"/>
+                                <DataGridTextColumn Header="Tarih" Binding="{Binding DateString}" Width="90"/>
+                                <DataGridTextColumn Header="İlk Giriş" Binding="{Binding ActualFirstIn}" Width="80"/>
+                                <DataGridTextColumn Header="Son Çıkış" Binding="{Binding ActualLastOut}" Width="80"/>
+                                
+                                <DataGridTextColumn Header="12 Öncesi (s)" Binding="{Binding DayWorkHours}" Width="90"/>
+                                <DataGridTextColumn Header="12 Sonrası (s)" Binding="{Binding NightWorkHours}" Width="90"/>
+                                <DataGridTextColumn Header="Net Çalışma" Binding="{Binding NetWorkHours}" Width="90"/>
+                                
+                                <!-- Onaylanan ve Limiti Aşan Mesailer -->
+                                <DataGridTextColumn Header="Onaylanan Mesai (s)" Binding="{Binding ApprovedOvertime}" Width="130"/>
+                                <DataGridTextColumn Header="İptal / Aşan Mesai" Binding="{Binding RejectedOvertime}" Width="120"/>
+                                
+                                <DataGridTextColumn Header="Geç Kalma (dk)" Binding="{Binding LateMinutes}" Width="95"/>
+                                <DataGridTextColumn Header="Mesai Durumu" Binding="{Binding Status}" Width="130"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </materialDesign:Card>
+                </Grid>
+            </TabItem>
+
+            <!-- TAB 2: GEÇİŞ HAREKETLERİ -->
+            <TabItem Header="Ham Geçiş Hareketleri">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <materialDesign:Card Grid.Row="0" Padding="10" Margin="0,0,0,10" UniformCornerRadius="8">
+                        <DockPanel LastChildFill="False">
+                            <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
+                                <Button Content="Veritabanını Yenile" Click="BtnLoadDbLogs_Click" Style="{StaticResource MaterialDesignOutlinedButton}" Margin="0,0,10,0"/>
+                                <Button Content="Tüm Hareketleri Excel'e Aktar" Click="BtnExportExcel_Click" Style="{StaticResource MaterialDesignRaisedButton}"/>
+                            </StackPanel>
+                        </DockPanel>
+                    </materialDesign:Card>
+
+                    <materialDesign:Card Grid.Row="1" Padding="10" UniformCornerRadius="8">
+                        <DataGrid x:Name="dgLogs" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Personel ID" Binding="{Binding UserId}" Width="110"/>
+                                <DataGridTextColumn Header="Personel Adı" Binding="{Binding UserName}" Width="180"/>
+                                <DataGridTextColumn Header="İşlem Tipi" Binding="{Binding InOutMode}" Width="120"/>
+                                <DataGridTextColumn Header="Tarih / Saat" Binding="{Binding LogTime}" Width="180"/>
+                                <DataGridTextColumn Header="Doğrulama Türü" Binding="{Binding VerifyMode}" Width="140"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </materialDesign:Card>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
