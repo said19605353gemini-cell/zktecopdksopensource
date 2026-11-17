@@ -1,0 +1,547 @@
+<Window x:Class="ZkPdksApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="ZKTeco PDKS Enterprise Pro 2026 - Vardiya, Biyometrik &amp; Bordro Yönetimi" Height="860" Width="1440"
+        TextElement.Foreground="#E0E6ED"
+        Background="#0F141C"
+        FontFamily="Segoe UI" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <!-- Modern Cam Efekti Kart Stili -->
+        <Style x:Key="ModernGlassCard" TargetType="Border">
+            <Setter Property="Background" Value="#171E2B"/>
+            <Setter Property="BorderBrush" Value="#253246"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="18" Direction="270" ShadowDepth="3" Opacity="0.25" Color="#000000"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- KPI Kart Stili -->
+        <Style x:Key="KpiCard" TargetType="Border">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#1A2232" Offset="0.0"/>
+                        <GradientStop Color="#141B28" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="#2D3B52"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="Padding" Value="14,12"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="12" Direction="270" ShadowDepth="2" Opacity="0.2" Color="#000000"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Modern Yuvarlak Giriş Kutusu Stili (Pill / Tag Box) -->
+        <Style x:Key="ModernInputBox" TargetType="Border">
+            <Setter Property="Background" Value="#1E293B"/>
+            <Setter Property="BorderBrush" Value="#334155"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="10,6"/>
+            <Setter Property="Margin" Value="0,0,12,0"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="#1E293B"/>
+            <Setter Property="Foreground" Value="#CBD5E1"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Padding" Value="8,10"/>
+            <Setter Property="BorderThickness" Value="0,0,1,1"/>
+            <Setter Property="BorderBrush" Value="#334155"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="DataGridCell">
+            <Setter Property="Padding" Value="8,7"/>
+            <Setter Property="BorderThickness" Value="0,0,1,0"/>
+            <Setter Property="BorderBrush" Value="#253246"/>
+            <Setter Property="Foreground" Value="#F1F5F9"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DataGridCell">
+                        <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#1E3A8A"/>
+                    <Setter Property="Foreground" Value="#FFFFFF"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="18">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- 1. ÜST HEADER & BAĞLANTI KARTI -->
+        <Border Grid.Row="0" Style="{StaticResource ModernGlassCard}" Padding="16,14" Margin="0,0,0,14">
+            <DockPanel LastChildFill="False">
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" VerticalAlignment="Center">
+                    <Border CornerRadius="10" Background="#1E293B" Padding="8" Margin="0,0,14,0" BorderBrush="#38BDF8" BorderThickness="1">
+                        <materialDesign:PackIcon Kind="Fingerprint" Width="36" Height="36" VerticalAlignment="Center" Foreground="#38BDF8"/>
+                    </Border>
+                    <StackPanel VerticalAlignment="Center">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="ZKTeco PDKS" FontSize="20" FontWeight="ExtraBold" Foreground="#F8FAFC"/>
+                            <Border Background="#2563EB" CornerRadius="4" Padding="6,2" Margin="10,0,0,0" VerticalAlignment="Center">
+                                <TextBlock Text="ENTERPRISE 2026" FontSize="10" FontWeight="Bold" Foreground="#FFFFFF"/>
+                            </Border>
+                        </StackPanel>
+                        <TextBlock Text="Taşeron &amp; Personel Yönetimi • Gece/Gündüz Ayrımı • Çoklu Vardiya &amp; Hakediş Puantajı" FontSize="12" Foreground="#94A3B8" Margin="0,3,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" VerticalAlignment="Center">
+                    <Border Background="#1E293B" CornerRadius="8" Padding="6,2" Margin="0,0,10,0" BorderBrush="#334155" BorderThickness="1">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="IpNetwork" Width="20" Height="20" Foreground="#38BDF8" VerticalAlignment="Center" Margin="6,0,6,0"/>
+                            <TextBox x:Name="txtIpAddress" Text="127.0.0.1" Width="95" Foreground="#F8FAFC" BorderThickness="0" VerticalAlignment="Center" FontSize="13"/>
+                            <TextBlock Text=":" Foreground="#64748B" VerticalAlignment="Center" FontWeight="Bold"/>
+                            <TextBox x:Name="txtPort" Text="4370" Width="45" Foreground="#F8FAFC" BorderThickness="0" VerticalAlignment="Center" FontSize="13" Margin="4,0,6,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Button Content="Cihaza Bağlan" Click="BtnConnect_Click" Style="{StaticResource MaterialDesignRaisedButton}" Background="#2563EB" BorderBrush="#3B82F6" Foreground="White" Margin="0,0,8,0" FontWeight="SemiBold"/>
+                    <Button Content="Logları Çek" Click="BtnGetLogs_Click" Style="{StaticResource MaterialDesignRaisedAccentButton}" Background="#059669" BorderBrush="#10B981" Foreground="White" Margin="0,0,8,0" FontWeight="SemiBold"/>
+                    <Button Content="Personel Özlük" Click="BtnEmployees_Click" Style="{StaticResource MaterialDesignOutlinedButton}" BorderBrush="#64748B" Foreground="#E2E8F0" Margin="0,0,8,0"/>
+                    <Button Content="Grup &amp; Statü Yönetimi" Click="BtnGroupManagement_Click" Style="{StaticResource MaterialDesignOutlinedButton}" BorderBrush="#8B5CF6" Foreground="#C4B5FD" Margin="0,0,8,0"/>
+                    <Button Content="Mesai &amp; Taşeron Kuralları" Click="BtnShifts_Click" Style="{StaticResource MaterialDesignOutlinedButton}" BorderBrush="#64748B" Foreground="#E2E8F0"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <!-- 2. ÖZET İSTATİSTİK & CİHAZ SAAT TAKİP KARTLARI -->
+        <Grid Grid.Row="1" Margin="0,0,0,14">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.1*"/>
+                <ColumnDefinition Width="1.1*"/>
+                <ColumnDefinition Width="1.1*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Kart 1: Bağlantı Durumu -->
+            <Border Grid.Column="0" Margin="0,0,4,0" Style="{StaticResource KpiCard}">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border CornerRadius="8" Background="#1E293B" Padding="8" Margin="0,0,10,0">
+                        <materialDesign:PackIcon Kind="LanConnect" Width="24" Height="24" Foreground="#38BDF8"/>
+                    </Border>
+                    <StackPanel>
+                        <TextBlock Text="CİHAZ VE HAT" FontSize="10" FontWeight="Bold" Foreground="#94A3B8"/>
+                        <TextBlock x:Name="txtConnectionStatus" Text="Bağlantı Yok" FontSize="14" FontWeight="ExtraBold" Foreground="#F87171" Margin="0,2,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Kart 2: Cihaz Saati & RTC Takibi -->
+            <Border Grid.Column="1" Margin="4,0,4,0" Style="{StaticResource KpiCard}">
+                <DockPanel LastChildFill="True">
+                    <Button DockPanel.Dock="Right" Padding="2" Height="28" Width="28" Click="BtnSyncTime_Click" ToolTip="Cihaz saatini bilgisayarla eşitle" Style="{StaticResource MaterialDesignIconButton}">
+                        <materialDesign:PackIcon Kind="Sync" Width="16" Height="16" Foreground="#38BDF8"/>
+                    </Button>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <Border CornerRadius="8" Background="#1E293B" Padding="8" Margin="0,0,10,0">
+                            <materialDesign:PackIcon Kind="ClockOutline" Width="24" Height="24" Foreground="#FBBF24"/>
+                        </Border>
+                        <StackPanel>
+                            <TextBlock Text="CİHAZ SAATİ (RTC)" FontSize="10" FontWeight="Bold" Foreground="#94A3B8"/>
+                            <TextBlock x:Name="txtDeviceTime" Text="Bilinmiyor" FontSize="13" FontWeight="Bold" Foreground="#F8FAFC" Margin="0,2,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+
+            <!-- Kart 3: Kayıtlı Personel -->
+            <Border Grid.Column="2" Margin="4,0,4,0" Style="{StaticResource KpiCard}">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border CornerRadius="8" Background="#1E293B" Padding="8" Margin="0,0,10,0">
+                        <materialDesign:PackIcon Kind="AccountGroup" Width="24" Height="24" Foreground="#34D399"/>
+                    </Border>
+                    <StackPanel>
+                        <TextBlock Text="KADRO &amp; TAŞERON" FontSize="10" FontWeight="Bold" Foreground="#94A3B8"/>
+                        <TextBlock x:Name="txtEmpCount" Text="0 Kişi" FontSize="15" FontWeight="ExtraBold" Foreground="#F8FAFC" Margin="0,2,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Kart 4: Toplam Genel Mesai Saati -->
+            <Border Grid.Column="3" Margin="4,0,4,0" Style="{StaticResource KpiCard}">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border CornerRadius="8" Background="#1E293B" Padding="8" Margin="0,0,10,0">
+                        <materialDesign:PackIcon Kind="TimerSand" Width="24" Height="24" Foreground="#38BDF8"/>
+                    </Border>
+                    <StackPanel>
+                        <TextBlock Text="TOPLAM GENEL MESAİ" FontSize="10" FontWeight="Bold" Foreground="#94A3B8"/>
+                        <TextBlock x:Name="txtKpiTotalOvertime" Text="0.00 Saat" FontSize="15" FontWeight="ExtraBold" Foreground="#38BDF8" Margin="0,2,0,0"/>
+                        <TextBlock x:Name="txtStatus" Text="Hazır" FontSize="10" Foreground="#64748B" Margin="0,1,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Kart 5: Cumartesi Çalışma Toplamı -->
+            <Border Grid.Column="4" Margin="4,0,4,0" Style="{StaticResource KpiCard}">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border CornerRadius="8" Background="#1E293B" Padding="8" Margin="0,0,10,0">
+                        <materialDesign:PackIcon Kind="CalendarWeek" Width="24" Height="24" Foreground="#FBBF24"/>
+                    </Border>
+                    <StackPanel>
+                        <TextBlock Text="CUMARTESİ ÇALIŞMA" FontSize="10" FontWeight="Bold" Foreground="#94A3B8"/>
+                        <TextBlock x:Name="txtKpiSaturdayHours" Text="0.00 Saat" FontSize="15" FontWeight="ExtraBold" Foreground="#FBBF24" Margin="0,2,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Kart 6: Pazar & Tatil Çalışma Toplamı -->
+            <Border Grid.Column="5" Margin="4,0,0,0" Style="{StaticResource KpiCard}">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border CornerRadius="8" Background="#1E293B" Padding="8" Margin="0,0,10,0">
+                        <materialDesign:PackIcon Kind="CalendarWeekend" Width="24" Height="24" Foreground="#F43F5E"/>
+                    </Border>
+                    <StackPanel>
+                        <TextBlock Text="PAZAR &amp; TATİL MESAİ" FontSize="10" FontWeight="Bold" Foreground="#94A3B8"/>
+                        <TextBlock x:Name="txtKpiSundayHours" Text="0.00 Saat" FontSize="15" FontWeight="ExtraBold" Foreground="#FB7185" Margin="0,2,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <!-- 3. TABLI İÇERİK ALANI -->
+        <TabControl Grid.Row="2">
+            <!-- TAB 1: GELİŞMİŞ VARDİYA, ÇALIŞMA VE FAZLA MESAİ LİMİT RAPORU -->
+            <TabItem Header="  Puantaj &amp; Mesai Raporu  " FontSize="13" FontWeight="SemiBold">
+                <Grid Margin="6,10,6,6">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Filtre ve Hızlı Çalışma Saatleri Paneli -->
+                    <Border Grid.Row="0" Style="{StaticResource ModernGlassCard}" Padding="16,14" Margin="0,0,0,14">
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <!-- Yıl Kutucuğu -->
+                            <Border Style="{StaticResource ModernInputBox}">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <materialDesign:PackIcon Kind="Calendar" Width="18" Height="18" Foreground="#38BDF8" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                                    <TextBlock Text="Yıl:" VerticalAlignment="Center" Margin="0,0,8,0" FontWeight="SemiBold" Foreground="#94A3B8"/>
+                                    <ComboBox x:Name="cbReportYear" Width="75" Foreground="#F8FAFC" BorderThickness="0"/>
+                                </StackPanel>
+                            </Border>
+
+                            <!-- Ay Kutucuğu -->
+                            <Border Style="{StaticResource ModernInputBox}">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <materialDesign:PackIcon Kind="CalendarRange" Width="18" Height="18" Foreground="#FBBF24" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                                    <TextBlock Text="Ay:" VerticalAlignment="Center" Margin="0,0,8,0" FontWeight="SemiBold" Foreground="#94A3B8"/>
+                                    <ComboBox x:Name="cbReportMonth" Width="110" Foreground="#F8FAFC" BorderThickness="0"/>
+                                </StackPanel>
+                            </Border>
+
+                            <!-- Grup Filtresi Kutucuğu -->
+                            <Border Style="{StaticResource ModernInputBox}">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <materialDesign:PackIcon Kind="AccountMultiple" Width="18" Height="18" Foreground="#34D399" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                                    <TextBlock Text="Grup:" VerticalAlignment="Center" Margin="0,0,8,0" FontWeight="SemiBold" Foreground="#94A3B8"/>
+                                    <ComboBox x:Name="cbReportGroup" Width="130" Foreground="#F8FAFC" BorderThickness="0"/>
+                                </StackPanel>
+                            </Border>
+
+                            <!-- Hızlı Giriş & Çıkış Saati Belirleme Kutucuğu -->
+                            <Border BorderBrush="#3B82F6" BorderThickness="1.5" CornerRadius="10" Padding="12,6" Margin="0,0,16,0" Background="#1E293B">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <CheckBox x:Name="chkOverrideShift" Content="Özel Saat:" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,10,0" Foreground="#93C5FD" ToolTip="Tüm personele bu raporda anlık belirlediğiniz saatleri uygular"/>
+                                    
+                                    <Border Background="#0F172A" CornerRadius="6" Padding="6,3" Margin="0,0,8,0" BorderBrush="#334155" BorderThickness="1">
+                                        <TextBox x:Name="txtQuickStart" Width="55" Text="08:30" Foreground="#38BDF8" FontWeight="SemiBold" BorderThickness="0" HorizontalContentAlignment="Center"/>
+                                    </Border>
+                                    <TextBlock Text="—" Foreground="#64748B" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                    <Border Background="#0F172A" CornerRadius="6" Padding="6,3" Margin="0,0,8,0" BorderBrush="#334155" BorderThickness="1">
+                                        <TextBox x:Name="txtQuickEnd" Width="55" Text="18:00" Foreground="#38BDF8" FontWeight="SemiBold" BorderThickness="0" HorizontalContentAlignment="Center"/>
+                                    </Border>
+                                    <Border Background="#0F172A" CornerRadius="6" Padding="6,3" BorderBrush="#334155" BorderThickness="1">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBox x:Name="txtQuickTolerance" Width="30" Text="10" Foreground="#FBBF24" FontWeight="SemiBold" BorderThickness="0" HorizontalContentAlignment="Center"/>
+                                            <TextBlock Text="dk" Foreground="#94A3B8" FontSize="11" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Border>
+                                </StackPanel>
+                            </Border>
+
+                            <Button Content="Hesapla" Click="BtnCalculateReport_Click" Style="{StaticResource MaterialDesignRaisedButton}" Background="#2563EB" BorderBrush="#3B82F6" Foreground="White" Margin="0,0,10,0" FontWeight="Bold" Height="36"/>
+                            <Button Content="Bordro Excel'e Aktar" Click="BtnExportMonthlyReport_Click" Style="{StaticResource MaterialDesignOutlinedButton}" BorderBrush="#10B981" Foreground="#34D399" FontWeight="Bold" Height="36" Margin="0,0,10,0"/>
+                            <Button Content="Gün Gün Puantaj Excel'e Aktar" Click="BtnExportDailyAttendance_Click" Style="{StaticResource MaterialDesignRaisedAccentButton}" Background="#0D9488" BorderBrush="#14B8A6" Foreground="White" FontWeight="Bold" Height="36"/>
+                        </WrapPanel>
+                    </Border>
+
+                    <!-- Rapor Tablosu -->
+                    <Border Grid.Row="1" Style="{StaticResource ModernGlassCard}" Padding="4">
+                        <DataGrid x:Name="dgMonthlyReport" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False"
+                                  Background="Transparent" RowBackground="#171E2B" AlternatingRowBackground="#1D2636"
+                                  BorderThickness="0" GridLinesVisibility="All" HorizontalGridLinesBrush="#253246" VerticalGridLinesBrush="#253246"
+                                  ScrollViewer.CanContentScroll="True"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                                  ScrollViewer.VerticalScrollBarVisibility="Auto">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Binding="{Binding UserId}" Width="65"/>
+                                <DataGridTextColumn Header="Ad Soyad" Binding="{Binding EmployeeName}" Width="150"/>
+                                <DataGridTextColumn Header="Grup" Binding="{Binding GroupName}" Width="110"/>
+                                <DataGridTextColumn Header="Tür" Binding="{Binding EmploymentType}" Width="100"/>
+                                <DataGridTextColumn Header="Vardiya" Binding="{Binding ShiftName}" Width="140"/>
+                                <DataGridTextColumn Header="Tarih" Binding="{Binding DateString}" Width="100"/>
+                                <DataGridTextColumn Header="Gün" Binding="{Binding DayType}" Width="90"/>
+                                <DataGridTextColumn Header="İlk Giriş" Binding="{Binding ActualFirstIn}" Width="85"/>
+                                <DataGridTextColumn Header="Son Çıkış" Binding="{Binding ActualLastOut}" Width="85"/>
+                                
+                                <DataGridTextColumn Header="12 Öncesi Çal.(s)" Binding="{Binding DayWorkHours}" Width="105"/>
+                                <DataGridTextColumn Header="12 Sonrası Çal.(s)" Binding="{Binding NightWorkHours}" Width="105"/>
+                                <DataGridTextColumn Header="Fiili Mola(dk)" Binding="{Binding ActualBreakMinutes}" Width="95"/>
+                                <DataGridTextColumn Header="Mola Aşımı(dk)" Binding="{Binding ExcessBreakMinutes}" Width="100"/>
+                                <DataGridTextColumn Header="Net Çalışma" Binding="{Binding NetWorkHours}" Width="95"/>
+                                
+                                <!-- 3'lü Ayrıntılı Mesai Ayrımı: Sabah, Akşam, Gece -->
+                                <DataGridTextColumn Header="Sabah Mesai(s)" Binding="{Binding MorningOvertimeHours}" Width="105"/>
+                                <DataGridTextColumn Header="Akşam Mesai(s)" Binding="{Binding EveningOvertimeHours}" Width="105"/>
+                                <DataGridTextColumn Header="Gece Mesai(s)" Binding="{Binding NightShiftOvertimeHours}" Width="105"/>
+
+                                <!-- Onaylanan ve Limiti Aşan Mesailer -->
+                                <DataGridTextColumn Header="Ham Mesai" Binding="{Binding ApprovedOvertime}" Width="90"/>
+                                <DataGridTextColumn Header="Çarpan" Binding="{Binding OvertimeMultiplier}" Width="75"/>
+                                <DataGridTextColumn Header="Hakediş Mesai" Binding="{Binding WeightedOvertimeHours}" Width="105"/>
+                                <DataGridTextColumn Header="İptal / Aşan" Binding="{Binding RejectedOvertime}" Width="90"/>
+                                
+                                <DataGridTextColumn Header="Geç Kalma (dk)" Binding="{Binding LateMinutes}" Width="100"/>
+                                <DataGridTextColumn Header="Eksik (s)" Binding="{Binding MissingWorkHours}" Width="85"/>
+                                <DataGridTextColumn Header="Mesai / Devamsızlık Durumu" Binding="{Binding Status}" Width="220" MinWidth="180"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Border>
+                </Grid>
+            </TabItem>
+
+            <!-- TAB 2: GEÇİŞ HAREKETLERİ -->
+            <TabItem Header="  Ham Geçiş Hareketleri  " FontSize="13" FontWeight="SemiBold">
+                <Grid Margin="6,10,6,6">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Row="0" Style="{StaticResource ModernGlassCard}" Padding="12" Margin="0,0,0,10">
+                        <DockPanel LastChildFill="False">
+                            <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
+                                <Button Content="Veritabanını Yenile" Click="BtnLoadDbLogs_Click" Style="{StaticResource MaterialDesignOutlinedButton}" BorderBrush="#64748B" Foreground="#E2E8F0" Margin="0,0,10,0"/>
+                                <Button Content="Tüm Hareketleri Excel'e Aktar" Click="BtnExportExcel_Click" Style="{StaticResource MaterialDesignRaisedButton}" Background="#2563EB" BorderBrush="#3B82F6" Foreground="White"/>
+                            </StackPanel>
+                        </DockPanel>
+                    </Border>
+
+                    <Border Grid.Row="1" Style="{StaticResource ModernGlassCard}" Padding="8">
+                        <DataGrid x:Name="dgLogs" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False"
+                                  Background="Transparent" RowBackground="#171E2B" AlternatingRowBackground="#1A2232"
+                                  BorderThickness="0" GridLinesVisibility="Horizontal" HorizontalGridLinesBrush="#253246">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Personel ID" Binding="{Binding UserId}" Width="110"/>
+                                <DataGridTextColumn Header="Personel Adı" Binding="{Binding UserName}" Width="180"/>
+                                <DataGridTextColumn Header="İşlem Tipi" Binding="{Binding InOutMode}" Width="120"/>
+                                <DataGridTextColumn Header="Tarih / Saat" Binding="{Binding LogTime}" Width="180"/>
+                                <DataGridTextColumn Header="Doğrulama Türü" Binding="{Binding VerifyMode}" Width="140"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Border>
+                </Grid>
+            </TabItem>
+
+            <!-- TAB 3: PERSONEL BİLGİ & ÇALIŞMA ÖZET KARTI (360 DERECE PANEL) -->
+            <TabItem Header="  Personel Bilgi &amp; Özet Paneli  " FontSize="13" FontWeight="SemiBold">
+                <Grid Margin="6,10,6,6">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Üst Personel Seçim Çubuğu -->
+                    <Border Grid.Row="0" Style="{StaticResource ModernGlassCard}" Padding="16,12" Margin="0,0,0,12">
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="AccountSearch" Width="24" Height="24" Foreground="#38BDF8" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                            <TextBlock Text="İncelenecek Personel:" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#F8FAFC" Margin="0,0,12,0"/>
+                            <Border Style="{StaticResource ModernInputBox}" Padding="6,2" Margin="0,0,14,0">
+                                <ComboBox x:Name="cbSelectedEmployeeCard" Width="260" Foreground="#F8FAFC" BorderThickness="0"
+                                          SelectionChanged="CbSelectedEmployeeCard_SelectionChanged" DisplayMemberPath="Name" SelectedValuePath="Badgenumber"/>
+                            </Border>
+                            <Button Content="Bu Personelin Aylık Detayını Excel'e Aktar" Click="BtnExportSingleEmpExcel_Click"
+                                    Style="{StaticResource MaterialDesignRaisedButton}" Background="#2563EB" BorderBrush="#3B82F6" Foreground="White" FontWeight="SemiBold"/>
+                        </WrapPanel>
+                    </Border>
+
+                    <!-- Alt Detay Kartları -->
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="360"/>
+                            <ColumnDefinition Width="14"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Sol Kart: Personelin Tüm Özlük & Sistem Bilgileri -->
+                        <Border Grid.Column="0" Style="{StaticResource ModernGlassCard}" Padding="18">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,0,16">
+                                        <Border CornerRadius="30" Width="56" Height="56" Background="#1E293B" BorderBrush="#38BDF8" BorderThickness="2" VerticalAlignment="Center" Margin="0,0,14,0">
+                                            <materialDesign:PackIcon Kind="Account" Width="34" Height="34" Foreground="#38BDF8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                        <StackPanel VerticalAlignment="Center">
+                                            <TextBlock x:Name="txtCardEmpName" Text="Personel Seçiniz" FontSize="17" FontWeight="Bold" Foreground="#F8FAFC"/>
+                                            <TextBlock x:Name="txtCardEmpBadge" Text="ID: -" FontSize="13" Foreground="#94A3B8" Margin="0,2,0,0"/>
+                                        </StackPanel>
+                                    </StackPanel>
+
+                                    <Separator Background="#253246" Margin="0,0,0,14"/>
+
+                                    <TextBlock Text="ÖZLÜK VE KİMLİK BİLGİLERİ" FontSize="11" FontWeight="Bold" Foreground="#64748B" Margin="0,0,0,8"/>
+                                    
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="T.C. Kimlik No:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardTcNo" Text="-" Foreground="#F8FAFC" FontWeight="SemiBold" FontSize="13" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="İstihdam Türü / Statü:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardEmpType" Text="-" Foreground="#38BDF8" FontWeight="Bold" FontSize="13" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Çalışma Grubu:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardGroup" Text="-" Foreground="#34D399" FontWeight="Bold" FontSize="13" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Departman:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardDept" Text="-" Foreground="#F8FAFC" FontSize="13" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Unvan:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardTitle" Text="-" Foreground="#F8FAFC" FontSize="13" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Şirket / Şube:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardCompanyBranch" Text="-" Foreground="#F8FAFC" FontSize="13" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Kart (RFID) No:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardRfid" Text="-" Foreground="#FBBF24" FontSize="13" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Telefon:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardPhone" Text="-" Foreground="#F8FAFC" FontSize="13" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Durum:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardStatus" Text="-" Foreground="#A7F3D0" FontWeight="Bold" FontSize="13" HorizontalAlignment="Right"/>
+                                    </Grid>
+
+                                    <Separator Background="#253246" Margin="0,10,0,12"/>
+
+                                    <TextBlock Text="SEÇİLİ AY TOPLAMLARI" FontSize="11" FontWeight="Bold" Foreground="#64748B" Margin="0,0,0,8"/>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Çalıştığı Gün Sayısı:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardWorkedDays" Text="0 Gün" Foreground="#38BDF8" FontWeight="Bold" FontSize="14" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Toplam Net Çalışma:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardTotalNet" Text="0.00 Saat" Foreground="#F8FAFC" FontWeight="Bold" FontSize="14" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Hafta İçi Mesai:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardWeekdayOt" Text="0.00 Saat" Foreground="#38BDF8" FontWeight="Bold" FontSize="14" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Cumartesi Çalışma:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardSaturdayOt" Text="0.00 Saat" Foreground="#FBBF24" FontWeight="Bold" FontSize="14" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Pazar &amp; Tatil Çalışma:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardSundayOt" Text="0.00 Saat" Foreground="#FB7185" FontWeight="Bold" FontSize="14" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Sabah Mesaisi (Saat):" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardMorningOt" Text="0.00 Saat" Foreground="#F59E0B" FontWeight="Bold" FontSize="14" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Akşam Mesaisi (Saat):" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardEveningOt" Text="0.00 Saat" Foreground="#38BDF8" FontWeight="Bold" FontSize="14" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Gece Mesaisi (24:00+):" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardNightOt" Text="0.00 Saat" Foreground="#818CF8" FontWeight="Bold" FontSize="14" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Toplam Mola Aşımı:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardTotalExcessBreak" Text="0 dk" Foreground="#F87171" FontWeight="Bold" FontSize="14" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Toplam Hakediş Mesai:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardTotalWeightedOt" Text="0.00 Saat" Foreground="#34D399" FontWeight="ExtraBold" FontSize="15" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                    <Grid Margin="0,0,0,6">
+                                        <TextBlock Text="Toplam Eksik Çalışma:" Foreground="#94A3B8" FontSize="13"/>
+                                        <TextBlock x:Name="txtCardTotalMissing" Text="0.00 Saat" Foreground="#F87171" FontWeight="Bold" FontSize="14" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </Border>
+
+                        <!-- Sağ Kart: Bu Personelin Gün Gün Çalıştığı Günlerin Detaylı Tablosu -->
+                        <Border Grid.Column="2" Style="{StaticResource ModernGlassCard}" Padding="8">
+                            <DataGrid x:Name="dgEmpDailyDetails" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False"
+                                      Background="Transparent" RowBackground="#171E2B" AlternatingRowBackground="#1D2636"
+                                      BorderThickness="0" GridLinesVisibility="All" HorizontalGridLinesBrush="#253246" VerticalGridLinesBrush="#253246"
+                                      ScrollViewer.CanContentScroll="True"
+                                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                                      ScrollViewer.VerticalScrollBarVisibility="Auto">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Tarih" Binding="{Binding DateString}" Width="100"/>
+                                    <DataGridTextColumn Header="Gün" Binding="{Binding DayType}" Width="95"/>
+                                    <DataGridTextColumn Header="İlk Giriş" Binding="{Binding ActualFirstIn}" Width="90"/>
+                                    <DataGridTextColumn Header="Son Çıkış" Binding="{Binding ActualLastOut}" Width="90"/>
+                                    <DataGridTextColumn Header="12 Öncesi Çal.(s)" Binding="{Binding DayWorkHours}" Width="110"/>
+                                    <DataGridTextColumn Header="12 Sonrası Gece Çal.(s)" Binding="{Binding NightWorkHours}" Width="125"/>
+                                    <DataGridTextColumn Header="Mola(dk)" Binding="{Binding ActualBreakMinutes}" Width="85"/>
+                                    <DataGridTextColumn Header="Mola Aşımı(dk)" Binding="{Binding ExcessBreakMinutes}" Width="95"/>
+                                    <DataGridTextColumn Header="Net Çalışma" Binding="{Binding NetWorkHours}" Width="100"/>
+                                    <DataGridTextColumn Header="Sabah Mesai(s)" Binding="{Binding MorningOvertimeHours}" Width="100"/>
+                                    <DataGridTextColumn Header="Akşam Mesai(s)" Binding="{Binding EveningOvertimeHours}" Width="100"/>
+                                    <DataGridTextColumn Header="Gece Mesai(s)" Binding="{Binding NightShiftOvertimeHours}" Width="100"/>
+                                    <DataGridTextColumn Header="Ham Mesai" Binding="{Binding ApprovedOvertime}" Width="90"/>
+                                    <DataGridTextColumn Header="Çarpan" Binding="{Binding OvertimeMultiplier}" Width="75"/>
+                                    <DataGridTextColumn Header="Hakediş Mesai" Binding="{Binding WeightedOvertimeHours}" Width="105"/>
+                                    <DataGridTextColumn Header="Geç Kalma (dk)" Binding="{Binding LateMinutes}" Width="100"/>
+                                    <DataGridTextColumn Header="Eksik (s)" Binding="{Binding MissingWorkHours}" Width="85"/>
+                                    <DataGridTextColumn Header="Durum" Binding="{Binding Status}" Width="*"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

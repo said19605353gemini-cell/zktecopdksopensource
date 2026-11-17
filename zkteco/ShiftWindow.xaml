@@ -1,0 +1,103 @@
+<Window x:Class="ZkPdksApp.ShiftWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Firma Çalışma Saatleri, Vardiya ve Fazla Mesai Limit Yönetimi" Height="680" Width="1020"
+        WindowStartupLocation="CenterOwner"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Üst Vardiya Tanımlama Kartı -->
+        <materialDesign:Card Grid.Row="0" Padding="15" Margin="0,0,0,15" UniformCornerRadius="10">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Firma Çalışma Saatleri &amp; Günlük Mesai Limit Kuralları" FontWeight="Bold" FontSize="16" Margin="0,0,0,12" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+
+                <!-- 1. Satır: Saatler ve Standart Çalışma -->
+                <WrapPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBox x:Name="txtShiftName" Width="240" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Vardiya / Firma Kuralı Adı *" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtStartTime" Width="110" Margin="0,0,15,10" materialDesign:HintAssist.Hint="İşe Giriş (08:30)" Text="08:30:00" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtEndTime" Width="110" Margin="0,0,15,10" materialDesign:HintAssist.Hint="İşten Çıkış (18:00)" Text="18:00:00" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtReqWork" Width="130" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Günlük Zorunlu Saat" Text="8.0" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtLunchMinutes" Width="120" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Yemek Molası (dk)" Text="60" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                </WrapPanel>
+
+                <!-- 2. Satır: Toleranslar ve Fazla Mesai Limitleri -->
+                <WrapPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBox x:Name="txtGraceMinutes" Width="140" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Geç Kalma Toleransı (dk)" Text="10" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtMinOtThreshold" Width="160" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Asgari Mesai Eşiği (dk)" Text="30" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtMaxDailyOt" Width="180" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Günlük İzin Verilen Max Mesai (Saat)" Text="3.0" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtDuplicateSeconds" Width="130" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Mükerrer Filtresi (sn)" Text="60" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                </WrapPanel>
+
+                <!-- 3. Satır: Sabah & Akşam Mesaiye Alma Ayarları -->
+                <GroupBox Header="Sabah &amp; Akşam Mesaiye Alma / Mesai Pencere Kuralları" Margin="0,0,0,15" Padding="10">
+                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <CheckBox x:Name="chkAllowEarlyInOt" Content="Sabah Erken Gelmeler Mesaiye Sayılsın" VerticalAlignment="Center" Margin="0,0,20,10"/>
+                        <TextBox x:Name="txtEarlyInMaxOt" Width="180" Margin="0,0,20,10" materialDesign:HintAssist.Hint="Sabah Max Erken Mesai (Saat)" Text="1.0" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                        <TextBox x:Name="txtOtWindowStart" Width="150" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Akşam Mesai Başlangıç (18:00)" Text="18:00:00" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                        <TextBox x:Name="txtOtWindowEnd" Width="150" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Akşam Mesai Bitiş (22:00)" Text="22:00:00" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    </WrapPanel>
+                </GroupBox>
+
+                <!-- 4. Satır: Mesai Katsayıları, Hedef Grup ve Yuvarlama Kuralları -->
+                <GroupBox Header="Grup Eşleştirme, Mesai Katsayıları &amp; Yuvarlama Kuralları" Margin="0,0,0,15" Padding="10">
+                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <ComboBox x:Name="cbTargetGroup" Width="170" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Kuralın Uygulanacağı Grup / Statü" IsEditable="True"/>
+                        <CheckBox x:Name="chkApplyToAllMatching" Content="Bu Gruptaki/Statüdeki Tüm Personele Bu Kuralı Otomatik Uygula" VerticalAlignment="Center" IsChecked="True" Margin="0,0,20,10"/>
+                        <TextBox x:Name="txtWeekdayMult" Width="130" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Hafta İçi Çarpan (1.5)" Text="1.5" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                        <TextBox x:Name="txtWeekendMult" Width="130" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Hafta Sonu Çarpan (2.0)" Text="2.0" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                        <TextBox x:Name="txtHolidayMult" Width="130" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Resmi Tatil Çarpan (2.0)" Text="2.0" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                        <ComboBox x:Name="cbRounding" Width="140" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Mesai Yuvarlama">
+                            <ComboBoxItem Content="Yuvarlama Yok (0 dk)"/>
+                            <ComboBoxItem Content="15 Dakika Yuvarla" IsSelected="True"/>
+                            <ComboBoxItem Content="30 Dakika Yuvarla"/>
+                            <ComboBoxItem Content="60 Dakika Yuvarla"/>
+                        </ComboBox>
+                    </WrapPanel>
+                </GroupBox>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <CheckBox x:Name="chkOvernight" Content="Gece Vardiyası (Gece yarısını aşan vardiya: 22:00 - 06:00)" VerticalAlignment="Center" Margin="0,0,20,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="Temizle" Click="BtnClear_Click" Style="{StaticResource MaterialDesignFlatButton}" Margin="0,0,10,0"/>
+                    <Button Content="Kuralları Kaydet" Click="BtnSave_Click" Style="{StaticResource MaterialDesignRaisedButton}"/>
+                </StackPanel>
+            </StackPanel>
+        </materialDesign:Card>
+
+        <!-- Liste Kartı -->
+        <materialDesign:Card Grid.Row="1" Padding="15" UniformCornerRadius="10">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top" Text="Tanımlı Vardiyalar, Çalışma Saatleri ve Limitler" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+                <DataGrid x:Name="dgShifts" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False"
+                          SelectionChanged="DgShifts_SelectionChanged" SelectionMode="Single">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="45"/>
+                        <DataGridTextColumn Header="Vardiya Adı" Binding="{Binding Name}" Width="210"/>
+                        <DataGridTextColumn Header="Giriş" Binding="{Binding StartTime}" Width="75"/>
+                        <DataGridTextColumn Header="Çıkış" Binding="{Binding EndTime}" Width="75"/>
+                        <DataGridTextColumn Header="Zorunlu Saat" Binding="{Binding RequiredDailyWorkHours}" Width="95"/>
+                        <DataGridTextColumn Header="Hedef Grup" Binding="{Binding TargetGroup}" Width="100"/>
+                        <DataGridTextColumn Header="Max Mesai (Limit)" Binding="{Binding MaxDailyOvertimeHours}" Width="120"/>
+                        <DataGridTextColumn Header="H.İçi Çarpan" Binding="{Binding WeekdayMultiplier}" Width="90"/>
+                        <DataGridTextColumn Header="H.Sonu Çarpan" Binding="{Binding WeekendMultiplier}" Width="95"/>
+                        <DataGridCheckBoxColumn Header="Erken Mesai?" Binding="{Binding AllowEarlyInOvertime}" Width="95"/>
+                        <DataGridTextColumn Header="Sabah Max (s)" Binding="{Binding EarlyInMaxOvertimeHours}" Width="95"/>
+                        <DataGridTextColumn Header="Mesai Aralığı" Binding="{Binding OvertimeWindowEnd}" Width="95"/>
+                        <DataGridTextColumn Header="Asgari Eşik (dk)" Binding="{Binding MinOvertimeThresholdMinutes}" Width="110"/>
+                        <DataGridTextColumn Header="Tolerans (dk)" Binding="{Binding GracePeriodMinutes}" Width="95"/>
+                        <DataGridTextColumn Header="Mola (dk)" Binding="{Binding LunchBreakMinutes}" Width="80"/>
+                        <DataGridCheckBoxColumn Header="Gece" Binding="{Binding IsOvernight}" Width="65"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+        </materialDesign:Card>
+    </Grid>
+</Window>

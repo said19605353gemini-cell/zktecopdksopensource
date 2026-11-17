@@ -1,0 +1,350 @@
+﻿================================================================================
+[CRASH DUMP] - 2026-11-17 00:40:53.090
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.Runtime.InteropServices.COMException
+Mesaj          : {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+HResult        : 0x80040154
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\zkteco\ZkService.cs içinde: satır 31
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 00:41:28.894
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.Runtime.InteropServices.COMException
+Mesaj          : {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+HResult        : 0x80040154
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\zkteco\ZkService.cs içinde: satır 31
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 00:43:20.653
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.Runtime.InteropServices.COMException
+Mesaj          : {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+HResult        : 0x80040154
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\zkteco\ZkService.cs içinde: satır 31
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 00:57:29.151
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.Runtime.InteropServices.COMException
+Mesaj          : {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+HResult        : 0x80040154
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\zkteco\ZkService.cs içinde: satır 31
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 00:57:54.013
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.Runtime.InteropServices.COMException
+Mesaj          : {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+HResult        : 0x80040154
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\zkteco\ZkService.cs içinde: satır 31
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 00:57:54.014
+Konum / Bağlam : BtnConnect_Click
+Hata Türü      : System.Exception
+Mesaj          : ZKTeco SDK başlatılamadı: {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+HResult        : 0x80131500
+StackTrace     :
+   konum: ZkService.Connect(String ipAddress, Int32 port) C:\Users\SaidNurs\Desktop\zkteco\ZkService.cs içinde: satır 54
+   konum: ZkPdksApp.MainWindow.BtnConnect_Click(Object sender, RoutedEventArgs e) C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 146
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 00:58:31.662
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.Runtime.InteropServices.COMException
+Mesaj          : {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+HResult        : 0x80040154
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\zkteco\ZkService.cs içinde: satır 31
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 00:58:31.663
+Konum / Bağlam : BtnConnect_Click
+Hata Türü      : System.Exception
+Mesaj          : ZKTeco SDK başlatılamadı: {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+HResult        : 0x80131500
+StackTrace     :
+   konum: ZkService.Connect(String ipAddress, Int32 port) C:\Users\SaidNurs\Desktop\zkteco\ZkService.cs içinde: satır 54
+   konum: ZkPdksApp.MainWindow.BtnConnect_Click(Object sender, RoutedEventArgs e) C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 146
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 01:21:26.709
+Konum / Bağlam : RefreshAllData
+Hata Türü      : System.Data.SQLite.SQLiteException
+Mesaj          : SQL logic error
+no such column: TcNo
+HResult        : 0x87AF001F
+StackTrace     :
+   konum: System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   konum: System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   konum: System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   konum: System.Data.SQLite.SQLiteDataReader.NextResult()
+   konum: System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   konum: System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   konum: System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   konum: ZkPdksApp.DatabaseService.GetAllEmployees() C:\Users\SaidNurs\Desktop\zkteco\DatabaseService.cs içinde: satır 188
+   konum: ZkPdksApp.MainWindow.RefreshAllData() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 97
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 01:22:45.439
+Konum / Bağlam : RefreshAllData
+Hata Türü      : System.Data.SQLite.SQLiteException
+Mesaj          : SQL logic error
+no such column: TcNo
+HResult        : 0x87AF001F
+StackTrace     :
+   konum: System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   konum: System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   konum: System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   konum: System.Data.SQLite.SQLiteDataReader.NextResult()
+   konum: System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   konum: System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   konum: System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   konum: ZkPdksApp.DatabaseService.GetAllEmployees() C:\Users\SaidNurs\Desktop\zkteco\DatabaseService.cs içinde: satır 188
+   konum: ZkPdksApp.MainWindow.RefreshAllData() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 97
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 01:22:52.546
+Konum / Bağlam : RefreshAllData
+Hata Türü      : System.Data.SQLite.SQLiteException
+Mesaj          : SQL logic error
+no such column: TcNo
+HResult        : 0x87AF001F
+StackTrace     :
+   konum: System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   konum: System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   konum: System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   konum: System.Data.SQLite.SQLiteDataReader.NextResult()
+   konum: System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   konum: System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   konum: System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   konum: ZkPdksApp.DatabaseService.GetAllEmployees() C:\Users\SaidNurs\Desktop\zkteco\DatabaseService.cs içinde: satır 188
+   konum: ZkPdksApp.MainWindow.RefreshAllData() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 97
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 03:08:11.046
+Konum / Bağlam : MainWindow InitializeComponent
+Hata Türü      : System.Windows.Markup.XamlParseException
+Mesaj          : 'System.Windows.Baml2006.TypeConverterMarkupExtension' öğesinde değer sağlama işlemi özel durum döndürdü.
+HResult        : 0x80131501
+StackTrace     :
+   konum: System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   konum: System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   konum: System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   konum: System.Windows.Application.LoadComponent(Object component, Uri resourceLocator)
+   konum: ZkPdksApp.MainWindow.InitializeComponent() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml içinde: satır 1
+   konum: ZkPdksApp.MainWindow..ctor() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 38
+--- Inner Exception ---
+Tür            : System.FormatException
+Mesaj          : CalendarYear, PackIconKind için geçerli bir değer değil.
+StackTrace     :
+   konum: System.ComponentModel.EnumConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   konum: System.Windows.Baml2006.TypeConverterMarkupExtension.ProvideValue(IServiceProvider serviceProvider)
+   konum: MS.Internal.Xaml.Runtime.ClrObjectRuntime.CallProvideValue(MarkupExtension me, IServiceProvider serviceProvider)
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 03:08:11.179
+Konum / Bağlam : MainWindow ctor Body
+Hata Türü      : System.NullReferenceException
+Mesaj          : Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+HResult        : 0x80004003
+StackTrace     :
+   konum: ZkPdksApp.MainWindow.InitDateComboboxes() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 78
+   konum: ZkPdksApp.MainWindow..ctor() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 56
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 03:08:11.183
+Konum / Bağlam : DispatcherUnhandledException (WPF Arayüz Hatası)
+Hata Türü      : System.Windows.Markup.XamlParseException
+Mesaj          : 'ZkPdksApp.MainWindow' başlatma işlemi özel durum döndürdü.
+HResult        : 0x80131501
+StackTrace     :
+   konum: System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   konum: System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   konum: System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   konum: System.Windows.Application.LoadBamlStreamWithSyncInfo(Stream stream, ParserContext pc)
+   konum: System.Windows.Application.LoadComponent(Uri resourceLocator, Boolean bSkipJournaledProperties)
+   konum: System.Windows.Application.DoStartup()
+   konum: System.Windows.Application.<.ctor>b__1_0(Object unused)
+   konum: System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   konum: System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+--- Inner Exception ---
+Tür            : System.InvalidOperationException
+Mesaj          : Aynı örnekte iç içe geçmiş BeginInit çağrıları olamaz.
+StackTrace     :
+   konum: System.Windows.FrameworkElement.BeginInit()
+   konum: MS.Internal.Xaml.Runtime.ClrObjectRuntime.InitializationGuard(XamlType xamlType, Object obj, Boolean begin)
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 03:08:16.430
+Konum / Bağlam : MainWindow InitializeComponent
+Hata Türü      : System.Windows.Markup.XamlParseException
+Mesaj          : 'System.Windows.Baml2006.TypeConverterMarkupExtension' öğesinde değer sağlama işlemi özel durum döndürdü.
+HResult        : 0x80131501
+StackTrace     :
+   konum: System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   konum: System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   konum: System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   konum: System.Windows.Application.LoadComponent(Object component, Uri resourceLocator)
+   konum: ZkPdksApp.MainWindow.InitializeComponent() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml içinde: satır 1
+   konum: ZkPdksApp.MainWindow..ctor() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 38
+--- Inner Exception ---
+Tür            : System.FormatException
+Mesaj          : CalendarYear, PackIconKind için geçerli bir değer değil.
+StackTrace     :
+   konum: System.ComponentModel.EnumConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   konum: System.Windows.Baml2006.TypeConverterMarkupExtension.ProvideValue(IServiceProvider serviceProvider)
+   konum: MS.Internal.Xaml.Runtime.ClrObjectRuntime.CallProvideValue(MarkupExtension me, IServiceProvider serviceProvider)
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 03:08:16.568
+Konum / Bağlam : MainWindow ctor Body
+Hata Türü      : System.NullReferenceException
+Mesaj          : Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+HResult        : 0x80004003
+StackTrace     :
+   konum: ZkPdksApp.MainWindow.InitDateComboboxes() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 78
+   konum: ZkPdksApp.MainWindow..ctor() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 56
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 03:08:16.570
+Konum / Bağlam : DispatcherUnhandledException (WPF Arayüz Hatası)
+Hata Türü      : System.Windows.Markup.XamlParseException
+Mesaj          : 'ZkPdksApp.MainWindow' başlatma işlemi özel durum döndürdü.
+HResult        : 0x80131501
+StackTrace     :
+   konum: System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   konum: System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   konum: System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   konum: System.Windows.Application.LoadBamlStreamWithSyncInfo(Stream stream, ParserContext pc)
+   konum: System.Windows.Application.LoadComponent(Uri resourceLocator, Boolean bSkipJournaledProperties)
+   konum: System.Windows.Application.DoStartup()
+   konum: System.Windows.Application.<.ctor>b__1_0(Object unused)
+   konum: System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   konum: System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+--- Inner Exception ---
+Tür            : System.InvalidOperationException
+Mesaj          : Aynı örnekte iç içe geçmiş BeginInit çağrıları olamaz.
+StackTrace     :
+   konum: System.Windows.FrameworkElement.BeginInit()
+   konum: MS.Internal.Xaml.Runtime.ClrObjectRuntime.InitializationGuard(XamlType xamlType, Object obj, Boolean begin)
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 03:08:24.114
+Konum / Bağlam : MainWindow InitializeComponent
+Hata Türü      : System.Windows.Markup.XamlParseException
+Mesaj          : 'System.Windows.Baml2006.TypeConverterMarkupExtension' öğesinde değer sağlama işlemi özel durum döndürdü.
+HResult        : 0x80131501
+StackTrace     :
+   konum: System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   konum: System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   konum: System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   konum: System.Windows.Application.LoadComponent(Object component, Uri resourceLocator)
+   konum: ZkPdksApp.MainWindow.InitializeComponent() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml içinde: satır 1
+   konum: ZkPdksApp.MainWindow..ctor() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 38
+--- Inner Exception ---
+Tür            : System.FormatException
+Mesaj          : CalendarYear, PackIconKind için geçerli bir değer değil.
+StackTrace     :
+   konum: System.ComponentModel.EnumConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   konum: System.Windows.Baml2006.TypeConverterMarkupExtension.ProvideValue(IServiceProvider serviceProvider)
+   konum: MS.Internal.Xaml.Runtime.ClrObjectRuntime.CallProvideValue(MarkupExtension me, IServiceProvider serviceProvider)
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 03:08:24.243
+Konum / Bağlam : MainWindow ctor Body
+Hata Türü      : System.NullReferenceException
+Mesaj          : Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+HResult        : 0x80004003
+StackTrace     :
+   konum: ZkPdksApp.MainWindow.InitDateComboboxes() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 78
+   konum: ZkPdksApp.MainWindow..ctor() C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 56
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 03:08:24.244
+Konum / Bağlam : DispatcherUnhandledException (WPF Arayüz Hatası)
+Hata Türü      : System.Windows.Markup.XamlParseException
+Mesaj          : 'ZkPdksApp.MainWindow' başlatma işlemi özel durum döndürdü.
+HResult        : 0x80131501
+StackTrace     :
+   konum: System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   konum: System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   konum: System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   konum: System.Windows.Application.LoadBamlStreamWithSyncInfo(Stream stream, ParserContext pc)
+   konum: System.Windows.Application.LoadComponent(Uri resourceLocator, Boolean bSkipJournaledProperties)
+   konum: System.Windows.Application.DoStartup()
+   konum: System.Windows.Application.<.ctor>b__1_0(Object unused)
+   konum: System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   konum: System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+--- Inner Exception ---
+Tür            : System.InvalidOperationException
+Mesaj          : Aynı örnekte iç içe geçmiş BeginInit çağrıları olamaz.
+StackTrace     :
+   konum: System.Windows.FrameworkElement.BeginInit()
+   konum: MS.Internal.Xaml.Runtime.ClrObjectRuntime.InitializationGuard(XamlType xamlType, Object obj, Boolean begin)
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 03:41:15.292
+Konum / Bağlam : BtnExportDailyAttendance_Click
+Hata Türü      : System.IO.IOException
+Mesaj          : İşlem, başka bir işlem tarafından kullanıldığından 'C:\Users\SaidNurs\Desktop\PDKS_Tum_Personel_Gun_Gun_Puantaj_2026_11.xlsx' dosyasına erişemiyor.
+HResult        : 0x80070020
+StackTrace     :
+   konum: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   konum: System.IO.File.InternalDelete(String path, Boolean checkHost)
+   konum: System.IO.File.Delete(String path)
+   konum: ClosedXML.Excel.XLWorkbook.SaveAs(String file, SaveOptions options)
+   konum: ClosedXML.Excel.XLWorkbook.SaveAs(String file, Boolean validate, Boolean evaluateFormulae)
+   konum: ClosedXML.Excel.XLWorkbook.SaveAs(String file)
+   konum: ZkPdksApp.MainWindow.BtnExportDailyAttendance_Click(Object sender, RoutedEventArgs e) C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 954
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-17 03:45:28.747
+Konum / Bağlam : BtnExportDailyAttendance_Click
+Hata Türü      : System.IO.IOException
+Mesaj          : İşlem, başka bir işlem tarafından kullanıldığından 'C:\Users\SaidNurs\Desktop\ZKTeco_Gece_Gunduz_Mesai_Raporu_2026_11.xlsx' dosyasına erişemiyor.
+HResult        : 0x80070020
+StackTrace     :
+   konum: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   konum: System.IO.File.InternalDelete(String path, Boolean checkHost)
+   konum: System.IO.File.Delete(String path)
+   konum: ClosedXML.Excel.XLWorkbook.SaveAs(String file, SaveOptions options)
+   konum: ClosedXML.Excel.XLWorkbook.SaveAs(String file, Boolean validate, Boolean evaluateFormulae)
+   konum: ClosedXML.Excel.XLWorkbook.SaveAs(String file)
+   konum: ZkPdksApp.MainWindow.BtnExportDailyAttendance_Click(Object sender, RoutedEventArgs e) C:\Users\SaidNurs\Desktop\zkteco\MainWindow.xaml.cs içinde: satır 954
+================================================================================
