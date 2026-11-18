@@ -1,0 +1,160 @@
+<Window x:Class="ZkPdksApp.GroupManagementWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Grup ve İstihdam Türü (Statü) Yönetimi" Height="580" Width="920"
+        WindowStartupLocation="CenterOwner"
+        Background="#F1F5F9"
+        TextElement.Foreground="#0F172A">
+    <Window.Resources>
+        <Style x:Key="ModernGlassCard" TargetType="Border">
+            <Setter Property="Background" Value="#FFFFFF"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="BorderBrush" Value="#E2E8F0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="10" Color="#0F172A" Opacity="0.05" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="#F8FAFC"/>
+            <Setter Property="Foreground" Value="#334155"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Padding" Value="8,10"/>
+            <Setter Property="BorderThickness" Value="0,0,1,1"/>
+            <Setter Property="BorderBrush" Value="#E2E8F0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="DataGridCell">
+            <Setter Property="Padding" Value="8,7"/>
+            <Setter Property="BorderThickness" Value="0,0,1,0"/>
+            <Setter Property="BorderBrush" Value="#F1F5F9"/>
+            <Setter Property="Foreground" Value="#1E293B"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="18">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- BAŞLIK KARTI -->
+        <Border Grid.Row="0" Style="{StaticResource ModernGlassCard}" Padding="16,12" Margin="0,0,0,14">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Border CornerRadius="8" Background="#EFF6FF" Padding="8" Margin="0,0,12,0" BorderBrush="#BFDBFE" BorderThickness="1">
+                    <materialDesign:PackIcon Kind="AccountMultiplePlus" Width="28" Height="28" Foreground="#1E40AF" VerticalAlignment="Center"/>
+                </Border>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="Departman, Grup ve İstihdam Türü (Statü) Yönetimi" FontSize="17" FontWeight="Bold" Foreground="#0F172A"/>
+                    <TextBlock Text="Taşeron, Kadrolu, Üretim, Saha gibi grupları ve istihdam statülerini çoğaltabilir, silebilir ve yönetebilirsiniz." FontSize="12" Foreground="#64748B" Margin="0,2,0,0"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- 2 SÜTUN: SOL = ÇALIŞMA GRUPLARI / DEPARTMANLAR, SAĞ = İSTİHDAM TÜRLERİ (TAŞERON / KADROLU VB.) -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="14"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- SOL PANEL: ÇALIŞMA GRUPLARI / DEPARTMANLAR -->
+            <Border Grid.Column="0" Style="{StaticResource ModernGlassCard}" Padding="16">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,12">
+                        <materialDesign:PackIcon Kind="Domain" Width="22" Height="22" Foreground="#1E40AF" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <TextBlock Text="Çalışma Grupları / Departmanlar" FontSize="15" FontWeight="Bold" Foreground="#0F172A" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <!-- Ekleme Alanı -->
+                    <Border Grid.Row="1" Background="#F8FAFC" CornerRadius="8" Padding="12" Margin="0,0,0,12" BorderBrush="#E2E8F0" BorderThickness="1">
+                        <StackPanel>
+                            <TextBox x:Name="txtNewGroupName" Foreground="#0F172A" materialDesign:HintAssist.Hint="Grup Adı (Örn: Üretim, Montaj, Depo) *" Margin="0,0,0,8"/>
+                            <TextBox x:Name="txtNewGroupDesc" Foreground="#64748B" materialDesign:HintAssist.Hint="Açıklama (Opsiyonel)" Margin="0,0,0,10"/>
+                            <Button Content="+ Yeni Grup Ekle" Click="BtnAddGroup_Click" Style="{StaticResource MaterialDesignRaisedButton}" Background="#1E40AF" BorderBrush="#1D4ED8" Foreground="White" Height="32" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Liste -->
+                    <DataGrid Grid.Row="2" x:Name="dgGroups" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False"
+                              Background="#FFFFFF" RowBackground="#FFFFFF" AlternatingRowBackground="#F8FAFC"
+                              BorderThickness="0" GridLinesVisibility="All" HorizontalGridLinesBrush="#E2E8F0" VerticalGridLinesBrush="#E2E8F0"
+                              SelectionMode="Single" Margin="0,0,0,10"
+                              ScrollViewer.CanContentScroll="True"
+                              ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                              ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="45"/>
+                            <DataGridTextColumn Header="Grup / Departman Adı" Binding="{Binding Name}" Width="160"/>
+                            <DataGridTextColumn Header="Açıklama" Binding="{Binding Description}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <!-- Silme Butonu -->
+                    <Button Grid.Row="3" Content="Seçili Grubu Sil" Click="BtnDeleteGroup_Click" Style="{StaticResource MaterialDesignOutlinedButton}" BorderBrush="#DC2626" Foreground="#DC2626" HorizontalAlignment="Right" Height="32"/>
+                </Grid>
+            </Border>
+
+            <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Background="Transparent"/>
+
+            <!-- SAĞ PANEL: İSTİHDAM TÜRLERİ / STATÜLER (TAŞERON, KADROLU, VB.) -->
+            <Border Grid.Column="2" Style="{StaticResource ModernGlassCard}" Padding="16">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,12">
+                        <materialDesign:PackIcon Kind="BadgeAccountHorizontal" Width="22" Height="22" Foreground="#059669" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <TextBlock Text="İstihdam Türleri / Statüler (Taşeron, Kadrolu...)" FontSize="15" FontWeight="Bold" Foreground="#0F172A" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <!-- Ekleme Alanı -->
+                    <Border Grid.Row="1" Background="#F8FAFC" CornerRadius="8" Padding="12" Margin="0,0,0,12" BorderBrush="#E2E8F0" BorderThickness="1">
+                        <StackPanel>
+                            <TextBox x:Name="txtNewTypeName" Foreground="#0F172A" materialDesign:HintAssist.Hint="Statü Adı (Örn: Taşeron, Kadrolu, Yevmiyeli) *" Margin="0,0,0,8"/>
+                            <TextBox x:Name="txtNewTypeDesc" Foreground="#64748B" materialDesign:HintAssist.Hint="Açıklama (Opsiyonel)" Margin="0,0,0,10"/>
+                            <Button Content="+ Yeni Statü / Tür Ekle" Click="BtnAddEmploymentType_Click" Style="{StaticResource MaterialDesignRaisedButton}" Background="#059669" BorderBrush="#047857" Foreground="White" Height="32" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Liste -->
+                    <DataGrid Grid.Row="2" x:Name="dgEmploymentTypes" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False"
+                              Background="#FFFFFF" RowBackground="#FFFFFF" AlternatingRowBackground="#F8FAFC"
+                              BorderThickness="0" GridLinesVisibility="All" HorizontalGridLinesBrush="#E2E8F0" VerticalGridLinesBrush="#E2E8F0"
+                              SelectionMode="Single" Margin="0,0,0,10"
+                              ScrollViewer.CanContentScroll="True"
+                              ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                              ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="45"/>
+                            <DataGridTextColumn Header="İstihdam / Statü Türü" Binding="{Binding Name}" Width="160"/>
+                            <DataGridTextColumn Header="Açıklama" Binding="{Binding Description}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <!-- Silme Butonu -->
+                    <Button Grid.Row="3" Content="Seçili Statüyü Sil" Click="BtnDeleteEmploymentType_Click" Style="{StaticResource MaterialDesignOutlinedButton}" BorderBrush="#DC2626" Foreground="#DC2626" HorizontalAlignment="Right" Height="32"/>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

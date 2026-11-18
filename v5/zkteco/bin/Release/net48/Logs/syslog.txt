@@ -1,0 +1,840 @@
+﻿[2026-11-17 00:39:26.763] === Uygulama Başlatıldı ===
+[2026-11-17 00:39:26.765] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 00:39:26.766] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 00:39:26.769] MainWindow yapıcı metodu (constructor) başlatılıyor...
+[2026-11-17 00:40:52.664] === Uygulama Başlatıldı ===
+[2026-11-17 00:40:52.666] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 00:40:52.667] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 00:40:52.670] MainWindow ctor: Başladı.
+[2026-11-17 00:40:52.670] MainWindow ctor: InitializeComponent çağrılıyor...
+[2026-11-17 00:40:52.772] MainWindow ctor: InitializeComponent bitti.
+[2026-11-17 00:40:52.777] MainWindow ctor: DatabaseService başlatılıyor...
+[2026-11-17 00:40:53.082] MainWindow ctor: DatabaseService tamam.
+[2026-11-17 00:40:53.083] MainWindow ctor: ZkService başlatılıyor...
+[2026-11-17 00:40:53.083] ZkService: ZKemkeeper COM sürücüsü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+[2026-11-17 00:40:53.097] MainWindow ctor: ZkService başlatılamadı: {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+[2026-11-17 00:40:53.100] Veritabanından 0 log yüklendi.
+[2026-11-17 00:40:53.100] MainWindow ctor: Tamamlandı.
+[2026-11-17 00:41:28.449] === Uygulama Başlatıldı ===
+[2026-11-17 00:41:28.452] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 00:41:28.453] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 00:41:28.456] MainWindow ctor: Başladı.
+[2026-11-17 00:41:28.456] MainWindow ctor: InitializeComponent çağrılıyor...
+[2026-11-17 00:41:28.699] MainWindow ctor: InitializeComponent bitti.
+[2026-11-17 00:41:28.701] MainWindow ctor: DatabaseService başlatılıyor...
+[2026-11-17 00:41:28.882] MainWindow ctor: DatabaseService tamam.
+[2026-11-17 00:41:28.882] MainWindow ctor: ZkService başlatılıyor...
+[2026-11-17 00:41:28.883] ZkService: ZKemkeeper COM sürücüsü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+[2026-11-17 00:41:28.903] MainWindow ctor: ZkService başlatılamadı: {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+[2026-11-17 00:41:28.908] Veritabanından 0 log yüklendi.
+[2026-11-17 00:41:28.908] MainWindow ctor: Tamamlandı.
+[2026-11-17 00:43:20.285] === Uygulama Başlatıldı ===
+[2026-11-17 00:43:20.287] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 00:43:20.288] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 00:43:20.290] MainWindow ctor: Başladı.
+[2026-11-17 00:43:20.527] MainWindow ctor: InitializeComponent bitti.
+[2026-11-17 00:43:20.646] ZkService: ZKemkeeper COM sürücüsü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+[2026-11-17 00:43:20.676] Aylık mesai raporu hesaplandı. 2026/11: 0 satır.
+[2026-11-17 00:43:20.677] MainWindow ctor: Tamamlandı.
+[2026-11-17 00:57:28.795] === Uygulama Başlatıldı ===
+[2026-11-17 00:57:28.799] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 00:57:28.800] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 00:57:28.802] MainWindow ctor: Başladı.
+[2026-11-17 00:57:29.018] MainWindow ctor: InitializeComponent bitti.
+[2026-11-17 00:57:29.142] ZkService: ZKemkeeper COM sürücüsü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+[2026-11-17 00:57:29.174] Aylık mesai raporu hesaplandı. 2026/11: 0 satır.
+[2026-11-17 00:57:29.175] MainWindow ctor: Tamamlandı.
+[2026-11-17 00:57:54.009] Bağlantı butonu tıklandı. IP: 192.168.1.201, Port: 4370
+[2026-11-17 00:57:54.011] ZkService: ZKemkeeper COM sürücüsü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+[HATA] BtnConnect_Click: ZKTeco SDK başlatılamadı: {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+[2026-11-17 00:58:31.658] Bağlantı butonu tıklandı. IP: 127.0.0.1, Port: 4370
+[2026-11-17 00:58:31.659] ZkService: ZKemkeeper COM sürücüsü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+[HATA] BtnConnect_Click: ZKTeco SDK başlatılamadı: {00853887-A10A-4F67-9796-DE47A016666F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 80040154 Sınıf kaydedilmemiş (HRESULT özel durum döndürdü: 0x80040154 (REGDB_E_CLASSNOTREG)).
+[2026-11-17 00:59:13.434] === Uygulama Başlatıldı ===
+[2026-11-17 00:59:13.436] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 00:59:13.437] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 00:59:13.440] MainWindow ctor: Başladı.
+[2026-11-17 00:59:13.655] MainWindow ctor: InitializeComponent bitti.
+[2026-11-17 00:59:13.760] ZkService: ZKemkeeper COM sürücüsü başlatılıyor...
+[2026-11-17 00:59:13.771] ZkService: ZKemkeeper COM nesnesi başarıyla yüklendi.
+[2026-11-17 00:59:13.787] Aylık mesai raporu hesaplandı. 2026/11: 0 satır.
+[2026-11-17 00:59:13.788] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:00:37.310] === Uygulama Başlatıldı ===
+[2026-11-17 01:00:37.313] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 01:00:37.314] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 01:00:37.316] MainWindow ctor: Başladı.
+[2026-11-17 01:00:37.522] MainWindow ctor: InitializeComponent bitti.
+[2026-11-17 01:00:37.623] ZkService: ZKemkeeper COM sürücüsü başlatılıyor...
+[2026-11-17 01:00:37.627] ZkService: ZKemkeeper COM nesnesi başarıyla yüklendi.
+[2026-11-17 01:00:37.642] Aylık mesai raporu hesaplandı. 2026/11: 0 satır.
+[2026-11-17 01:00:37.642] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:02:18.663] === Uygulama Başlatıldı ===
+[2026-11-17 01:02:18.665] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 01:02:18.666] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 01:02:18.669] MainWindow ctor: Başladı.
+[2026-11-17 01:02:18.890] MainWindow ctor: InitializeComponent bitti.
+[2026-11-17 01:02:19.005] ZkService: ZKemkeeper COM sürücüsü başlatılıyor...
+[2026-11-17 01:02:19.012] ZkService: ZKemkeeper COM nesnesi başarıyla yüklendi.
+[2026-11-17 01:02:19.032] Aylık mesai raporu hesaplandı. 2026/11: 0 satır.
+[2026-11-17 01:02:19.033] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:02:20.707] Bağlantı butonu tıklandı. IP: 127.0.0.1, Port: 4370
+[2026-11-17 01:02:20.708] ZkService: Cihaza bağlanılıyor -> IP: 127.0.0.1, Port: 4370
+[2026-11-17 01:02:20.916] ZkService: Bağlantı sonucu: True
+[2026-11-17 01:06:22.522] ZkService: Loglar okunmaya başlıyor...
+[2026-11-17 01:06:22.523] ZkService: ReadGeneralLogData false döndü.
+[2026-11-17 01:06:22.529] Aylık mesai raporu hesaplandı. 2026/11: 0 satır.
+[2026-11-17 01:06:28.762] ZkService: Personel listesi çekiliyor...
+[2026-11-17 01:06:30.913] Aylık mesai raporu hesaplandı. 2026/11: 0 satır.
+[2026-11-17 01:10:22.211] === Uygulama Başlatıldı ===
+[2026-11-17 01:10:22.213] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 01:10:22.214] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 01:10:22.216] MainWindow ctor: Başladı.
+[2026-11-17 01:10:22.465] MainWindow ctor: InitializeComponent bitti.
+[2026-11-17 01:10:22.567] ZkService: ZKemkeeper COM sürücüsü başlatılıyor...
+[2026-11-17 01:10:22.600] ZkService: ZKemkeeper COM nesnesi başarıyla yüklendi.
+[2026-11-17 01:10:22.616] Aylık mesai raporu hesaplandı. 2026/11: 0 satır.
+[2026-11-17 01:10:22.616] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:11:06.201] === Uygulama Başlatıldı ===
+[2026-11-17 01:11:06.203] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 01:11:06.204] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 01:11:06.207] MainWindow ctor: Başladı.
+[2026-11-17 01:11:06.413] MainWindow ctor: InitializeComponent bitti.
+[2026-11-17 01:11:06.515] ZkService: ZKemkeeper evrensel sürücüsü yükleniyor...
+[2026-11-17 01:11:06.519] ZkService: ZKemkeeper evrensel COM nesnesi hazır.
+[2026-11-17 01:11:06.535] Aylık mesai raporu hesaplandı. 2026/11: 0 satır.
+[2026-11-17 01:11:06.535] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:12:21.820] === Uygulama Başlatıldı ===
+[2026-11-17 01:12:21.822] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 01:12:21.823] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 01:12:21.826] MainWindow ctor: Başladı.
+[2026-11-17 01:12:22.040] MainWindow ctor: InitializeComponent bitti.
+[2026-11-17 01:12:22.150] ZkService: ZKemkeeper evrensel sürücüsü yükleniyor...
+[2026-11-17 01:12:22.157] ZkService: ZKemkeeper evrensel COM nesnesi hazır.
+[2026-11-17 01:12:22.175] Aylık mesai raporu hesaplandı. 2026/11: 0 satır.
+[2026-11-17 01:12:22.175] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:12:27.346] Bağlantı butonu tıklandı. IP: 127.0.0.1, Port: 4370
+[2026-11-17 01:12:27.426] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 01:12:29.362] Aylık mesai raporu hesaplandı. 2026/11: 0 satır.
+[2026-11-17 01:12:35.046] Aylık mesai raporu hesaplandı. 2026/11: 0 satır.
+[2026-11-17 01:14:48.213] === Uygulama Başlatıldı ===
+[2026-11-17 01:14:48.215] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 01:14:48.216] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 01:14:48.218] MainWindow ctor: Başladı.
+[2026-11-17 01:14:48.447] MainWindow ctor: InitializeComponent bitti.
+[2026-11-17 01:14:48.543] ZkService: ZKemkeeper evrensel sürücüsü yükleniyor...
+[2026-11-17 01:14:48.556] ZkService: ZKemkeeper evrensel COM nesnesi hazır.
+[2026-11-17 01:14:48.570] Aylık mesai raporu hesaplandı. 2026/11: 0 satır.
+[2026-11-17 01:14:48.570] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:15:17.643] === Uygulama Başlatıldı ===
+[2026-11-17 01:15:17.645] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 01:15:17.646] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 01:15:17.649] MainWindow ctor: Başladı.
+[2026-11-17 01:15:17.903] MainWindow ctor: InitializeComponent bitti.
+[2026-11-17 01:15:17.984] ZkService: ZKemkeeper evrensel sürücüsü yükleniyor...
+[2026-11-17 01:15:18.002] ZkService: ZKemkeeper evrensel COM nesnesi hazır.
+[2026-11-17 01:15:18.017] Aylık mesai raporu hesaplandı. 2026/11: 0 satır.
+[2026-11-17 01:15:18.018] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:15:20.066] Bağlantı butonu tıklandı. IP: 127.0.0.1, Port: 4370
+[2026-11-17 01:15:20.095] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 01:15:21.901] ZkService: Simülatörden 40 adet log okundu.
+[2026-11-17 01:15:21.922] Aylık mesai raporu hesaplandı. 2026/11: 20 satır.
+[2026-11-17 01:15:32.263] Aylık mesai raporu hesaplandı. 2026/11: 20 satır.
+[2026-11-17 01:21:26.302] === Uygulama Başlatıldı ===
+[2026-11-17 01:21:26.304] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 01:21:26.304] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 01:21:26.307] MainWindow ctor: Başladı.
+[2026-11-17 01:21:26.691] ZkService: Sürücü başlatılıyor...
+[HATA] RefreshAllData: SQL logic error
+no such column: TcNo
+[2026-11-17 01:21:26.718] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:22:45.062] === Uygulama Başlatıldı ===
+[2026-11-17 01:22:45.065] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 01:22:45.066] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 01:22:45.069] MainWindow ctor: Başladı.
+[2026-11-17 01:22:45.416] ZkService: Sürücü başlatılıyor...
+[HATA] RefreshAllData: SQL logic error
+no such column: TcNo
+[2026-11-17 01:22:45.450] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:22:50.973] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[HATA] RefreshAllData: SQL logic error
+no such column: TcNo
+[2026-11-17 01:24:37.383] === Uygulama Başlatıldı ===
+[2026-11-17 01:24:37.386] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 01:24:37.387] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 01:24:37.389] MainWindow ctor: Başladı.
+[2026-11-17 01:24:37.735] ZkService: Sürücü başlatılıyor...
+[2026-11-17 01:24:37.773] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:25:55.221] === Uygulama Başlatıldı ===
+[2026-11-17 01:25:55.224] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 01:25:55.224] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 01:25:55.227] MainWindow ctor: Başladı.
+[2026-11-17 01:25:55.609] ZkService: Sürücü başlatılıyor...
+[2026-11-17 01:25:55.654] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:25:57.078] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 01:29:03.514] === Uygulama Başlatıldı ===
+[2026-11-17 01:29:03.516] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 01:29:03.517] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 01:29:03.519] MainWindow ctor: Başladı.
+[2026-11-17 01:29:03.840] ZkService: Sürücü başlatılıyor...
+[2026-11-17 01:29:03.889] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:39:09.888] === Uygulama Başlatıldı ===
+[2026-11-17 01:39:09.891] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 01:39:09.891] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 01:39:09.894] MainWindow ctor: Başladı.
+[2026-11-17 01:39:10.292] ZkService: Sürücü başlatılıyor...
+[2026-11-17 01:39:10.341] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:39:13.183] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 01:39:22.218] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 01:44:37.262] === Uygulama Başlatıldı ===
+[2026-11-17 01:44:37.264] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 01:44:37.265] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 01:44:37.267] MainWindow ctor: Başladı.
+[2026-11-17 01:44:37.620] ZkService: Sürücü başlatılıyor...
+[2026-11-17 01:44:37.658] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:54:29.624] === Uygulama Başlatıldı ===
+[2026-11-17 01:54:29.627] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 01:54:29.627] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 01:54:29.631] MainWindow ctor: Başladı.
+[2026-11-17 01:54:29.958] ZkService: Sürücü başlatılıyor...
+[2026-11-17 01:54:30.002] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:59:38.422] === Uygulama Başlatıldı ===
+[2026-11-17 01:59:38.424] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 01:59:38.425] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 01:59:38.428] MainWindow ctor: Başladı.
+[2026-11-17 01:59:38.750] ZkService: Sürücü başlatılıyor...
+[2026-11-17 01:59:38.794] MainWindow ctor: Tamamlandı.
+[2026-11-17 01:59:43.854] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 02:01:58.218] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 02:03:41.679] === Uygulama Başlatıldı ===
+[2026-11-17 02:03:41.680] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 02:03:41.681] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 02:03:41.684] MainWindow ctor: Başladı.
+[2026-11-17 02:03:42.031] ZkService: Sürücü başlatılıyor...
+[2026-11-17 02:03:42.073] MainWindow ctor: Tamamlandı.
+[2026-11-17 02:04:17.628] === Uygulama Başlatıldı ===
+[2026-11-17 02:04:17.630] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 02:04:17.631] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 02:04:17.634] MainWindow ctor: Başladı.
+[2026-11-17 02:04:17.960] ZkService: Sürücü başlatılıyor...
+[2026-11-17 02:04:18.004] MainWindow ctor: Tamamlandı.
+[2026-11-17 02:04:23.192] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 02:05:49.602] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 02:08:47.686] === Uygulama Başlatıldı ===
+[2026-11-17 02:08:47.688] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 02:08:47.689] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 02:08:47.691] MainWindow ctor: Başladı.
+[2026-11-17 02:08:48.015] ZkService: Sürücü başlatılıyor...
+[2026-11-17 02:08:48.058] MainWindow ctor: Tamamlandı.
+[2026-11-17 02:09:17.332] === Uygulama Başlatıldı ===
+[2026-11-17 02:09:17.335] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 02:09:17.336] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 02:09:17.339] MainWindow ctor: Başladı.
+[2026-11-17 02:09:17.696] ZkService: Sürücü başlatılıyor...
+[2026-11-17 02:09:17.752] MainWindow ctor: Tamamlandı.
+[2026-11-17 02:09:20.704] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 02:11:13.100] === Uygulama Başlatıldı ===
+[2026-11-17 02:11:13.441] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 02:11:13.444] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 02:11:13.450] MainWindow ctor: Başladı.
+[2026-11-17 02:11:13.799] ZkService: Sürücü başlatılıyor...
+[2026-11-17 02:11:13.843] MainWindow ctor: Tamamlandı.
+[2026-11-17 02:13:38.600] === Uygulama Başlatıldı ===
+[2026-11-17 02:13:38.603] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 02:13:38.605] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 02:13:38.608] MainWindow ctor: Başladı.
+[2026-11-17 02:13:39.015] ZkService: Sürücü başlatılıyor...
+[2026-11-17 02:13:39.074] MainWindow ctor: Tamamlandı.
+[2026-11-17 02:13:40.991] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 02:20:03.939] === Uygulama Başlatıldı ===
+[2026-11-17 02:20:03.941] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 02:20:03.942] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 02:20:03.944] MainWindow ctor: Başladı.
+[2026-11-17 02:20:04.313] ZkService: Sürücü başlatılıyor...
+[2026-11-17 02:20:04.376] MainWindow ctor: Tamamlandı.
+[2026-11-17 02:25:30.422] === Uygulama Başlatıldı ===
+[2026-11-17 02:25:30.425] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 02:25:30.425] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 02:25:30.428] MainWindow ctor: Başladı.
+[2026-11-17 02:25:30.770] ZkService: Sürücü başlatılıyor...
+[2026-11-17 02:25:30.828] MainWindow ctor: Tamamlandı.
+[2026-11-17 02:25:40.167] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 02:48:44.357] === Uygulama Başlatıldı ===
+[2026-11-17 02:48:44.359] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 02:48:44.360] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 02:48:44.363] MainWindow ctor: Başladı.
+[2026-11-17 02:48:44.785] ZkService: Sürücü başlatılıyor...
+[2026-11-17 02:48:44.852] MainWindow ctor: Tamamlandı.
+[2026-11-17 02:49:08.495] === Uygulama Başlatıldı ===
+[2026-11-17 02:49:08.498] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 02:49:08.499] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 02:49:08.502] MainWindow ctor: Başladı.
+[2026-11-17 02:49:08.833] ZkService: Sürücü başlatılıyor...
+[2026-11-17 02:49:08.883] MainWindow ctor: Tamamlandı.
+[2026-11-17 02:49:13.533] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 02:49:20.217] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 02:55:37.545] === Uygulama Başlatıldı ===
+[2026-11-17 02:55:37.548] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 02:55:37.548] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 02:55:37.551] MainWindow ctor: Başladı.
+[2026-11-17 02:55:37.905] ZkService: Sürücü başlatılıyor...
+[2026-11-17 02:55:37.956] MainWindow ctor: Tamamlandı.
+[2026-11-17 02:56:31.776] === Uygulama Başlatıldı ===
+[2026-11-17 02:56:31.779] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 02:56:31.779] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 02:56:31.782] MainWindow ctor: Başladı.
+[2026-11-17 02:56:32.149] ZkService: Sürücü başlatılıyor...
+[2026-11-17 02:56:32.203] MainWindow ctor: Tamamlandı.
+[2026-11-17 02:56:35.268] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 03:00:25.692] === Uygulama Başlatıldı ===
+[2026-11-17 03:00:25.697] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:00:25.699] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:00:25.704] MainWindow ctor: Başladı.
+[2026-11-17 03:00:26.048] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:00:26.099] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:05:23.510] === Uygulama Başlatıldı ===
+[2026-11-17 03:05:23.512] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:05:23.513] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:05:23.516] MainWindow ctor: Başladı.
+[2026-11-17 03:05:23.847] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:05:23.898] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:05:26.997] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 03:06:31.798] === Uygulama Başlatıldı ===
+[2026-11-17 03:06:31.800] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:06:31.801] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:06:31.804] MainWindow ctor: Başladı.
+[2026-11-17 03:06:32.141] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:06:32.200] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:06:48.601] === Uygulama Başlatıldı ===
+[2026-11-17 03:06:48.603] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:06:48.604] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:06:48.606] MainWindow ctor: Başladı.
+[2026-11-17 03:06:48.966] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:06:49.018] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:08:10.848] === Uygulama Başlatıldı ===
+[2026-11-17 03:08:10.850] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:08:10.851] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:08:10.854] MainWindow ctor: Başladı.
+[HATA] MainWindow InitializeComponent: 'System.Windows.Baml2006.TypeConverterMarkupExtension' öğesinde değer sağlama işlemi özel durum döndürdü.
+[2026-11-17 03:08:11.172] ZkService: Sürücü başlatılıyor...
+[HATA] MainWindow ctor Body: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+[HATA] DispatcherUnhandledException (WPF Arayüz Hatası): 'ZkPdksApp.MainWindow' başlatma işlemi özel durum döndürdü.
+[2026-11-17 03:08:16.224] === Uygulama Başlatıldı ===
+[2026-11-17 03:08:16.226] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:08:16.227] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:08:16.230] MainWindow ctor: Başladı.
+[HATA] MainWindow InitializeComponent: 'System.Windows.Baml2006.TypeConverterMarkupExtension' öğesinde değer sağlama işlemi özel durum döndürdü.
+[2026-11-17 03:08:16.560] ZkService: Sürücü başlatılıyor...
+[HATA] MainWindow ctor Body: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+[HATA] DispatcherUnhandledException (WPF Arayüz Hatası): 'ZkPdksApp.MainWindow' başlatma işlemi özel durum döndürdü.
+[2026-11-17 03:08:23.920] === Uygulama Başlatıldı ===
+[2026-11-17 03:08:23.922] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:08:23.923] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:08:23.926] MainWindow ctor: Başladı.
+[HATA] MainWindow InitializeComponent: 'System.Windows.Baml2006.TypeConverterMarkupExtension' öğesinde değer sağlama işlemi özel durum döndürdü.
+[2026-11-17 03:08:24.235] ZkService: Sürücü başlatılıyor...
+[HATA] MainWindow ctor Body: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+[HATA] DispatcherUnhandledException (WPF Arayüz Hatası): 'ZkPdksApp.MainWindow' başlatma işlemi özel durum döndürdü.
+[2026-11-17 03:09:17.195] === Uygulama Başlatıldı ===
+[2026-11-17 03:09:17.198] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:09:17.199] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:09:17.201] MainWindow ctor: Başladı.
+[2026-11-17 03:09:17.524] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:09:17.575] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:11:13.191] === Uygulama Başlatıldı ===
+[2026-11-17 03:11:13.193] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:11:13.194] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:11:13.197] MainWindow ctor: Başladı.
+[2026-11-17 03:11:13.562] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:11:13.622] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:12:00.960] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 03:12:45.972] === Uygulama Başlatıldı ===
+[2026-11-17 03:12:45.975] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:12:45.976] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:12:45.978] MainWindow ctor: Başladı.
+[2026-11-17 03:12:46.313] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:12:46.365] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:13:03.713] === Uygulama Başlatıldı ===
+[2026-11-17 03:13:03.716] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:13:03.716] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:13:03.719] MainWindow ctor: Başladı.
+[2026-11-17 03:13:04.077] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:13:04.133] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:13:41.491] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 03:13:59.423] === Uygulama Başlatıldı ===
+[2026-11-17 03:13:59.427] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:13:59.429] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:13:59.433] MainWindow ctor: Başladı.
+[2026-11-17 03:13:59.778] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:13:59.848] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:14:01.335] === Uygulama Başlatıldı ===
+[2026-11-17 03:14:01.337] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:14:01.338] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:14:01.342] MainWindow ctor: Başladı.
+[2026-11-17 03:14:01.690] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:14:01.748] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:18:26.278] === Uygulama Başlatıldı ===
+[2026-11-17 03:18:26.280] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:18:26.281] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:18:26.286] MainWindow ctor: Başladı.
+[2026-11-17 03:18:26.677] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:18:26.750] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:21:06.017] === Uygulama Başlatıldı ===
+[2026-11-17 03:21:06.019] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:21:06.020] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:21:06.022] MainWindow ctor: Başladı.
+[2026-11-17 03:21:06.447] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:21:06.508] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:21:10.252] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 03:25:20.114] === Uygulama Başlatıldı ===
+[2026-11-17 03:25:20.116] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:25:20.117] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:25:20.119] MainWindow ctor: Başladı.
+[2026-11-17 03:25:20.596] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:25:20.654] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:25:33.418] === Uygulama Başlatıldı ===
+[2026-11-17 03:25:33.420] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:25:33.421] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:25:33.424] MainWindow ctor: Başladı.
+[2026-11-17 03:25:33.843] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:25:33.896] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:25:36.150] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 03:28:20.145] === Uygulama Başlatıldı ===
+[2026-11-17 03:28:20.148] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:28:20.149] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:28:20.155] MainWindow ctor: Başladı.
+[2026-11-17 03:28:20.770] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:28:20.862] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:28:24.787] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 03:29:00.979] === Uygulama Başlatıldı ===
+[2026-11-17 03:29:00.981] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:29:00.982] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:29:00.985] MainWindow ctor: Başladı.
+[2026-11-17 03:29:01.359] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:29:01.411] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:29:07.602] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 03:29:27.810] === Uygulama Başlatıldı ===
+[2026-11-17 03:29:27.812] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:29:27.813] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:29:27.816] MainWindow ctor: Başladı.
+[2026-11-17 03:29:28.223] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:29:28.336] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:31:58.496] === Uygulama Başlatıldı ===
+[2026-11-17 03:31:58.499] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:31:58.500] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:31:58.503] MainWindow ctor: Başladı.
+[2026-11-17 03:31:58.916] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:31:58.996] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:32:05.297] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 03:34:19.731] === Uygulama Başlatıldı ===
+[2026-11-17 03:34:19.733] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:34:19.734] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:34:19.736] MainWindow ctor: Başladı.
+[2026-11-17 03:34:20.112] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:34:20.176] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:39:07.463] === Uygulama Başlatıldı ===
+[2026-11-17 03:39:07.465] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:39:07.466] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:39:07.469] MainWindow ctor: Başladı.
+[2026-11-17 03:39:07.851] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:39:07.914] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:39:10.250] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 03:39:17.498] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 03:40:08.934] === Uygulama Başlatıldı ===
+[2026-11-17 03:40:08.937] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:40:08.937] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:40:08.940] MainWindow ctor: Başladı.
+[2026-11-17 03:40:09.355] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:40:09.421] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:40:58.915] === Uygulama Başlatıldı ===
+[2026-11-17 03:40:58.917] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:40:58.918] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:40:58.922] MainWindow ctor: Başladı.
+[2026-11-17 03:40:59.318] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:40:59.389] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:41:01.541] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[HATA] BtnExportDailyAttendance_Click: İşlem, başka bir işlem tarafından kullanıldığından 'C:\Users\SaidNurs\Desktop\PDKS_Tum_Personel_Gun_Gun_Puantaj_2026_11.xlsx' dosyasına erişemiyor.
+[2026-11-17 03:44:52.938] === Uygulama Başlatıldı ===
+[2026-11-17 03:44:52.940] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:44:52.941] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:44:52.944] MainWindow ctor: Başladı.
+[2026-11-17 03:44:53.325] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:44:53.388] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:45:01.304] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 03:45:18.134] === Uygulama Başlatıldı ===
+[2026-11-17 03:45:18.137] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 03:45:18.138] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 03:45:18.141] MainWindow ctor: Başladı.
+[2026-11-17 03:45:18.522] ZkService: Sürücü başlatılıyor...
+[2026-11-17 03:45:18.588] MainWindow ctor: Tamamlandı.
+[2026-11-17 03:45:20.792] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[HATA] BtnExportDailyAttendance_Click: İşlem, başka bir işlem tarafından kullanıldığından 'C:\Users\SaidNurs\Desktop\ZKTeco_Gece_Gunduz_Mesai_Raporu_2026_11.xlsx' dosyasına erişemiyor.
+[2026-11-17 09:02:00.113] === Uygulama Başlatıldı ===
+[2026-11-17 09:02:00.113] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 09:02:00.113] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 09:02:00.113] MainWindow ctor: Başladı.
+[2026-11-17 09:02:00.520] ZkService: Sürücü başlatılıyor...
+[2026-11-17 09:02:00.582] MainWindow ctor: Tamamlandı.
+[2026-11-17 09:46:03.059] === Uygulama Başlatıldı ===
+[2026-11-17 09:46:03.062] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 09:46:03.062] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 09:46:03.065] MainWindow ctor: Başladı.
+[2026-11-17 09:46:03.766] ZkService: Sürücü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 8007007f Belirtilen yordam bulunamadı. (HRESULT özel durum döndürdü: 0x8007007F).
+[2026-11-17 09:46:06.514] MainWindow ctor: Tamamlandı.
+[2026-11-17 09:46:09.434] === Uygulama Başlatıldı ===
+[2026-11-17 09:46:09.436] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 09:46:09.437] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 09:46:09.441] MainWindow ctor: Başladı.
+[2026-11-17 09:46:09.878] ZkService: Sürücü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 8007007f Belirtilen yordam bulunamadı. (HRESULT özel durum döndürdü: 0x8007007F).
+[2026-11-17 09:46:14.203] MainWindow ctor: Tamamlandı.
+[2026-11-17 09:46:20.906] === Uygulama Başlatıldı ===
+[2026-11-17 09:46:20.908] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 09:46:20.909] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 09:46:20.911] MainWindow ctor: Başladı.
+[2026-11-17 09:46:21.277] ZkService: Sürücü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 8007007f Belirtilen yordam bulunamadı. (HRESULT özel durum döndürdü: 0x8007007F).
+[2026-11-17 09:46:23.078] MainWindow ctor: Tamamlandı.
+[2026-11-17 15:03:30.861] === Uygulama Başlatıldı ===
+[2026-11-17 15:03:30.861] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 15:03:30.876] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 15:03:30.876] MainWindow ctor: Başladı.
+[2026-11-17 15:03:31.360] ZkService: Sürücü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 8007007f Belirtilen yordam bulunamadı. (HRESULT özel durum döndürdü: 0x8007007F).
+[2026-11-17 15:03:39.373] MainWindow ctor: Tamamlandı.
+[2026-11-17 19:50:46.902] === Uygulama Başlatıldı ===
+[2026-11-17 19:50:46.902] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 19:50:46.902] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 19:50:46.902] MainWindow ctor: Başladı.
+[2026-11-17 19:50:47.430] ZkService: Sürücü başlatılıyor...
+[2026-11-17 19:54:26.669] === Uygulama Başlatıldı ===
+[2026-11-17 19:54:26.669] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 19:54:26.669] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 19:54:26.684] MainWindow ctor: Başladı.
+[2026-11-17 19:54:27.027] ZkService: Sürücü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 8007007f Belirtilen yordam bulunamadı. (HRESULT özel durum döndürdü: 0x8007007F).
+[2026-11-17 19:54:28.551] MainWindow ctor: Tamamlandı.
+[2026-11-17 19:54:32.931] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 20:12:39.652] === Uygulama Başlatıldı ===
+[2026-11-17 20:12:39.652] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 20:12:39.652] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 20:12:39.652] MainWindow ctor: Başladı.
+[2026-11-17 20:12:40.087] ZkService: Sürücü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 8007007f Belirtilen yordam bulunamadı. (HRESULT özel durum döndürdü: 0x8007007F).
+[2026-11-17 20:12:43.013] MainWindow ctor: Tamamlandı.
+[2026-11-17 20:20:27.899] === Uygulama Başlatıldı ===
+[2026-11-17 20:20:27.899] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 20:20:27.915] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 20:20:27.915] MainWindow ctor: Başladı.
+[2026-11-17 20:20:28.261] ZkService: Sürücü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 8007007f Belirtilen yordam bulunamadı. (HRESULT özel durum döndürdü: 0x8007007F).
+[2026-11-17 20:21:07.034] MainWindow ctor: Tamamlandı.
+[2026-11-17 20:33:27.371] === Uygulama Başlatıldı ===
+[2026-11-17 20:33:27.373] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 20:33:27.373] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 20:33:27.378] MainWindow ctor: Başladı.
+[2026-11-17 20:33:27.797] ZkService: Sürücü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 8007007f Belirtilen yordam bulunamadı. (HRESULT özel durum döndürdü: 0x8007007F).
+[2026-11-17 20:33:29.299] MainWindow ctor: Tamamlandı.
+[2026-11-17 20:34:04.936] === Uygulama Başlatıldı ===
+[2026-11-17 20:34:04.938] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 20:34:04.939] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 20:34:04.942] MainWindow ctor: Başladı.
+[2026-11-17 20:34:05.309] ZkService: Sürücü başlatılıyor...
+[2026-11-17 20:34:54.356] === Uygulama Başlatıldı ===
+[2026-11-17 20:34:54.356] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 20:34:54.356] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 20:34:54.356] MainWindow ctor: Başladı.
+[2026-11-17 20:34:54.721] ZkService: Sürücü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 8007007f Belirtilen yordam bulunamadı. (HRESULT özel durum döndürdü: 0x8007007F).
+[2026-11-17 20:34:56.358] MainWindow ctor: Tamamlandı.
+[2026-11-17 20:37:11.457] === Uygulama Başlatıldı ===
+[2026-11-17 20:37:11.457] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 20:37:11.457] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 20:37:11.457] MainWindow ctor: Başladı.
+[2026-11-17 20:37:11.858] ZkService: Sürücü başlatılıyor...
+[2026-11-17 20:37:58.419] === Uygulama Başlatıldı ===
+[2026-11-17 20:37:58.419] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 20:37:58.419] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 20:37:58.419] MainWindow ctor: Başladı.
+[2026-11-17 20:37:58.801] ZkService: Sürücü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 8007007f Belirtilen yordam bulunamadı. (HRESULT özel durum döndürdü: 0x8007007F).
+[2026-11-17 20:38:00.354] MainWindow ctor: Tamamlandı.
+[2026-11-17 20:38:22.566] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 20:42:41.963] === Uygulama Başlatıldı ===
+[2026-11-17 20:42:41.963] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 20:42:41.963] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 20:42:41.963] MainWindow ctor: Başladı.
+[2026-11-17 20:42:42.310] ZkService: Sürücü başlatılıyor...
+[2026-11-17 20:42:42.373] MainWindow ctor: Tamamlandı.
+[2026-11-17 20:44:03.288] === Uygulama Başlatıldı ===
+[2026-11-17 20:44:03.288] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 20:44:03.288] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 20:44:03.288] MainWindow ctor: Başladı.
+[2026-11-17 20:44:03.636] ZkService: Sürücü başlatılıyor...
+[2026-11-17 20:44:03.703] MainWindow ctor: Tamamlandı.
+[2026-11-17 20:50:25.306] === Uygulama Başlatıldı ===
+[2026-11-17 20:50:25.322] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 20:50:25.322] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 20:50:25.322] MainWindow ctor: Başladı.
+[2026-11-17 20:50:25.711] ZkService: Sürücü başlatılıyor...
+[2026-11-17 20:50:25.783] MainWindow ctor: Tamamlandı.
+[2026-11-17 20:50:27.694] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 20:57:17.062] === Uygulama Başlatıldı ===
+[2026-11-17 20:57:17.062] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 20:57:17.062] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 20:57:17.062] MainWindow ctor: Başladı.
+[2026-11-17 20:57:17.493] ZkService: Sürücü başlatılıyor...
+[2026-11-17 20:57:17.558] MainWindow ctor: Tamamlandı.
+[2026-11-17 21:04:35.251] === Uygulama Başlatıldı ===
+[2026-11-17 21:04:35.253] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 21:04:35.254] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 21:04:35.259] MainWindow ctor: Başladı.
+[2026-11-17 21:04:35.880] ZkService: Sürücü başlatılıyor...
+[2026-11-17 21:04:35.956] MainWindow ctor: Tamamlandı.
+[2026-11-17 21:05:11.989] === Uygulama Başlatıldı ===
+[2026-11-17 21:05:12.005] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 21:05:12.005] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 21:05:12.005] MainWindow ctor: Başladı.
+[2026-11-17 21:05:12.443] ZkService: Sürücü başlatılıyor...
+[2026-11-17 21:05:12.514] MainWindow ctor: Tamamlandı.
+[2026-11-17 21:09:40.219] === Uygulama Başlatıldı ===
+[2026-11-17 21:09:40.219] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 21:09:40.219] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 21:09:40.219] MainWindow ctor: Başladı.
+[2026-11-17 21:09:40.888] ZkService: Sürücü başlatılıyor...
+[2026-11-17 21:09:40.971] MainWindow ctor: Tamamlandı.
+[2026-11-17 21:11:26.643] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 21:19:37.435] === Uygulama Başlatıldı ===
+[2026-11-17 21:19:37.435] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 21:19:37.435] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 21:19:37.450] MainWindow ctor: Başladı.
+[2026-11-17 21:19:37.882] ZkService: Sürücü başlatılıyor...
+[2026-11-17 21:19:37.957] MainWindow ctor: Tamamlandı.
+[2026-11-17 21:23:37.086] === Uygulama Başlatıldı ===
+[2026-11-17 21:23:37.089] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 21:23:37.090] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 21:23:37.093] MainWindow ctor: Başladı.
+[2026-11-17 21:23:37.547] ZkService: Sürücü başlatılıyor...
+[2026-11-17 21:23:37.625] MainWindow ctor: Tamamlandı.
+[2026-11-17 21:50:22.695] === Uygulama Başlatıldı ===
+[2026-11-17 21:50:22.711] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 21:50:22.712] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 21:50:22.712] MainWindow ctor: Başladı.
+[2026-11-17 21:50:23.118] ZkService: Sürücü başlatılıyor...
+[2026-11-17 21:50:23.180] MainWindow ctor: Tamamlandı.
+[2026-11-17 21:50:33.922] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 22:11:16.658] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 22:11:51.393] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 22:21:33.312] === Uygulama Başlatıldı ===
+[2026-11-17 22:21:33.312] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 22:21:33.312] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 22:21:33.312] MainWindow ctor: Başladı.
+[2026-11-17 22:21:33.731] ZkService: Sürücü başlatılıyor...
+[2026-11-17 22:21:33.797] MainWindow ctor: Tamamlandı.
+[2026-11-17 22:23:58.337] === Uygulama Başlatıldı ===
+[2026-11-17 22:23:58.337] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 22:23:58.337] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 22:23:58.337] MainWindow ctor: Başladı.
+[2026-11-17 22:23:58.711] ZkService: Sürücü başlatılıyor...
+[2026-11-17 22:23:58.758] MainWindow ctor: Tamamlandı.
+[2026-11-17 22:24:01.245] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 22:31:47.103] === Uygulama Başlatıldı ===
+[2026-11-17 22:31:47.105] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 22:31:47.107] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 22:31:47.107] MainWindow ctor: Başladı.
+[2026-11-17 22:31:47.508] ZkService: Sürücü başlatılıyor...
+[2026-11-17 22:31:47.584] MainWindow ctor: Tamamlandı.
+[2026-11-17 22:31:50.083] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 22:32:42.835] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 22:51:40.896] === Uygulama Başlatıldı ===
+[2026-11-17 22:51:40.896] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 22:51:40.896] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 22:51:40.913] MainWindow ctor: Başladı.
+[2026-11-17 22:51:41.345] ZkService: Sürücü başlatılıyor...
+[2026-11-17 22:51:41.412] MainWindow ctor: Tamamlandı.
+[2026-11-17 22:54:02.825] === Uygulama Başlatıldı ===
+[2026-11-17 22:54:02.827] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 22:54:02.828] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 22:54:02.832] MainWindow ctor: Başladı.
+[2026-11-17 22:54:03.298] ZkService: Sürücü başlatılıyor...
+[2026-11-17 22:54:03.367] MainWindow ctor: Tamamlandı.
+[2026-11-17 23:03:35.382] === Uygulama Başlatıldı ===
+[2026-11-17 23:03:35.382] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 23:03:35.382] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 23:03:35.382] MainWindow ctor: Başladı.
+[2026-11-17 23:03:35.790] ZkService: Sürücü başlatılıyor...
+[2026-11-17 23:03:35.852] MainWindow ctor: Tamamlandı.
+[2026-11-17 23:32:12.138] === Uygulama Başlatıldı ===
+[2026-11-17 23:32:12.138] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 23:32:12.138] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 23:32:12.154] MainWindow ctor: Başladı.
+[2026-11-17 23:32:12.784] ZkService: Sürücü başlatılıyor...
+[2026-11-17 23:32:12.862] MainWindow ctor: Tamamlandı.
+[2026-11-17 23:35:18.927] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 23:38:35.817] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-17 23:49:13.627] === Uygulama Başlatıldı ===
+[2026-11-17 23:49:13.627] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-17 23:49:13.627] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-17 23:49:13.627] MainWindow ctor: Başladı.
+[2026-11-17 23:49:14.042] ZkService: Sürücü başlatılıyor...
+[2026-11-17 23:49:14.094] MainWindow ctor: Tamamlandı.
+[2026-11-18 00:01:31.986] === Uygulama Başlatıldı ===
+[2026-11-18 00:01:31.986] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 00:01:31.986] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 00:01:32.003] MainWindow ctor: Başladı.
+[2026-11-18 00:01:32.436] ZkService: Sürücü başlatılıyor...
+[2026-11-18 00:01:33.036] MainWindow ctor: Tamamlandı.
+[2026-11-18 00:01:36.680] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-18 00:05:43.167] === Uygulama Başlatıldı ===
+[2026-11-18 00:05:43.183] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 00:05:43.185] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 00:05:43.185] MainWindow ctor: Başladı.
+[2026-11-18 00:05:43.583] ZkService: Sürücü başlatılıyor...
+[2026-11-18 00:05:43.650] MainWindow ctor: Tamamlandı.
+[2026-11-18 00:09:14.115] === Uygulama Başlatıldı ===
+[2026-11-18 00:09:14.115] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 00:09:14.115] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 00:09:14.115] MainWindow ctor: Başladı.
+[2026-11-18 00:09:14.633] ZkService: Sürücü başlatılıyor...
+[2026-11-18 00:09:14.715] MainWindow ctor: Tamamlandı.
+[2026-11-18 00:11:03.774] === Uygulama Başlatıldı ===
+[2026-11-18 00:11:03.774] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 00:11:03.774] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 00:11:03.774] MainWindow ctor: Başladı.
+[2026-11-18 00:11:04.231] ZkService: Sürücü başlatılıyor...
+[2026-11-18 00:11:04.297] MainWindow ctor: Tamamlandı.
+[2026-11-18 00:22:42.644] === Uygulama Başlatıldı ===
+[2026-11-18 00:22:42.659] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 00:22:42.659] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 00:22:42.659] MainWindow ctor: Başladı.
+[2026-11-18 00:22:43.040] ZkService: Sürücü başlatılıyor...
+[2026-11-18 00:22:43.107] MainWindow ctor: Tamamlandı.
+[2026-11-18 00:24:15.266] === Uygulama Başlatıldı ===
+[2026-11-18 00:24:15.266] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 00:24:15.266] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 00:24:15.273] MainWindow ctor: Başladı.
+[2026-11-18 00:24:15.721] ZkService: Sürücü başlatılıyor...
+[2026-11-18 00:24:15.792] MainWindow ctor: Tamamlandı.
+[2026-11-18 00:29:12.519] === Uygulama Başlatıldı ===
+[2026-11-18 00:29:12.519] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 00:29:12.519] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 00:29:12.519] MainWindow ctor: Başladı.
+[2026-11-18 00:29:12.970] ZkService: Sürücü başlatılıyor...
+[2026-11-18 00:29:13.086] MainWindow ctor: Tamamlandı.
+[2026-11-18 00:44:49.180] === Uygulama Başlatıldı ===
+[2026-11-18 00:44:49.180] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 00:44:49.180] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 00:44:49.180] MainWindow ctor: Başladı.
+[2026-11-18 00:44:49.621] ZkService: Sürücü başlatılıyor...
+[2026-11-18 00:44:49.696] MainWindow ctor: Tamamlandı.
+[2026-11-18 01:03:03.480] === Uygulama Başlatıldı ===
+[2026-11-18 01:03:03.497] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 01:03:03.497] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 01:03:03.497] MainWindow ctor: Başladı.
+[2026-11-18 01:03:03.913] ZkService: Sürücü başlatılıyor...
+[2026-11-18 01:03:03.998] MainWindow ctor: Tamamlandı.
+[2026-11-18 01:03:10.176] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-18 01:06:12.320] === Uygulama Başlatıldı ===
+[2026-11-18 01:06:12.323] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 01:06:12.324] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 01:06:12.325] MainWindow ctor: Başladı.
+[2026-11-18 01:06:12.771] ZkService: Sürücü başlatılıyor...
+[2026-11-18 01:06:13.051] MainWindow ctor: Tamamlandı.
+[2026-11-18 01:09:12.405] === Uygulama Başlatıldı ===
+[2026-11-18 01:09:12.407] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 01:09:12.409] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 01:09:12.411] MainWindow ctor: Başladı.
+[2026-11-18 01:09:12.929] ZkService: Sürücü başlatılıyor...
+[2026-11-18 01:09:13.194] MainWindow ctor: Tamamlandı.
+[2026-11-18 01:13:04.191] === Uygulama Başlatıldı ===
+[2026-11-18 01:13:04.208] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 01:13:04.208] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 01:13:04.208] MainWindow ctor: Başladı.
+[2026-11-18 01:13:04.642] ZkService: Sürücü başlatılıyor...
+[2026-11-18 01:13:04.908] MainWindow ctor: Tamamlandı.
+[2026-11-18 01:13:14.624] === Uygulama Başlatıldı ===
+[2026-11-18 01:13:14.624] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 01:13:14.624] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 01:13:14.641] MainWindow ctor: Başladı.
+[2026-11-18 01:13:15.047] ZkService: Sürücü başlatılıyor...
+[2026-11-18 01:13:15.330] MainWindow ctor: Tamamlandı.
+[2026-11-18 01:29:26.099] === Uygulama Başlatıldı ===
+[2026-11-18 01:29:26.099] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 01:29:26.099] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 01:29:26.099] MainWindow ctor: Başladı.
+[2026-11-18 01:29:26.528] ZkService: Sürücü başlatılıyor...
+[2026-11-18 01:29:26.772] MainWindow ctor: Tamamlandı.
+[2026-11-18 01:37:25.381] === Uygulama Başlatıldı ===
+[2026-11-18 01:37:25.381] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 01:37:25.381] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 01:37:25.381] MainWindow ctor: Başladı.
+[2026-11-18 01:37:25.803] ZkService: Sürücü başlatılıyor...
+[2026-11-18 01:37:26.114] MainWindow ctor: Tamamlandı.
+[2026-11-18 02:01:54.861] === Uygulama Başlatıldı ===
+[2026-11-18 02:01:54.861] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 02:01:54.861] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 02:01:54.861] MainWindow ctor: Başladı.
+[2026-11-18 02:01:55.289] ZkService: Sürücü başlatılıyor...
+[2026-11-18 02:01:55.571] MainWindow ctor: Tamamlandı.
+[2026-11-18 02:05:04.275] === Uygulama Başlatıldı ===
+[2026-11-18 02:05:04.275] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 02:05:04.275] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 02:05:04.292] MainWindow ctor: Başladı.
+[2026-11-18 02:05:04.742] ZkService: Sürücü başlatılıyor...
+[2026-11-18 02:05:05.042] MainWindow ctor: Tamamlandı.
+[2026-11-18 02:46:06.161] === Uygulama Başlatıldı ===
+[2026-11-18 02:46:06.161] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 02:46:06.161] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 02:46:06.161] MainWindow ctor: Başladı.
+[2026-11-18 02:46:06.599] ZkService: Sürücü başlatılıyor...
+[2026-11-18 02:46:06.899] MainWindow ctor: Tamamlandı.
+[2026-11-18 02:46:17.049] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-18 02:54:02.522] === Uygulama Başlatıldı ===
+[2026-11-18 02:54:02.538] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 02:54:02.538] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 02:54:02.538] MainWindow ctor: Başladı.
+[2026-11-18 02:54:02.950] ZkService: Sürücü başlatılıyor...
+[2026-11-18 02:54:03.240] MainWindow ctor: Tamamlandı.
+[2026-11-18 02:54:40.161] === Uygulama Başlatıldı ===
+[2026-11-18 02:54:40.177] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 02:54:40.177] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 02:54:40.177] MainWindow ctor: Başladı.
+[2026-11-18 02:54:40.625] ZkService: Sürücü başlatılıyor...
+[2026-11-18 02:54:40.903] MainWindow ctor: Tamamlandı.
+[2026-11-18 02:57:30.546] === Uygulama Başlatıldı ===
+[2026-11-18 02:57:30.562] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 02:57:30.562] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 02:57:30.562] MainWindow ctor: Başladı.
+[2026-11-18 02:57:30.997] ZkService: Sürücü başlatılıyor...
+[2026-11-18 02:57:31.240] MainWindow ctor: Tamamlandı.
+[2026-11-18 03:12:11.050] === Uygulama Başlatıldı ===
+[2026-11-18 03:12:11.051] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 03:12:11.051] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 03:12:11.051] MainWindow ctor: Başladı.
+[2026-11-18 03:12:11.715] ZkService: Sürücü başlatılıyor...
+[2026-11-18 03:12:12.015] MainWindow ctor: Tamamlandı.
+[2026-11-18 03:12:44.567] === Uygulama Başlatıldı ===
+[2026-11-18 03:12:44.567] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 03:12:44.567] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 03:12:44.577] MainWindow ctor: Başladı.
+[2026-11-18 03:12:45.148] ZkService: Sürücü başlatılıyor...
+[2026-11-18 03:12:45.438] MainWindow ctor: Tamamlandı.
+[2026-11-18 03:18:36.545] === Uygulama Başlatıldı ===
+[2026-11-18 03:18:36.545] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 03:18:36.545] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 03:18:36.545] MainWindow ctor: Başladı.
+[2026-11-18 03:18:36.995] ZkService: Sürücü başlatılıyor...
+[2026-11-18 03:18:37.295] MainWindow ctor: Tamamlandı.
+[2026-11-18 03:21:44.812] === Uygulama Başlatıldı ===
+[2026-11-18 03:21:44.827] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 03:21:44.827] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 03:21:44.827] MainWindow ctor: Başladı.
+[2026-11-18 03:21:45.336] ZkService: Sürücü başlatılıyor...
+[2026-11-18 03:21:45.692] MainWindow ctor: Tamamlandı.
