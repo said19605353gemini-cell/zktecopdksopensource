@@ -838,3 +838,10 @@ no such column: TcNo
 [2026-11-18 03:21:44.827] MainWindow ctor: Başladı.
 [2026-11-18 03:21:45.336] ZkService: Sürücü başlatılıyor...
 [2026-11-18 03:21:45.692] MainWindow ctor: Tamamlandı.
+[2026-11-18 03:27:50.725] === Uygulama Başlatıldı ===
+[2026-11-18 03:27:50.725] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-18 03:27:50.725] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-18 03:27:50.741] MainWindow ctor: Başladı.
+[2026-11-18 03:27:51.162] ZkService: Sürücü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 8007007e Belirtilen modül bulunamadı. (HRESULT özel durum döndürdü: 0x8007007E).
+[2026-11-18 03:27:51.647] MainWindow ctor: Tamamlandı.
