@@ -1,3 +1,5 @@
+gemini gravity ile yapıldı
+
 # zktecopdksopensource
 <img width="1367" height="812" alt="image" src="https://github.com/user-attachments/assets/11c9ebf3-09fa-49f1-96c4-f29c50ba6423" />
 
