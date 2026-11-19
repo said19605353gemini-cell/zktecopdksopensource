@@ -1,5 +1,5 @@
 gemini gravity ile yapıldı
-
+aşağıda yazdığım hedeflerim çoğunu tamamladım.
 
 
 🌟 Öne Çıkan Temel Özellikler
