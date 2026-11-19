@@ -1,0 +1,7 @@
+﻿[2026-11-19 15:22:38.971] === Uygulama Başlatıldı ===
+[2026-11-19 15:22:38.974] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: True
+[2026-11-19 15:22:38.977] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-19 15:22:38.981] MainWindow ctor: Başladı.
+[2026-11-19 15:22:39.727] ZkService: Sürücü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 8007007e Belirtilen modül bulunamadı. (HRESULT özel durum döndürdü: 0x8007007E).
+[2026-11-19 15:22:40.814] MainWindow ctor: Tamamlandı.

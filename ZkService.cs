@@ -16,8 +16,19 @@ public class ZkService
     public string InitError { get; private set; }
     public int MachineNumber { get; set; } = 1;
 
+    [System.Runtime.InteropServices.DllImport("kernel32.dll", CharSet = System.Runtime.InteropServices.CharSet.Auto, SetLastError = true)]
+    private static extern bool SetDllDirectory(string lpPathName);
+
     public ZkService()
     {
+        try
+        {
+            // Önce uygulama dizinini DLL arama sırasının en başına al
+            string appDir = AppDomain.CurrentDomain.BaseDirectory;
+            SetDllDirectory(appDir);
+        }
+        catch { }
+
         InitializeDriver();
     }
 
@@ -26,6 +37,10 @@ public class ZkService
         try
         {
             ZkPdksApp.Logger.Log("ZkService: Sürücü başlatılıyor...");
+            string appDir = AppDomain.CurrentDomain.BaseDirectory;
+            SetDllDirectory(appDir);
+
+            // HKCU veya ProgID üzerinden zkemkeeper COM nesnesini üret
             Type zkType = Type.GetTypeFromProgID("zkemkeeper.ZKEM") ?? Type.GetTypeFromCLSID(new Guid("00853A19-BD51-419B-9269-2DABE57EB61F"));
 
             if (zkType != null)
@@ -69,7 +84,10 @@ public class ZkService
 
         try
         {
-            if (commKey > 0) axCZKEM.SetCommPassword(commKey);
+            if (commKey > 0)
+            {
+                try { axCZKEM.SetCommPassword(commKey); } catch { }
+            }
             isConnected = axCZKEM.Connect_Net(ipAddress, port);
             isSimulator = false;
             return isConnected;

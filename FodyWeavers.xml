@@ -1,22 +1,3 @@
-<Weavers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="FodyWeavers.xsd">
-  <Costura IncludeDebugSymbols="false" Unmanaged32Assemblies="zkemkeeper|commpro|comms|plcommpro|plcomms|plrscagent|plrscomm|pltcpcomm|rscagent|rscomm|tcpcomm|usbcomm|zkemsdk">
-    <IncludeAssemblies>
-      MaterialDesignThemes.Wpf
-      MaterialDesignColors
-      Microsoft.Xaml.Behaviors
-      System.Data.SQLite
-      ClosedXML
-      ClosedXML.Parser
-      DocumentFormat.OpenXml
-      DocumentFormat.OpenXml.Framework
-      ExcelNumberFormat
-      Microsoft.Bcl.HashCode
-      RBush
-      SixLabors.Fonts
-      System.Buffers
-      System.Memory
-      System.Numerics.Vectors
-      System.Runtime.CompilerServices.Unsafe
-    </IncludeAssemblies>
-  </Costura>
+﻿<Weavers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="FodyWeavers.xsd">
+  <Costura />
 </Weavers>

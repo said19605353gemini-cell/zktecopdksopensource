@@ -41,26 +41,6 @@
           }
         }
       },
-      "Costura.Fody/6.2.0": {
-        "type": "package",
-        "dependencies": {
-          "Fody": "6.9.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/Costura.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Costura.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "build": {
-          "build/Costura.Fody.props": {},
-          "build/Costura.Fody.targets": {}
-        }
-      },
       "DocumentFormat.OpenXml/3.1.1": {
         "type": "package",
         "dependencies": {
@@ -111,12 +91,6 @@
           "lib/net20/ExcelNumberFormat.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "Fody/6.9.3": {
-        "type": "package",
-        "build": {
-          "build/Fody.targets": {}
         }
       },
       "MaterialDesignColors/2.1.4": {
@@ -424,7 +398,7 @@
         }
       }
     },
-    "net48/win-x86": {
+    "net48/win-arm64": {
       "ClosedXML/0.105.1": {
         "type": "package",
         "dependencies": {
@@ -462,26 +436,6 @@
           "lib/netstandard2.0/ClosedXML.Parser.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "Costura.Fody/6.2.0": {
-        "type": "package",
-        "dependencies": {
-          "Fody": "6.9.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/Costura.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Costura.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "build": {
-          "build/Costura.Fody.props": {},
-          "build/Costura.Fody.targets": {}
         }
       },
       "DocumentFormat.OpenXml/3.1.1": {
@@ -536,10 +490,601 @@
           }
         }
       },
-      "Fody/6.9.3": {
+      "MaterialDesignColors/2.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net462/MaterialDesignColors.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignColors.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "MaterialDesignThemes/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "2.1.4",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.39"
+        },
+        "compile": {
+          "lib/net462/MaterialDesignThemes.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignThemes.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      },
+      "Microsoft.Bcl.HashCode/1.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/Microsoft.Bcl.HashCode.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Bcl.HashCode.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System",
+          "System.Core",
+          "System.XML",
+          "System.Xaml",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "RBush.Signed/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net47/RBush.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/RBush.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Screl.ZKemKeeper/1.1.0": {
         "type": "package",
         "build": {
-          "build/Fody.targets": {}
+          "build/Screl.ZKemKeeper.targets": {}
+        }
+      },
+      "SixLabors.Fonts/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SixLabors.Fonts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/SixLabors.Fonts.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Stub.System.Data.SQLite.Core.NetFramework/1.0.118": {
+        "type": "package",
+        "compile": {
+          "lib/net46/System.Data.SQLite.dll": {
+            "related": ".dll.altconfig;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/System.Data.SQLite.dll": {
+            "related": ".dll.altconfig;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net46/Stub.System.Data.SQLite.Core.NetFramework.targets": {}
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Data.SQLite.Core/1.0.118": {
+        "type": "package",
+        "dependencies": {
+          "Stub.System.Data.SQLite.Core.NetFramework": "[1.0.118]"
+        }
+      },
+      "System.Memory/4.5.5": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    },
+    "net48/win-x64": {
+      "ClosedXML/0.105.1": {
+        "type": "package",
+        "dependencies": {
+          "ClosedXML.Parser": "2.0.0",
+          "DocumentFormat.OpenXml": "[3.1.1, 4.0.0)",
+          "ExcelNumberFormat": "1.1.0",
+          "Microsoft.Bcl.HashCode": "1.1.1",
+          "RBush.Signed": "4.0.0",
+          "SixLabors.Fonts": "[1.0.0, 3.0.0)",
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/ClosedXML.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/ClosedXML.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "ClosedXML.Parser/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/ClosedXML.Parser.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/ClosedXML.Parser.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "DocumentFormat.OpenXml/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "DocumentFormat.OpenXml.Framework": "3.1.1"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Xml",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net46/DocumentFormat.OpenXml.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/DocumentFormat.OpenXml.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "DocumentFormat.OpenXml.Framework/3.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Xml",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net46/DocumentFormat.OpenXml.Framework.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/DocumentFormat.OpenXml.Framework.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ExcelNumberFormat/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/ExcelNumberFormat.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/ExcelNumberFormat.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MaterialDesignColors/2.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net462/MaterialDesignColors.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignColors.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "MaterialDesignThemes/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "2.1.4",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.39"
+        },
+        "compile": {
+          "lib/net462/MaterialDesignThemes.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignThemes.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      },
+      "Microsoft.Bcl.HashCode/1.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/Microsoft.Bcl.HashCode.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Bcl.HashCode.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System",
+          "System.Core",
+          "System.XML",
+          "System.Xaml",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "RBush.Signed/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net47/RBush.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/RBush.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Screl.ZKemKeeper/1.1.0": {
+        "type": "package",
+        "native": {
+          "runtimes/win-x64/native/commpro.dll": {},
+          "runtimes/win-x64/native/comms.dll": {},
+          "runtimes/win-x64/native/plcommpro.dll": {},
+          "runtimes/win-x64/native/plcomms.dll": {},
+          "runtimes/win-x64/native/plrscagent.dll": {},
+          "runtimes/win-x64/native/plrscomm.dll": {},
+          "runtimes/win-x64/native/pltcpcomm.dll": {},
+          "runtimes/win-x64/native/rscagent.dll": {},
+          "runtimes/win-x64/native/rscomm.dll": {},
+          "runtimes/win-x64/native/tcpcomm.dll": {},
+          "runtimes/win-x64/native/usbcomm.dll": {},
+          "runtimes/win-x64/native/zkemkeeper.dll": {},
+          "runtimes/win-x64/native/zkemsdk.dll": {}
+        },
+        "build": {
+          "build/Screl.ZKemKeeper.targets": {}
+        }
+      },
+      "SixLabors.Fonts/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SixLabors.Fonts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/SixLabors.Fonts.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Stub.System.Data.SQLite.Core.NetFramework/1.0.118": {
+        "type": "package",
+        "compile": {
+          "lib/net46/System.Data.SQLite.dll": {
+            "related": ".dll.altconfig;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/System.Data.SQLite.dll": {
+            "related": ".dll.altconfig;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net46/Stub.System.Data.SQLite.Core.NetFramework.targets": {}
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Data.SQLite.Core/1.0.118": {
+        "type": "package",
+        "dependencies": {
+          "Stub.System.Data.SQLite.Core.NetFramework": "[1.0.118]"
+        }
+      },
+      "System.Memory/4.5.5": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    },
+    "net48/win-x86": {
+      "ClosedXML/0.105.1": {
+        "type": "package",
+        "dependencies": {
+          "ClosedXML.Parser": "2.0.0",
+          "DocumentFormat.OpenXml": "[3.1.1, 4.0.0)",
+          "ExcelNumberFormat": "1.1.0",
+          "Microsoft.Bcl.HashCode": "1.1.1",
+          "RBush.Signed": "4.0.0",
+          "SixLabors.Fonts": "[1.0.0, 3.0.0)",
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/ClosedXML.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/ClosedXML.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "ClosedXML.Parser/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/ClosedXML.Parser.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/ClosedXML.Parser.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "DocumentFormat.OpenXml/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "DocumentFormat.OpenXml.Framework": "3.1.1"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Xml",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net46/DocumentFormat.OpenXml.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/DocumentFormat.OpenXml.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "DocumentFormat.OpenXml.Framework/3.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Xml",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net46/DocumentFormat.OpenXml.Framework.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/DocumentFormat.OpenXml.Framework.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ExcelNumberFormat/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/ExcelNumberFormat.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/ExcelNumberFormat.dll": {
+            "related": ".xml"
+          }
         }
       },
       "MaterialDesignColors/2.1.4": {
@@ -792,27 +1337,6 @@
         "lib/netstandard2.1/ClosedXML.Parser.xml"
       ]
     },
-    "Costura.Fody/6.2.0": {
-      "sha512": "jaX+A6sw6pI7lkLDTvxN7zU8Ja/a50N2xPKF6RYy0J6QF62wVg+hJMXJph2K8XarDaAlxQ82EaKv3fAvUNyRpg==",
-      "type": "package",
-      "path": "costura.fody/6.2.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/Costura.Fody.props",
-        "build/Costura.Fody.targets",
-        "costura.fody.6.2.0.nupkg.sha512",
-        "costura.fody.nuspec",
-        "icon.png",
-        "lib/netstandard2.0/Costura.dll",
-        "lib/netstandard2.0/Costura.pdb",
-        "lib/netstandard2.0/Costura.xml",
-        "netclassicweaver/Costura.Fody.dll",
-        "netclassicweaver/Costura.Fody.xcf",
-        "netstandardweaver/Costura.Fody.dll",
-        "netstandardweaver/Costura.Fody.xcf"
-      ]
-    },
     "DocumentFormat.OpenXml/3.1.1": {
       "sha512": "2z9QBzeTLNNKWM9SaOSDMegfQk/7hDuElOsmF77pKZMkFRP/GHA/W/4yOAQD9kn15N/FsFxHn3QVYkatuZghiA==",
       "type": "package",
@@ -877,42 +1401,6 @@
         "lib/netstandard1.0/ExcelNumberFormat.xml",
         "lib/netstandard2.0/ExcelNumberFormat.dll",
         "lib/netstandard2.0/ExcelNumberFormat.xml"
-      ]
-    },
-    "Fody/6.9.3": {
-      "sha512": "1CUGgFdyECDKgi5HaUBhdv6k+VG9Iy4OCforGfHyar3xQXAJypZkzymgKtWj/4SPd6nSG0Qi7NH71qHrDSZLaA==",
-      "type": "package",
-      "path": "fody/6.9.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/Fody.targets",
-        "fody.6.9.3.nupkg.sha512",
-        "fody.nuspec",
-        "package_icon.png",
-        "package_readme.md",
-        "tasks/net472/FodyCommon.dll",
-        "tasks/net472/FodyHelpers.dll",
-        "tasks/net472/FodyHelpers.xml",
-        "tasks/net472/FodyIsolated.dll",
-        "tasks/net472/FodyTasks.dll",
-        "tasks/net472/Mono.Cecil.Pdb.dll",
-        "tasks/net472/Mono.Cecil.Pdb.pdb",
-        "tasks/net472/Mono.Cecil.Rocks.dll",
-        "tasks/net472/Mono.Cecil.Rocks.pdb",
-        "tasks/net472/Mono.Cecil.dll",
-        "tasks/net472/Mono.Cecil.pdb",
-        "tasks/netstandard2.0/FodyCommon.dll",
-        "tasks/netstandard2.0/FodyHelpers.dll",
-        "tasks/netstandard2.0/FodyHelpers.xml",
-        "tasks/netstandard2.0/FodyIsolated.dll",
-        "tasks/netstandard2.0/FodyTasks.dll",
-        "tasks/netstandard2.0/Mono.Cecil.Pdb.dll",
-        "tasks/netstandard2.0/Mono.Cecil.Pdb.pdb",
-        "tasks/netstandard2.0/Mono.Cecil.Rocks.dll",
-        "tasks/netstandard2.0/Mono.Cecil.Rocks.pdb",
-        "tasks/netstandard2.0/Mono.Cecil.dll",
-        "tasks/netstandard2.0/Mono.Cecil.pdb"
       ]
     },
     "MaterialDesignColors/2.1.4": {
@@ -1296,7 +1784,6 @@
   "projectFileDependencyGroups": {
     "net48": [
       "ClosedXML >= 0.105.1",
-      "Costura.Fody >= 6.2.0",
       "MaterialDesignColors >= 2.1.4",
       "MaterialDesignThemes >= 4.9.0",
       "Screl.ZKemKeeper >= 1.1.0",
@@ -1309,11 +1796,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SaidNurs\\Desktop\\zkteco\\ZkPdksApp.csproj",
+      "projectUniqueName": "C:\\Users\\SaidNurs\\Desktop\\v5\\zkteco\\ZkPdksApp.csproj",
       "projectName": "ZkPdksApp",
-      "projectPath": "C:\\Users\\SaidNurs\\Desktop\\zkteco\\ZkPdksApp.csproj",
+      "projectPath": "C:\\Users\\SaidNurs\\Desktop\\v5\\zkteco\\ZkPdksApp.csproj",
       "packagesPath": "C:\\Users\\SaidNurs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SaidNurs\\Desktop\\zkteco\\obj\\",
+      "outputPath": "C:\\Users\\SaidNurs\\Desktop\\v5\\zkteco\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SaidNurs\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1354,10 +1841,6 @@
             "target": "Package",
             "version": "[0.105.1, )"
           },
-          "Costura.Fody": {
-            "target": "Package",
-            "version": "[6.2.0, )"
-          },
           "MaterialDesignColors": {
             "target": "Package",
             "version": "[2.1.4, )"
@@ -1379,6 +1862,12 @@
       }
     },
     "runtimes": {
+      "win-arm64": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
       "win-x86": {
         "#import": []
       }

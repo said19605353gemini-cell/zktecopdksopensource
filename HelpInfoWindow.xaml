@@ -1,0 +1,66 @@
+<Window x:Class="ZkPdksApp.HelpInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Yardım &amp; Bilgi Kılavuzu" Height="360" Width="520"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown">
+
+    <Border Background="#FFFFFF" CornerRadius="14" BorderBrush="#CBD5E1" BorderThickness="1.5" Margin="8">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="18" Color="#0F172A" Opacity="0.25" ShadowDepth="4"/>
+        </Border.Effect>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Başlık Çubuğu & Kapatma Butonu (Çarpı) -->
+            <Border Grid.Row="0" Background="#F8FAFC" CornerRadius="13,13,0,0" Padding="16,12" BorderBrush="#E2E8F0" BorderThickness="0,0,0,1">
+                <DockPanel LastChildFill="False">
+                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" VerticalAlignment="Center">
+                        <Border CornerRadius="8" Background="#EFF6FF" Padding="6" Margin="0,0,10,0">
+                            <materialDesign:PackIcon Kind="HelpCircleOutline" Width="22" Height="22" Foreground="#2563EB"/>
+                        </Border>
+                        <TextBlock x:Name="txtTitle" Text="Özellik Açıklaması" FontWeight="Bold" FontSize="15" Foreground="#0F172A" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <!-- Kapat (Çarpı Butonu) -->
+                    <Button DockPanel.Dock="Right" Click="BtnClose_Click" Style="{StaticResource MaterialDesignFlatButton}"
+                            Width="32" Height="32" Padding="0" Foreground="#64748B" Cursor="Hand" ToolTip="Kapat (ESC)">
+                        <materialDesign:PackIcon Kind="Close" Width="20" Height="20"/>
+                    </Button>
+                </DockPanel>
+            </Border>
+
+            <!-- İçerik Alanı -->
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="18,14">
+                <StackPanel>
+                    <TextBlock x:Name="txtSubtitle" Text="Bu özellik nasıl çalışır ve ne işe yarar?" FontWeight="SemiBold" FontSize="13" Foreground="#2563EB" Margin="0,0,0,8"/>
+                    <TextBlock x:Name="txtDescription" Text="Detaylı bilgi buraya gelecektir." TextWrapping="Wrap" FontSize="13" LineHeight="20" Foreground="#334155"/>
+                    
+                    <Border x:Name="pnlTip" Background="#F0FDF4" CornerRadius="8" BorderBrush="#BBF7D0" BorderThickness="1" Padding="10" Margin="0,14,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="LightbulbOnOutline" Width="18" Height="18" Foreground="#16A34A" Margin="0,2,8,0" VerticalAlignment="Top"/>
+                            <TextBlock x:Name="txtTip" Text="İpucu: Bu ayarı istediğiniz zaman değiştirebilirsiniz." TextWrapping="Wrap" FontSize="12" Foreground="#15803D" FontWeight="Medium"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+
+            <!-- Alt Çubuk (Anladım / Kapat Butonu) -->
+            <Border Grid.Row="2" Background="#F8FAFC" CornerRadius="0,0,13,13" Padding="16,10" BorderBrush="#E2E8F0" BorderThickness="0,1,0,0">
+                <Button x:Name="btnBottomClose" Click="BtnClose_Click" Content="Anladım / Kapat" HorizontalAlignment="Right"
+                        Style="{StaticResource MaterialDesignRaisedButton}" Background="#1E40AF" BorderBrush="#1D4ED8" Foreground="White"
+                        FontWeight="SemiBold" Height="34" Width="140"/>
+            </Border>
+        </Grid>
+    </Border>
+</Window>

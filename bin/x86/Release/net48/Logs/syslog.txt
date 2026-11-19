@@ -1,0 +1,35 @@
+﻿[2026-11-19 14:44:43.268] === Uygulama Başlatıldı ===
+[2026-11-19 14:44:43.271] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-19 14:44:43.272] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-19 14:44:43.276] MainWindow ctor: Başladı.
+[HATA] MainWindow InitializeComponent: 'System.Windows.Baml2006.TypeConverterMarkupExtension' öğesinde değer sağlama işlemi özel durum döndürdü.
+[2026-11-19 14:44:43.514] ZkService: Sürücü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 800700c1  geçerli bir Win32 uygulaması değil. (HRESULT özel durum döndürdü: 0x800700C1).
+[HATA] MainWindow ctor Body: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+[HATA] DispatcherUnhandledException (WPF Arayüz Hatası): 'ZkPdksApp.MainWindow' başlatma işlemi özel durum döndürdü.
+[2026-11-19 14:49:31.593] === Uygulama Başlatıldı ===
+[2026-11-19 14:49:31.596] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-19 14:49:31.597] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-19 14:49:31.601] MainWindow ctor: Başladı.
+[HATA] MainWindow InitializeComponent: 'System.Windows.Baml2006.TypeConverterMarkupExtension' öğesinde değer sağlama işlemi özel durum döndürdü.
+[2026-11-19 14:49:31.819] ZkService: Sürücü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 800700c1  geçerli bir Win32 uygulaması değil. (HRESULT özel durum döndürdü: 0x800700C1).
+[HATA] MainWindow ctor Body: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+[HATA] DispatcherUnhandledException (WPF Arayüz Hatası): 'ZkPdksApp.MainWindow' başlatma işlemi özel durum döndürdü.
+[2026-11-19 14:51:45.541] === Uygulama Başlatıldı ===
+[2026-11-19 14:51:45.543] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-19 14:51:45.544] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-19 14:51:45.551] MainWindow ctor: Başladı.
+[2026-11-19 14:51:46.342] ZkService: Sürücü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 800700c1  geçerli bir Win32 uygulaması değil. (HRESULT özel durum döndürdü: 0x800700C1).
+[2026-11-19 14:51:47.186] MainWindow ctor: Tamamlandı.
+[2026-11-19 14:51:58.516] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-19 14:52:07.425] ZkService: Sanal ZKTeco Simülatörüne bağlandı.
+[2026-11-19 15:00:35.994] === Uygulama Başlatıldı ===
+[2026-11-19 15:00:35.998] OS: Microsoft Windows NT 6.2.9200.0, .NET: 4.0.30319.42000, 64bit: False
+[2026-11-19 15:00:35.999] App.OnStartup tamamlandı, MainWindow başlatılıyor...
+[2026-11-19 15:00:36.002] MainWindow ctor: Başladı.
+[2026-11-19 15:00:36.600] ZkService: Sürücü başlatılıyor...
+[HATA] ZkService.InitializeDriver: {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 800700c1  geçerli bir Win32 uygulaması değil. (HRESULT özel durum döndürdü: 0x800700C1).
+[2026-11-19 15:00:37.324] MainWindow ctor: Tamamlandı.
+[2026-11-19 15:00:40.896] ZkService: Sanal ZKTeco Simülatörüne bağlandı.

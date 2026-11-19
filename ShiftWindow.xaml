@@ -2,69 +2,353 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Firma Çalışma Saatleri, Vardiya ve Fazla Mesai Limit Yönetimi" Height="680" Width="1020"
+        Title="Vardiya, Çalışma Saatleri ve Fazla Mesai Yönetim Paneli" Height="740" Width="1080"
         WindowStartupLocation="CenterOwner"
-        Background="{DynamicResource MaterialDesignPaper}"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}">
-    <Grid Margin="15">
+        Background="#F1F5F9"
+        TextElement.Foreground="#0F172A">
+    <Window.Resources>
+        <Style x:Key="CorporateCard" TargetType="Border">
+            <Setter Property="Background" Value="#FFFFFF"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="BorderBrush" Value="#E2E8F0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="10" Color="#0F172A" Opacity="0.05" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Preset Buton Stili -->
+        <Style x:Key="PresetButton" TargetType="Button" BasedOn="{StaticResource MaterialDesignOutlinedButton}">
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Margin" Value="0,0,8,4"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <!-- Modern Giriş Kutucuğu Stili -->
+        <Style x:Key="ModernFieldBox" TargetType="Border">
+            <Setter Property="Background" Value="#F8FAFC"/>
+            <Setter Property="BorderBrush" Value="#CBD5E1"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="6"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="Margin" Value="0,0,8,8"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="#F1F5F9"/>
+            <Setter Property="Foreground" Value="#0F172A"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Padding" Value="8,10"/>
+            <Setter Property="BorderThickness" Value="0,0,1,1"/>
+            <Setter Property="BorderBrush" Value="#CBD5E1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="ContentTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold" Foreground="#0F172A"/>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="DataGridCell">
+            <Setter Property="Padding" Value="8,7"/>
+            <Setter Property="BorderThickness" Value="0,0,1,0"/>
+            <Setter Property="BorderBrush" Value="#E2E8F0"/>
+            <Setter Property="Foreground" Value="#0F172A"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#DBEAFE"/>
+                    <Setter Property="Foreground" Value="#1E3A8A"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="HelpQuestionBtn" TargetType="Button" BasedOn="{StaticResource MaterialDesignFlatButton}">
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Margin" Value="4,0,0,0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Foreground" Value="#64748B"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#2563EB"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="16">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Üst Vardiya Tanımlama Kartı -->
-        <materialDesign:Card Grid.Row="0" Padding="15" Margin="0,0,0,15" UniformCornerRadius="10">
+        <!-- 1. HIZLI VARDİYA ŞABLONU SEÇİM PANELİ (Gündüz Standart, Gece, Part-Time, Sabah) -->
+        <Border Grid.Row="0" Style="{StaticResource CorporateCard}" Padding="14,12" Margin="0,0,0,12">
+            <DockPanel LastChildFill="False">
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" VerticalAlignment="Center">
+                    <Border CornerRadius="8" Background="#EFF6FF" Padding="8" Margin="0,0,10,0">
+                        <materialDesign:PackIcon Kind="ClockFast" Width="22" Height="22" Foreground="#1E40AF"/>
+                    </Border>
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="Hızlı Vardiya Şablonu Yükle" FontWeight="Bold" FontSize="14" Foreground="#0F172A"/>
+                        <TextBlock Text="Tek tıkla hazır saatleri doldurup dilediğiniz gibi özelleştirebilirsiniz:" FontSize="11" Foreground="#64748B"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" VerticalAlignment="Center">
+                    <Button Content="☀️ Gündüz Standart (08:30 - 18:00)" Click="BtnPresetDayStandard_Click" Style="{StaticResource PresetButton}" BorderBrush="#3B82F6" Foreground="#1D4ED8"/>
+                    <Button Content="🌙 Gece Vardiyası (22:00 - 06:00)" Click="BtnPresetNight_Click" Style="{StaticResource PresetButton}" BorderBrush="#6366F1" Foreground="#4338CA"/>
+                    <Button Content="⏱️ Part-Time / Yarı Zamanlı (13:00 - 18:00)" Click="BtnPresetPartTime_Click" Style="{StaticResource PresetButton}" BorderBrush="#10B981" Foreground="#047857"/>
+                    <Button Content="🌅 Erken Vardiya (07:00 - 15:00)" Click="BtnPresetEarly_Click" Style="{StaticResource PresetButton}" BorderBrush="#F59E0B" Foreground="#B45309"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <!-- 2. VARDİYA TANIMLAMA & ÖZELLEŞTİRME KARTI -->
+        <Border Grid.Row="1" Style="{StaticResource CorporateCard}" Padding="16" Margin="0,0,0,12">
             <StackPanel Orientation="Vertical">
-                <TextBlock Text="Firma Çalışma Saatleri &amp; Günlük Mesai Limit Kuralları" FontWeight="Bold" FontSize="16" Margin="0,0,0,12" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+                <TextBlock Text="Vardiya Detayları ve Çalışma Kuralları" FontWeight="Bold" FontSize="15" Margin="0,0,0,12" Foreground="#1E40AF"/>
 
                 <!-- 1. Satır: Saatler ve Standart Çalışma -->
                 <WrapPanel Orientation="Horizontal" Margin="0,0,0,10">
-                    <TextBox x:Name="txtShiftName" Width="240" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Vardiya / Firma Kuralı Adı *" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <TextBox x:Name="txtStartTime" Width="110" Margin="0,0,15,10" materialDesign:HintAssist.Hint="İşe Giriş (08:30)" Text="08:30:00" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <TextBox x:Name="txtEndTime" Width="110" Margin="0,0,15,10" materialDesign:HintAssist.Hint="İşten Çıkış (18:00)" Text="18:00:00" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <TextBox x:Name="txtReqWork" Width="130" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Günlük Zorunlu Saat" Text="8.0" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <TextBox x:Name="txtLunchMinutes" Width="120" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Yemek Molası (dk)" Text="60" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <Border Style="{StaticResource ModernFieldBox}">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="ClockOutline" Width="16" Height="16" Foreground="#2563EB" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtShiftName" Width="210" materialDesign:HintAssist.Hint="Vardiya Adı *" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                            <Button Style="{StaticResource HelpQuestionBtn}" Tag="ShiftName" Click="BtnHelp_Click" ToolTip="Vardiya Adı Bilgisi">
+                                <materialDesign:PackIcon Kind="HelpCircleOutline" Width="15" Height="15"/>
+                            </Button>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource ModernFieldBox}">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="Login" Width="16" Height="16" Foreground="#059669" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="Giriş:" FontWeight="SemiBold" Foreground="#475569" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtStartTime" Width="70" Text="08:30:00" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                            <TextBlock Text="Çıkış:" FontWeight="SemiBold" Foreground="#475569" Margin="6,0,4,0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtEndTime" Width="70" Text="18:00:00" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                            <Button Style="{StaticResource HelpQuestionBtn}" Tag="ShiftHours" Click="BtnHelp_Click" ToolTip="Giriş-Çıkış Saatleri Bilgisi">
+                                <materialDesign:PackIcon Kind="HelpCircleOutline" Width="15" Height="15"/>
+                            </Button>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource ModernFieldBox}">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="BriefcaseClockOutline" Width="16" Height="16" Foreground="#D97706" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="Zorunlu(s):" FontWeight="SemiBold" Foreground="#475569" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtReqWork" Width="40" Text="8.0" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                            <TextBlock Text="Mola(dk):" FontWeight="SemiBold" Foreground="#475569" Margin="6,0,4,0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtLunchMinutes" Width="40" Text="60" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                            <Button Style="{StaticResource HelpQuestionBtn}" Tag="ReqWorkLunch" Click="BtnHelp_Click" ToolTip="Zorunlu Çalışma ve Mola Bilgisi">
+                                <materialDesign:PackIcon Kind="HelpCircleOutline" Width="15" Height="15"/>
+                            </Button>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource ModernFieldBox}" Background="#EFF6FF" BorderBrush="#BFDBFE">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <CheckBox x:Name="chkOvernight" Content="Gece Vardiyası (Ertesi güne sarkan)" VerticalAlignment="Center" FontWeight="SemiBold" Foreground="#1E40AF"/>
+                            <Button Style="{StaticResource HelpQuestionBtn}" Tag="Overnight" Click="BtnHelp_Click" ToolTip="Gece Vardiyası Bilgisi" Margin="4,0,0,0">
+                                <materialDesign:PackIcon Kind="HelpCircleOutline" Width="15" Height="15"/>
+                            </Button>
+                        </StackPanel>
+                    </Border>
                 </WrapPanel>
 
-                <!-- 2. Satır: Toleranslar ve Fazla Mesai Limitleri -->
+                <!-- 2. Satır: Toleranslar ve Fazla Mesai Limitleri (Günlük, Haftalık, Aylık) -->
                 <WrapPanel Orientation="Horizontal" Margin="0,0,0,10">
-                    <TextBox x:Name="txtGraceMinutes" Width="140" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Geç Kalma Toleransı (dk)" Text="10" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <TextBox x:Name="txtMinOtThreshold" Width="160" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Asgari Mesai Eşiği (dk)" Text="30" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <TextBox x:Name="txtMaxDailyOt" Width="180" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Günlük İzin Verilen Max Mesai (Saat)" Text="3.0" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <TextBox x:Name="txtDuplicateSeconds" Width="130" Margin="0,0,15,10" materialDesign:HintAssist.Hint="Mükerrer Filtresi (sn)" Text="60" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <Border Style="{StaticResource ModernFieldBox}">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="TimerSand" Width="16" Height="16" Foreground="#64748B" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="Tolerans(dk):" FontWeight="SemiBold" Foreground="#475569" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtGraceMinutes" Width="35" Text="10" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                            <TextBlock Text="Mesai Eşiği(dk):" FontWeight="SemiBold" Foreground="#475569" Margin="6,0,4,0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtMinOtThreshold" Width="35" Text="30" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource ModernFieldBox}">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="ChartTimelineVariant" Width="16" Height="16" Foreground="#DC2626" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="Günlük Max(s):" FontWeight="SemiBold" Foreground="#475569" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtMaxDailyOt" Width="35" Text="3.0" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                            <TextBlock Text="Haftalık Max(s):" FontWeight="SemiBold" Foreground="#475569" Margin="6,0,4,0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtMaxWeeklyOt" Width="40" Text="15.0" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                            <TextBlock Text="Aylık Max(s):" FontWeight="SemiBold" Foreground="#475569" Margin="6,0,4,0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtMaxMonthlyOt" Width="40" Text="45.0" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                            <Button Style="{StaticResource HelpQuestionBtn}" Tag="OtLimits" Click="BtnHelp_Click" ToolTip="Mesai Limitleri ve Tolerans Bilgisi">
+                                <materialDesign:PackIcon Kind="HelpCircleOutline" Width="15" Height="15"/>
+                            </Button>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource ModernFieldBox}">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="FilterOutline" Width="16" Height="16" Foreground="#475569" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="Mükerrer(sn):" FontWeight="SemiBold" Foreground="#475569" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtDuplicateSeconds" Width="35" Text="60" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource ModernFieldBox}">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="AccountMultipleOutline" Width="16" Height="16" Foreground="#2563EB" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="Hedef Grup:" FontWeight="SemiBold" Foreground="#475569" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                            <ComboBox x:Name="cbTargetGroup" Width="130" BorderThickness="0" FontSize="12" Foreground="#0F172A" IsEditable="True"/>
+                            <Button Style="{StaticResource HelpQuestionBtn}" Tag="TargetGroup" Click="BtnHelp_Click" ToolTip="Hedef Grup Bilgisi">
+                                <materialDesign:PackIcon Kind="HelpCircleOutline" Width="15" Height="15"/>
+                            </Button>
+                        </StackPanel>
+                    </Border>
                 </WrapPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                    <CheckBox x:Name="chkOvernight" Content="Gece Vardiyası (Gece yarısını aşan vardiya: 22:00 - 06:00)" VerticalAlignment="Center" Margin="0,0,20,0"/>
-                </StackPanel>
+                <!-- 3. Satır: Sabah & Akşam Mesaiye Alma / Mesai Aralığı Ayarları -->
+                <GroupBox Header="Sabah &amp; Akşam Mesaiye Alma / Mesai Pencere Kuralları" Margin="0,0,0,12" Padding="8">
+                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <Border Style="{StaticResource ModernFieldBox}">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <CheckBox x:Name="chkAllowEarlyInOt" Content="Sabah Erken Gelmeler Mesaiye Sayılsın" VerticalAlignment="Center" FontWeight="SemiBold" Margin="0,0,6,0"/>
+                                <TextBlock Text="Sabah Max(s):" FontWeight="SemiBold" Foreground="#475569" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                <TextBox x:Name="txtEarlyInMaxOt" Width="40" Text="1.0" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                                <Button Style="{StaticResource HelpQuestionBtn}" Tag="MorningOt" Click="BtnHelp_Click" ToolTip="Sabah Erken Gelme Mesaisi Bilgisi">
+                                    <materialDesign:PackIcon Kind="HelpCircleOutline" Width="15" Height="15"/>
+                                </Button>
+                            </StackPanel>
+                        </Border>
 
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Border Style="{StaticResource ModernFieldBox}">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <materialDesign:PackIcon Kind="ClockTimeFourOutline" Width="16" Height="16" Foreground="#D97706" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                                <TextBlock Text="Akşam Mesai Başlangıç:" FontWeight="SemiBold" Foreground="#475569" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                <TextBox x:Name="txtOtWindowStart" Width="65" Text="18:00:00" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                                <TextBlock Text="Bitiş:" FontWeight="SemiBold" Foreground="#475569" Margin="6,0,4,0" VerticalAlignment="Center"/>
+                                <TextBox x:Name="txtOtWindowEnd" Width="65" Text="22:00:00" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                                <Button Style="{StaticResource HelpQuestionBtn}" Tag="EveningWindow" Click="BtnHelp_Click" ToolTip="Akşam Mesai Kabul Penceresi Bilgisi">
+                                    <materialDesign:PackIcon Kind="HelpCircleOutline" Width="15" Height="15"/>
+                                </Button>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Style="{StaticResource ModernFieldBox}" Background="#FFF1F2" BorderBrush="#FECDD3">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <CheckBox x:Name="chkExcludeOvernightOt" Content="Akşamdan Sabaha Olan Mesailer Silinsin (Gece Sayılmasın)" VerticalAlignment="Center" FontWeight="SemiBold" Foreground="#DC2626"/>
+                                <Button Style="{StaticResource HelpQuestionBtn}" Tag="ExcludeOvernight" Click="BtnHelp_Click" ToolTip="Gece Mesaisi Silme Kuralı Bilgisi" Margin="4,0,0,0">
+                                    <materialDesign:PackIcon Kind="HelpCircleOutline" Width="15" Height="15"/>
+                                </Button>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Style="{StaticResource ModernFieldBox}" Background="#ECFDF5" BorderBrush="#A7F3D0">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <CheckBox x:Name="chkDisableOtLimits" Content="⚡ Fazla Mesai Silinmesin (Limit Yok / Tamamı Mesaiye Sayılsın)" VerticalAlignment="Center" FontWeight="Bold" Foreground="#059669" ToolTip="Seçilirse günlük, haftalık, aylık tavan ve gece kırpması uygulanmaz, personelin çalıştığı tüm fazla mesai eksiksiz hakedişe yazılır"/>
+                                <Button Style="{StaticResource HelpQuestionBtn}" Tag="DisableOtLimits" Click="BtnHelp_Click" ToolTip="Limitsiz Mesai Kuralı Bilgisi" Margin="4,0,0,0">
+                                    <materialDesign:PackIcon Kind="HelpCircleOutline" Width="15" Height="15"/>
+                                </Button>
+                            </StackPanel>
+                        </Border>
+                    </WrapPanel>
+                </GroupBox>
+
+                <!-- 4. Satır: Mesai Katsayıları & Yuvarlama -->
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,8">
+                    <Border Style="{StaticResource ModernFieldBox}">
+                        <CheckBox x:Name="chkApplyToAllMatching" Content="Bu Gruptaki/Statüdeki Tüm Personele Otomatik Uygula" VerticalAlignment="Center" IsChecked="True" FontWeight="SemiBold"/>
+                    </Border>
+
+                    <Border Style="{StaticResource ModernFieldBox}">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="H.İçi:" FontWeight="SemiBold" Foreground="#475569" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtWeekdayMult" Width="35" Text="1.5" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                            <TextBlock Text="H.Sonu:" FontWeight="SemiBold" Foreground="#475569" Margin="6,0,4,0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtWeekendMult" Width="35" Text="2.0" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                            <TextBlock Text="Tatil:" FontWeight="SemiBold" Foreground="#475569" Margin="6,0,4,0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtHolidayMult" Width="35" Text="2.0" BorderThickness="0" FontSize="12" Foreground="#0F172A"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource ModernFieldBox}">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="Yuvarlama:" FontWeight="SemiBold" Foreground="#475569" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                            <ComboBox x:Name="cbRounding" Width="130" BorderThickness="0" FontSize="12" Foreground="#0F172A">
+                                <ComboBoxItem Content="Yuvarlama Yok (0 dk)"/>
+                                <ComboBoxItem Content="15 Dakika Yuvarla" IsSelected="True"/>
+                                <ComboBoxItem Content="30 Dakika Yuvarla"/>
+                                <ComboBoxItem Content="60 Dakika Yuvarla"/>
+                            </ComboBox>
+                            <Button Style="{StaticResource HelpQuestionBtn}" Tag="Multipliers" Click="BtnHelp_Click" ToolTip="Mesai Çarpanları ve Yuvarlama Bilgisi">
+                                <materialDesign:PackIcon Kind="HelpCircleOutline" Width="15" Height="15"/>
+                            </Button>
+                        </StackPanel>
+                    </Border>
+                </WrapPanel>
+
+                <!-- Değişiklik Geçerlilik & Geçmiş Veri Koruma Seçeneği -->
+                <Border Background="#F0FDF4" BorderBrush="#BBF7D0" BorderThickness="1" CornerRadius="6" Padding="10,6" Margin="0,0,0,8">
+                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <materialDesign:PackIcon Kind="History" Width="20" Height="20" Foreground="#059669" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <TextBlock Text="Kural Güncelleme / Geçmiş Veri Davranışı:" VerticalAlignment="Center" FontWeight="Bold" Foreground="#166534" Margin="0,0,12,0"/>
+                        <RadioButton x:Name="rbUpdateRetroactive" Content="Geçmişi de Güncelle (Tüm eski ve yeni kayıtlar yeni kurala göre hesaplansın)" IsChecked="True" VerticalAlignment="Center" Margin="0,0,15,0" FontWeight="SemiBold" Foreground="#1E293B"/>
+                        <RadioButton x:Name="rbKeepPastAsIs" Content="Eski Veriler Korunsun (Sadece bugünden itibaren / yeni oluşturulacak kural olarak kaydet)" VerticalAlignment="Center" FontWeight="SemiBold" Foreground="#1E293B"/>
+                        <Button Style="{StaticResource HelpQuestionBtn}" Tag="RetroactiveChoice" Click="BtnHelp_Click" ToolTip="Kural Geçmişi ve Güncelleme Bilgisi" Margin="8,0,0,0">
+                            <materialDesign:PackIcon Kind="HelpCircleOutline" Width="16" Height="16"/>
+                        </Button>
+                    </WrapPanel>
+                </Border>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,6,0,0">
                     <Button Content="Temizle" Click="BtnClear_Click" Style="{StaticResource MaterialDesignFlatButton}" Margin="0,0,10,0"/>
-                    <Button Content="Kuralları Kaydet" Click="BtnSave_Click" Style="{StaticResource MaterialDesignRaisedButton}"/>
+                    <Button Content="Seçili Vardiyayı Sil" Click="BtnDeleteShift_Click" Style="{StaticResource MaterialDesignOutlinedButton}" BorderBrush="#DC2626" Foreground="#DC2626" Margin="0,0,10,0"/>
+                    <Button Content="Vardiyayı Kaydet / Güncelle" Click="BtnSave_Click" Style="{StaticResource MaterialDesignRaisedButton}" Background="#1E40AF" BorderBrush="#1D4ED8" Foreground="White" FontWeight="Bold"/>
                 </StackPanel>
             </StackPanel>
-        </materialDesign:Card>
+        </Border>
 
-        <!-- Liste Kartı -->
-        <materialDesign:Card Grid.Row="1" Padding="15" UniformCornerRadius="10">
+        <!-- 3. LİSTE KARTI -->
+        <Border Grid.Row="2" Style="{StaticResource CorporateCard}" Padding="14">
             <DockPanel>
-                <TextBlock DockPanel.Dock="Top" Text="Tanımlı Vardiyalar, Çalışma Saatleri ve Limitler" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+                <TextBlock DockPanel.Dock="Top" Text="Kayıtlı Firma Vardiyaları ve Çalışma Planları" FontWeight="Bold" FontSize="14" Foreground="#0F172A" Margin="0,0,0,10"/>
                 <DataGrid x:Name="dgShifts" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False"
-                          SelectionChanged="DgShifts_SelectionChanged" SelectionMode="Single">
+                          Background="#FFFFFF" RowBackground="#FFFFFF" AlternatingRowBackground="#F8FAFC"
+                          BorderThickness="0" GridLinesVisibility="All" HorizontalGridLinesBrush="#E2E8F0" VerticalGridLinesBrush="#E2E8F0"
+                          SelectionChanged="DgShifts_SelectionChanged" SelectionMode="Single"
+                          ScrollViewer.CanContentScroll="True"
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="45"/>
                         <DataGridTextColumn Header="Vardiya Adı" Binding="{Binding Name}" Width="210"/>
                         <DataGridTextColumn Header="Giriş" Binding="{Binding StartTime}" Width="75"/>
                         <DataGridTextColumn Header="Çıkış" Binding="{Binding EndTime}" Width="75"/>
-                        <DataGridTextColumn Header="Zorunlu Saat" Binding="{Binding RequiredDailyWorkHours}" Width="95"/>
-                        <DataGridTextColumn Header="Max Mesai (Limit)" Binding="{Binding MaxDailyOvertimeHours}" Width="120"/>
-                        <DataGridTextColumn Header="Asgari Eşik (dk)" Binding="{Binding MinOvertimeThresholdMinutes}" Width="110"/>
-                        <DataGridTextColumn Header="Tolerans (dk)" Binding="{Binding GracePeriodMinutes}" Width="95"/>
-                        <DataGridTextColumn Header="Mola (dk)" Binding="{Binding LunchBreakMinutes}" Width="80"/>
-                        <DataGridCheckBoxColumn Header="Gece" Binding="{Binding IsOvernight}" Width="65"/>
+                        <DataGridTextColumn Header="Zorunlu (s)" Binding="{Binding RequiredDailyWorkHours}" Width="90"/>
+                        <DataGridTextColumn Header="Hedef Grup" Binding="{Binding TargetGroup}" Width="105"/>
+                        <DataGridTextColumn Header="Max Mesai" Binding="{Binding MaxDailyOvertimeHours}" Width="85"/>
+                        <DataGridTextColumn Header="H.İçi Çarpan" Binding="{Binding WeekdayMultiplier}" Width="85"/>
+                        <DataGridTextColumn Header="H.Sonu Çarpan" Binding="{Binding WeekendMultiplier}" Width="90"/>
+                        <DataGridCheckBoxColumn Header="Erken Mesai?" Binding="{Binding AllowEarlyInOvertime}" Width="90"/>
+                        <DataGridTextColumn Header="Sabah Max" Binding="{Binding EarlyInMaxOvertimeHours}" Width="85"/>
+                        <DataGridTextColumn Header="Mesai Bitiş" Binding="{Binding OvertimeWindowEnd}" Width="85"/>
+                        <DataGridCheckBoxColumn Header="Mesai Silinmesin?" Binding="{Binding DisableOvertimeLimits}" Width="120"/>
+                        <DataGridTextColumn Header="Eşik (dk)" Binding="{Binding MinOvertimeThresholdMinutes}" Width="80"/>
+                        <DataGridTextColumn Header="Tolerans" Binding="{Binding GracePeriodMinutes}" Width="80"/>
+                        <DataGridTextColumn Header="Mola (dk)" Binding="{Binding LunchBreakMinutes}" Width="75"/>
+                        <DataGridCheckBoxColumn Header="Gece" Binding="{Binding IsOvernight}" Width="60"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </DockPanel>
-        </materialDesign:Card>
+        </Border>
     </Grid>
 </Window>

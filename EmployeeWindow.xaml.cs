@@ -21,7 +21,25 @@ namespace ZkPdksApp
             dgEmployees.ItemsSource = Employees;
 
             LoadShifts();
+            LoadGroups();
             LoadEmployees();
+        }
+
+        private void LoadGroups()
+        {
+            var groups = dbService.GetAllGroupNames();
+            cbGroup.ItemsSource = groups;
+            if (groups.Count > 0)
+            {
+                cbGroup.SelectedIndex = 0;
+            }
+
+            var types = dbService.GetAllEmploymentTypes();
+            cbEmploymentType.ItemsSource = types;
+            if (types.Count > 0)
+            {
+                cbEmploymentType.SelectedIndex = 0;
+            }
         }
 
         private void LoadShifts()
@@ -52,40 +70,49 @@ namespace ZkPdksApp
 
             if (string.IsNullOrWhiteSpace(id) || string.IsNullOrWhiteSpace(name))
             {
-                MessageBox.Show("Cihaz ID ve Ad Soyad alanları zorunludur.", "Uyarı", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(LocalizationService.Get("Msg_EmpFieldsRequired"), LocalizationService.Get("MsgTitle_Warning"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
             string status = (cbStatus.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "Aktif";
+            string empType = !string.IsNullOrWhiteSpace(cbEmploymentType.Text) ? cbEmploymentType.Text.Trim() : (cbEmploymentType.SelectedItem?.ToString() ?? "Kadrolu");
             int shiftId = (cbShifts.SelectedValue != null) ? Convert.ToInt32(cbShifts.SelectedValue) : 1;
+            string grp = !string.IsNullOrWhiteSpace(cbGroup.Text) ? cbGroup.Text.Trim() : (cbGroup.SelectedItem?.ToString() ?? "Genel");
 
             var emp = new Employee
             {
                 Badgenumber = id,
                 Name = name,
+                GroupName = grp,
+                EmploymentType = empType,
                 TcNo = txtTcNo.Text.Trim(),
                 CardNo = txtCard.Text.Trim(),
                 Phone = txtPhone.Text.Trim(),
+                CompanyPhone = txtCompanyPhone.Text.Trim(),
                 Company = txtCompany.Text.Trim(),
                 Branch = txtBranch.Text.Trim(),
                 Department = txtDept.Text.Trim(),
                 Unit = txtUnit.Text.Trim(),
                 Title = txtTitle.Text.Trim(),
                 Status = status,
+                HireDate = dpHireDate.SelectedDate?.ToString("yyyy-MM-dd") ?? "",
+                LeaveDate = dpLeaveDate.SelectedDate?.ToString("yyyy-MM-dd") ?? "",
                 ShiftId = shiftId
             };
 
             dbService.SaveEmployee(emp);
+            dbService.SaveGroup(grp);
+            LoadGroups();
             LoadEmployees();
             BtnClear_Click(null, null);
-            MessageBox.Show("Personel özlük kartı başarıyla kaydedildi.", "Bilgi", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show(LocalizationService.Get("Msg_EmpSavedSuccess"), LocalizationService.Get("MsgTitle_Info"), MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
             if (dgEmployees.SelectedItem is Employee selected)
             {
-                if (MessageBox.Show($"{selected.Name} personelini silmek istediğinize emin misiniz?", "Silme Onayı",
+                if (MessageBox.Show(string.Format(LocalizationService.Get("Msg_EmpDeleteConfirm"), selected.Name), LocalizationService.Get("MsgTitle_DeleteConfirm"),
                     MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
                     dbService.DeleteEmployee(selected.Badgenumber);
@@ -95,7 +122,7 @@ namespace ZkPdksApp
             }
             else
             {
-                MessageBox.Show("Lütfen silinecek personeli seçin.", "Uyarı", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(LocalizationService.Get("Msg_SelectEmpToDelete"), LocalizationService.Get("MsgTitle_Warning"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
@@ -103,7 +130,7 @@ namespace ZkPdksApp
         {
             if (!zkService.IsConnected)
             {
-                MessageBox.Show("Cihaz bağlı değil. Lütfen önce ana ekrandan cihaza bağlanın.", "Hata", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(LocalizationService.Get("Msg_DeviceNotConnected"), LocalizationService.Get("MsgTitle_Warning"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
@@ -128,7 +155,7 @@ namespace ZkPdksApp
                 });
 
                 LoadEmployees();
-                MessageBox.Show($"{count} adet personel cihazdan çekilerek özlük kayıtları oluşturuldu.", "Başarılı", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(string.Format(LocalizationService.Get("Msg_EmpsFetchedSuccess"), count), LocalizationService.Get("MsgTitle_Success"), MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
@@ -145,12 +172,25 @@ namespace ZkPdksApp
                 txtTcNo.Text = selected.TcNo;
                 txtCard.Text = selected.CardNo;
                 txtPhone.Text = selected.Phone;
+                txtCompanyPhone.Text = selected.CompanyPhone;
                 txtCompany.Text = selected.Company;
                 txtBranch.Text = selected.Branch;
                 txtDept.Text = selected.Department;
                 txtUnit.Text = selected.Unit;
                 txtTitle.Text = selected.Title;
+                cbGroup.Text = selected.GroupName ?? "Genel";
+                cbEmploymentType.Text = selected.EmploymentType ?? "Kadrolu";
                 cbShifts.SelectedValue = selected.ShiftId;
+
+                if (!string.IsNullOrEmpty(selected.HireDate) && DateTime.TryParse(selected.HireDate, out DateTime hd))
+                    dpHireDate.SelectedDate = hd;
+                else
+                    dpHireDate.SelectedDate = null;
+
+                if (!string.IsNullOrEmpty(selected.LeaveDate) && DateTime.TryParse(selected.LeaveDate, out DateTime ld))
+                    dpLeaveDate.SelectedDate = ld;
+                else
+                    dpLeaveDate.SelectedDate = null;
 
                 foreach (ComboBoxItem item in cbStatus.Items)
                 {
@@ -170,9 +210,13 @@ namespace ZkPdksApp
             txtTcNo.Clear();
             txtCard.Clear();
             txtPhone.Clear();
+            txtCompanyPhone.Clear();
             txtUnit.Clear();
             txtTitle.Clear();
             cbStatus.SelectedIndex = 0;
+            cbEmploymentType.SelectedIndex = 0;
+            dpHireDate.SelectedDate = null;
+            dpLeaveDate.SelectedDate = null;
             if (cbShifts.Items.Count > 0) cbShifts.SelectedIndex = 0;
             dgEmployees.SelectedItem = null;
         }

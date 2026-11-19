@@ -1,0 +1,475 @@
+const fs = require('fs');
+
+// Keys and translations for all 9 languages:
+// tr, en, es, zh, fr, de, ru, ar, ku
+
+const msgTranslations = {
+    // Titles
+    "MsgTitle_Connected": {
+        tr: "Bağlantı Kuruldu",
+        en: "Connection Established",
+        es: "Conexión Establecida",
+        zh: "连接已建立",
+        fr: "Connexion Établie",
+        de: "Verbindung Hergestellt",
+        ru: "Соединение установлено",
+        ar: "تم الاتصال بنجاح",
+        ku: "Girêdan Çêbû"
+    },
+    "MsgTitle_ConnError": {
+        tr: "Bağlantı Hatası",
+        en: "Connection Error",
+        es: "Error de Conexión",
+        zh: "连接错误",
+        fr: "Erreur de Connexion",
+        de: "Verbindungsfehler",
+        ru: "Ошибка подключения",
+        ar: "خطأ في الاتصال",
+        ku: "Çewtiya Girêdanê"
+    },
+    "MsgTitle_Warning": {
+        tr: "Uyarı",
+        en: "Warning",
+        es: "Advertencia",
+        zh: "警告",
+        fr: "Avertissement",
+        de: "Warnung",
+        ru: "Предупреждение",
+        ar: "تحذير",
+        ku: "Hişyarî"
+    },
+    "MsgTitle_Info": {
+        tr: "Bilgi",
+        en: "Information",
+        es: "Información",
+        zh: "提示",
+        fr: "Information",
+        de: "Information",
+        ru: "Информация",
+        ar: "معلومات",
+        ku: "Agahî"
+    },
+    "MsgTitle_Success": {
+        tr: "Başarılı",
+        en: "Success",
+        es: "Éxito",
+        zh: "成功",
+        fr: "Succès",
+        de: "Erfolgreich",
+        ru: "Успешно",
+        ar: "نجاح",
+        ku: "Serkeftî"
+    },
+    "MsgTitle_Error": {
+        tr: "Hata",
+        en: "Error",
+        es: "Error",
+        zh: "错误",
+        fr: "Erreur",
+        de: "Fehler",
+        ru: "Ошибка",
+        ar: "خطأ",
+        ku: "Çewtî"
+    },
+    "MsgTitle_Confirm": {
+        tr: "Onay",
+        en: "Confirmation",
+        es: "Confirmación",
+        zh: "确认",
+        fr: "Confirmation",
+        de: "Bestätigung",
+        ru: "Подтверждение",
+        ar: "تأكيد",
+        ku: "Pejirandin"
+    },
+    "MsgTitle_DeleteConfirm": {
+        tr: "Silme Onayı",
+        en: "Delete Confirmation",
+        es: "Confirmación de Eliminación",
+        zh: "删除确认",
+        fr: "Confirmation de suppression",
+        de: "Löschbestätigung",
+        ru: "Подтверждение удаления",
+        ar: "تأكيد الحذف",
+        ku: "Pejirandina Jêbirinê"
+    },
+    "MsgTitle_PeriodUpdated": {
+        tr: "Dönem Güncellendi",
+        en: "Period Updated",
+        es: "Período Actualizado",
+        zh: "期间已更新",
+        fr: "Période mise à jour",
+        de: "Periode Aktualisiert",
+        ru: "Период обновлен",
+        ar: "تم تحديث الفترة",
+        ku: "Dewr Hate Nûkirin"
+    },
+    "MsgTitle_HolidaysUpdated": {
+        tr: "Tatiller Güncellendi",
+        en: "Holidays Updated",
+        es: "Feriados Actualizados",
+        zh: "节假日已更新",
+        fr: "Jours fériés mis à jour",
+        de: "Feiertage Aktualisiert",
+        ru: "Праздники обновлены",
+        ar: "تم تحديث العطلات",
+        ku: "Bêhnvedan Hate Nûkirin"
+    },
+    "MsgTitle_ClockSynced": {
+        tr: "Cihaz Saati Eşitlendi",
+        en: "Device Clock Synchronized",
+        es: "Reloj del Dispositivo Sincronizado",
+        zh: "设备时钟已同步",
+        fr: "Horloge de l'appareil synchronisée",
+        de: "Geräteuhr Synchronisiert",
+        ru: "Часы устройства синхронизированы",
+        ar: "تمت مزامنة ساعة الجهاز",
+        ku: "Saeta Amûrê Hate Hemahengkirin"
+    },
+    "MsgTitle_CalendarSynced": {
+        tr: "Takvim Eşitlendi",
+        en: "Calendar Synchronized",
+        es: "Calendario Sincronizado",
+        zh: "日历已同步",
+        fr: "Calendrier synchronisé",
+        de: "Kalender Synchronisiert",
+        ru: "Календарь синхронизирован",
+        ar: "تمت مزامنة التقويم",
+        ku: "Salname Hate Hemahengkirin"
+    },
+
+    // Messages
+    "Msg_ConnectedSuccess": {
+        tr: "ZKTeco cihazına başarıyla bağlanıldı!",
+        en: "Successfully connected to ZKTeco device!",
+        es: "¡Conectado exitosamente al dispositivo ZKTeco!",
+        zh: "已成功连接至中控(ZKTeco)考勤机！",
+        fr: "Connexion réussie au terminal ZKTeco !",
+        de: "Erfolgreich mit dem ZKTeco-Gerät verbunden!",
+        ru: "Успешное подключение к устройству ZKTeco!",
+        ar: "تم الاتصال بجهاز ZKTeco بنجاح!",
+        ku: "Bi serkeftî bi amûra ZKTeco ve hate girêdan!"
+    },
+    "Msg_ConnFailed": {
+        tr: "Cihaza bağlanılamadı. IP ve ağ erişiminizi kontrol edin.",
+        en: "Could not connect to device. Check your IP and network access.",
+        es: "No se pudo conectar al dispositivo. Verifique la IP y el acceso a la red.",
+        zh: "无法连接到设备。请检查设备IP及网络连通性。",
+        fr: "Impossible de se connecter à l'appareil. Vérifiez l'adresse IP et le réseau.",
+        de: "Verbindung zum Gerät fehlgeschlagen. Überprüfen Sie IP und Netzwerk.",
+        ru: "Не удалось подключиться к устройству. Проверьте IP и сеть.",
+        ar: "تعذر الاتصال بالجهاز. تحقق من عنوان IP والشبكة.",
+        ku: "Girêdan bi amûrê re çênebû. IP û torê kontrol bikin."
+    },
+    "Msg_PleaseConnectFirst": {
+        tr: "Lütfen önce cihaza bağlanın.",
+        en: "Please connect to the device first.",
+        es: "Por favor conéctese al dispositivo primero.",
+        zh: "请先连接考勤设备。",
+        fr: "Veuillez d'abord vous connecter à l'appareil.",
+        de: "Bitte verbinden Sie sich zuerst mit dem Gerät.",
+        ru: "Пожалуйста, сначала подключитесь к устройству.",
+        ar: "يرجى الاتصال بالجهاز أولاً.",
+        ku: "Ji kerema xwe pêşî bi amûrê ve girêbidin."
+    },
+    "Msg_NoDataToExport": {
+        tr: "Dışa aktarılacak kayıt bulunmuyor.",
+        en: "No records found to export.",
+        es: "No hay registros para exportar.",
+        zh: "没有可导出的数据记录。",
+        fr: "Aucun enregistrement à exporter.",
+        de: "Keine Datensätze zum Exportieren gefunden.",
+        ru: "Нет записей для экспорта.",
+        ar: "لا توجد سجلات لتصديرها.",
+        ku: "Tomarek ji bo derxistinê tune ye."
+    },
+    "Msg_ExcelExportSuccess": {
+        tr: "Rapor Excel olarak başarıyla kaydedildi!\n{0}",
+        en: "Report successfully saved as Excel!\n{0}",
+        es: "¡Informe guardado con éxito en Excel!\n{0}",
+        zh: "Excel报表已成功导出！\n{0}",
+        fr: "Rapport enregistré avec succès sous Excel !\n{0}",
+        de: "Bericht erfolgreich als Excel gespeichert!\n{0}",
+        ru: "Отчет успешно сохранен в Excel!\n{0}",
+        ar: "تم حفظ التقرير بنجاح بصيغة Excel!\n{0}",
+        ku: "Rapor bi serkeftî wekî Excel hate tomarkirin!\n{0}"
+    },
+    "Msg_ExcelExportError": {
+        tr: "Excel oluşturma hatası: {0}",
+        en: "Excel export error: {0}",
+        es: "Error de exportación a Excel: {0}",
+        zh: "生成Excel时出错：{0}",
+        fr: "Erreur de création Excel : {0}",
+        de: "Fehler beim Erstellen von Excel: {0}",
+        ru: "Ошибка экспорта в Excel: {0}",
+        ar: "خطأ في إنشاء ملف Excel: {0}",
+        ku: "Çewtiya afirandina Excel: {0}"
+    },
+    "Msg_SelectEmployeeFirst": {
+        tr: "Lütfen önce bir personel seçiniz.",
+        en: "Please select an employee first.",
+        es: "Por favor seleccione un empleado primero.",
+        zh: "请先选择一名员工。",
+        fr: "Veuillez d'abord sélectionner un employé.",
+        de: "Bitte wählen Sie zuerst einen Mitarbeiter aus.",
+        ru: "Пожалуйста, сначала выберите сотрудника.",
+        ar: "يرجى تحديد موظف أولاً.",
+        ku: "Ji kerema xwe pêşî karmendek hilbijêrin."
+    },
+    "Msg_NoDailyLogsForEmp": {
+        tr: "Seçilen personele ait gün gün çalışma kaydı bulunmuyor.",
+        en: "No daily attendance records found for the selected employee.",
+        es: "No hay registros de asistencia diaria para el empleado seleccionado.",
+        zh: "所选员工在当前周期内无出勤明细记录。",
+        fr: "Aucun relevé d'activité quotidien trouvé pour cet employé.",
+        de: "Keine täglichen Arbeitsdaten für den ausgewählten Mitarbeiter gefunden.",
+        ru: "У выбранного сотрудника нет ежедневных записей за этот период.",
+        ar: "لا توجد سجلات حضور يومية للموظف المحدد.",
+        ku: "Ji bo karmendê hilbijartî tomarek xebatê ya rojane tune."
+    },
+    "Msg_LogsFetchedSuccess": {
+        tr: "{0} adet geçiş logu çekildi, mesai kuralları hesaplandı.",
+        en: "{0} attendance logs downloaded, shift rules calculated.",
+        es: "{0} registros de asistencia descargados, reglas calculadas.",
+        zh: "已成功拉取 {0} 条打卡记录并完成考勤核算。",
+        fr: "{0} pointages récupérés, règles de présence calculées.",
+        de: "{0} Buchungen heruntergeladen, Schichtregeln berechnet.",
+        ru: "Загружено {0} записей посещаемости, правила смен рассчитаны.",
+        ar: "تم تنزيل {0} سجل حضور وحساب أوقات الدوام.",
+        ku: "{0} tomarên derbasbûnê hatin kişandin û qanûn hatin hesibandin."
+    },
+    "Msg_NoLogsInDb": {
+        tr: "Veritabanında henüz kayıtlı bir geçiş logu bulunmuyor.",
+        en: "No attendance logs found in database yet.",
+        es: "Aún no hay registros de asistencia en la base de datos.",
+        zh: "数据库中尚未记录任何打卡流水。",
+        fr: "Aucun journal de pointage n'est encore enregistré dans la base de données.",
+        de: "Noch keine Anwesenheitsprotokolle in der Datenbank vorhanden.",
+        ru: "В базе данных пока нет сохраненных записей проходов.",
+        ar: "لا توجد سجلات حضور مسجلة في قاعدة البيانات بعد.",
+        ku: "Di binkeya daneyan de hîna tomarek derbasbûnê tune ye."
+    },
+    "Msg_DeviceNotConnected": {
+        tr: "Cihaz bağlı değil. Lütfen ana ekrandan önce cihaza bağlanın.",
+        en: "Device is not connected. Please connect to device from main screen first.",
+        es: "El dispositivo no está conectado. Conéctese primero desde la pantalla principal.",
+        zh: "设备未连接。请先在主界面点击连接考勤机。",
+        fr: "Appareil non connecté. Veuillez d'abord vous connecter depuis l'écran principal.",
+        de: "Gerät nicht verbunden. Bitte verbinden Sie sich zuerst auf dem Hauptbildschirm.",
+        ru: "Устройство не подключено. Сначала подключитесь на главном экране.",
+        ar: "الجهاز غير متصل. يرجى الاتصال بالجهاز أولاً من الشاشة الرئيسية.",
+        ku: "Amûr ne girêdayî ye. Ji kerema xwe pêşî ji ser ekrana sereke ve girêbidin."
+    },
+    "Msg_EmpFieldsRequired": {
+        tr: "Cihaz ID ve Ad Soyad alanları zorunludur.",
+        en: "Device ID and Full Name fields are required.",
+        es: "Los campos ID de Dispositivo y Nombre Completo son obligatorios.",
+        zh: "工号(设备ID)和姓名均为必填项。",
+        fr: "L'identifiant de l'appareil et le nom complet sont obligatoires.",
+        de: "Geräte-ID und Vollständiger Name sind Pflichtfelder.",
+        ru: "ID устройства и ФИО обязательны для заполнения.",
+        ar: "معرف الجهاز والاسم الكامل مطلوبان.",
+        ku: "Qadên Nasnameya Amûrê û Nav Paşnav mecbûrî ne."
+    },
+    "Msg_EmpSavedSuccess": {
+        tr: "Personel özlük kartı başarıyla kaydedildi.",
+        en: "Employee profile successfully saved.",
+        es: "Ficha del empleado guardada con éxito.",
+        zh: "员工档案已成功保存。",
+        fr: "Fiche employé enregistrée avec succès.",
+        de: "Mitarbeiterprofil erfolgreich gespeichert.",
+        ru: "Личная карточка сотрудника успешно сохранена.",
+        ar: "تم حفظ ملف الموظف بنجاح.",
+        ku: "Qerta kesane ya karmend bi serkeftî hate tomarkirin."
+    },
+    "Msg_EmpDeleteConfirm": {
+        tr: "{0} personelini silmek istediğinize emin misiniz?",
+        en: "Are you sure you want to delete employee {0}?",
+        es: "¿Está seguro de que desea eliminar al empleado {0}?",
+        zh: "确定要删除员工 {0} 吗？",
+        fr: "Êtes-vous sûr de vouloir supprimer l'employé {0} ?",
+        de: "Möchten Sie den Mitarbeiter {0} wirklich löschen?",
+        ru: "Вы уверены, что хотите удалить сотрудника {0}?",
+        ar: "هل أنت متأكد أنك تريد حذف الموظف {0}؟",
+        ku: "Gelo hûn piştrast in ku dixwazin karmendê {0} jê bibin?"
+    },
+    "Msg_SelectEmpToDelete": {
+        tr: "Lütfen silinecek personeli seçin.",
+        en: "Please select an employee to delete.",
+        es: "Por favor seleccione un empleado para eliminar.",
+        zh: "请选择要删除的员工。",
+        fr: "Veuillez sélectionner un employé à supprimer.",
+        de: "Bitte wählen Sie einen zu löschenden Mitarbeiter aus.",
+        ru: "Пожалуйста, выберите сотрудника для удаления.",
+        ar: "يرجى تحديد الموظف المراد حذفه.",
+        ku: "Ji kerema xwe karmendê ku dê were jêbirin hilbijêrin."
+    },
+    "Msg_EmpsFetchedSuccess": {
+        tr: "{0} adet personel cihazdan çekilerek özlük kayıtları oluşturuldu.",
+        en: "{0} employees downloaded from device and profile records created.",
+        es: "{0} empleados descargados del dispositivo y registrados.",
+        zh: "已成功从设备拉取 {0} 位员工并建立档案。",
+        fr: "{0} employés téléchargés du terminal et enregistrés.",
+        de: "{0} Mitarbeiter vom Gerät heruntergeladen und erfasst.",
+        ru: "Загружено {0} сотрудников с устройства и созданы их карточки.",
+        ar: "تم تنزيل {0} موظف من الجهاز وإنشاء سجلاتهم.",
+        ku: "{0} karmend ji amûrê hatin kişandin û qertên wan hatin çêkirin."
+    },
+    "Msg_GroupNameRequired": {
+        tr: "Lütfen bir grup adı giriniz.",
+        en: "Please enter a group name.",
+        es: "Por favor ingrese un nombre de grupo.",
+        zh: "请输入班组/部门名称。",
+        fr: "Veuillez entrer un nom de groupe.",
+        de: "Bitte geben Sie einen Gruppennamen ein.",
+        ru: "Пожалуйста, введите название группы.",
+        ar: "يرجى إدخال اسم المجموعة.",
+        ku: "Ji kerema xwe navekî komê binivîsin."
+    },
+    "Msg_GroupDeleteConfirm": {
+        tr: "'{0}' grubunu silmek istediğinize emin misiniz?",
+        en: "Are you sure you want to delete group '{0}'?",
+        es: "¿Está seguro de que desea eliminar el grupo '{0}'?",
+        zh: "确定要删除分组 '{0}' 吗？",
+        fr: "Êtes-vous sûr de vouloir supprimer le groupe '{0}' ?",
+        de: "Möchten Sie die Gruppe '{0}' wirklich löschen?",
+        ru: "Вы уверены, что хотите удалить группу '{0}'?",
+        ar: "هل أنت متأكد أنك تريد حذف المجموعة '{0}'؟",
+        ku: "Gelo hûn piştrast in ku dixwazin koma '{0}' jê bibin?"
+    },
+    "Msg_SelectGroupToDelete": {
+        tr: "Lütfen silmek için tablodan bir grup seçiniz.",
+        en: "Please select a group from the table to delete.",
+        es: "Por favor seleccione un grupo de la tabla para eliminar.",
+        zh: "请在表格中选择要删除的分组。",
+        fr: "Veuillez sélectionner un groupe du tableau à supprimer.",
+        de: "Bitte wählen Sie eine Gruppe aus der Tabelle zum Löschen aus.",
+        ru: "Пожалуйста, выберите группу из таблицы для удаления.",
+        ar: "يرجى اختيار مجموعة من الجدول لحذفها.",
+        ku: "Ji kerema xwe ji tabloyê komekê ji bo jêbirinê hilbijêrin."
+    },
+    "Msg_EmploymentTypeNameRequired": {
+        tr: "Lütfen bir istihdam türü / statü adı giriniz.",
+        en: "Please enter an employment type / status name.",
+        es: "Por favor ingrese un nombre de tipo/estatus de empleo.",
+        zh: "请输入用工类型/人员编制名称。",
+        fr: "Veuillez entrer un statut ou type d'emploi.",
+        de: "Bitte geben Sie eine Beschäftigungsart ein.",
+        ru: "Пожалуйста, введите тип занятости / статус.",
+        ar: "يرجى إدخال نوع التوظيف / الحالة.",
+        ku: "Ji kerema xwe navekî cureyê kar / statuyê binivîsin."
+    },
+    "Msg_EmploymentTypeDeleteConfirm": {
+        tr: "'{0}' istihdam türünü silmek istediğinize emin misiniz?",
+        en: "Are you sure you want to delete employment type '{0}'?",
+        es: "¿Está seguro de que desea eliminar el tipo de empleo '{0}'?",
+        zh: "确定要删除用工类型 '{0}' 吗？",
+        fr: "Êtes-vous sûr de vouloir supprimer ce type d'emploi '{0}' ?",
+        de: "Möchten Sie die Beschäftigungsart '{0}' wirklich löschen?",
+        ru: "Вы уверены, что хотите удалить тип занятости '{0}'?",
+        ar: "هل أنت متأكد أنك تريد حذف نوع التوظيف '{0}'؟",
+        ku: "Gelo hûn piştrast in ku dixwazin cureyê kar '{0}' jê bibin?"
+    },
+    "Msg_ShiftNameRequired": {
+        tr: "Vardiya / kural adı zorunludur.",
+        en: "Shift / rule name is required.",
+        es: "El nombre del turno / regla es obligatorio.",
+        zh: "班次/排班规则名称为必填项。",
+        fr: "Le nom du shift / de la règle est obligatoire.",
+        de: "Schicht- / Regelname ist erforderlich.",
+        ru: "Название смены / правила обязательно.",
+        ar: "اسم الوردية / القاعدة مطلوب.",
+        ku: "Navê nobetê / qanûnê mecbûrî ye."
+    },
+    "Msg_ShiftTimeFormatInvalid": {
+        tr: "Başlangıç ve bitiş saatleri geçerli formatta olmalıdır (Örn: 08:30:00).",
+        en: "Start and end times must be in a valid format (e.g. 08:30:00).",
+        es: "Las horas de inicio y fin deben tener un formato válido (Ej: 08:30:00).",
+        zh: "开始时间和结束时间格式必须正确（例如：08:30:00）。",
+        fr: "Les heures de début et de fin doivent être au format valide (ex. 08:30:00).",
+        de: "Start- und Endzeiten müssen ein gültiges Format haben (z. B. 08:30:00).",
+        ru: "Время начала и окончания должно быть в правильном формате (напр. 08:30:00).",
+        ar: "يجب أن تكون أوقات البدء والانتهاء بتنسيق صحيح (مثال: 08:30:00).",
+        ku: "Demên destpêk û qedandinê divê di forma rast de bin (Mînak: 08:30:00)."
+    },
+    "Msg_ShiftDeleteConfirm": {
+        tr: "Bu vardiya kuralını silmek istediğinize emin misiniz?",
+        en: "Are you sure you want to delete this shift rule?",
+        es: "¿Está seguro de que desea eliminar esta regla de turno?",
+        zh: "确定要删除此班次规则吗？",
+        fr: "Êtes-vous sûr de vouloir supprimer cette règle de shift ?",
+        de: "Möchten Sie diese Schichtregel wirklich löschen?",
+        ru: "Вы уверены, что хотите удалить это правило смены?",
+        ar: "هل أنت متأكد أنك تريد حذف قاعدة الوردية هذه؟",
+        ku: "Gelo hûn piştrast in ku dixwazin vê qanûna nobetê jê bibin?"
+    },
+    "Msg_ShiftDeletedSuccess": {
+        tr: "Vardiya kuralı silindi.",
+        en: "Shift rule deleted.",
+        es: "Regla de turno eliminada.",
+        zh: "班次规则已删除。",
+        fr: "Règle de shift supprimée.",
+        de: "Schichtregel gelöscht.",
+        ru: "Правило смены удалено.",
+        ar: "تم حذف قاعدة الوردية.",
+        ku: "Qanûna nobetê hate jêbirin."
+    },
+    "Msg_ShiftScheduleSaved": {
+        tr: "Tarih bazlı vardiya çizelgesi kaydedildi!\nPuantaj hesaplamalarında bu tarihlerde otomatik olarak seçilen vardiya programı geçerli olacaktır.",
+        en: "Date-based shift schedule saved!\nThis shift program will automatically apply to attendance calculations on these dates.",
+        es: "¡Horario de turnos por fechas guardado!\nSe aplicará automáticamente a los cálculos en estas fechas.",
+        zh: "指定日期区间的排班计划已保存！\n在考勤核算时系统将自动套用所选班次规则。",
+        fr: "Planning d'équipe enregistré !\nCe programme s'appliquera automatiquement aux calculs sur ces dates.",
+        de: "Datumsbasierter Schichtplan gespeichert!\nWird bei den Berechnungen an diesen Daten automatisch angewendet.",
+        ru: "График смен по датам сохранен!\nПри расчетах в эти даты автоматически будет применяться выбранная смена.",
+        ar: "تم حفظ جدول الورديات المجدول!\nسيتم تطبيق هذا الجدول تلقائيًا في حسابات الحضور.",
+        ku: "Çîzelgeya nobetê hate tomarkirin!\nDi van dîrokan de bernameya hilbijartî dê bixweber derbasdar be."
+    },
+    "Msg_EndDateBeforeStartDate": {
+        tr: "Bitiş tarihi başlangıç tarihinden önce olamaz.",
+        en: "End date cannot be earlier than start date.",
+        es: "La fecha de fin no puede ser anterior a la fecha de inicio.",
+        zh: "结束日期不能早于开始日期。",
+        fr: "La date de fin ne peut pas être antérieure à la date de début.",
+        de: "Das Enddatum darf nicht vor dem Startdatum liegen.",
+        ru: "Дата окончания не может быть раньше даты начала.",
+        ar: "لا يمكن أن يكون تاريخ الانتهاء قبل تاريخ البدء.",
+        ku: "Dîroka qedandinê nikare ji ya destpêkê berê be."
+    },
+    "Msg_SelectScheduleToDelete": {
+        tr: "Lütfen silinecek kaydı tablodan seçiniz.",
+        en: "Please select the record to delete from the table.",
+        es: "Por favor seleccione el registro a eliminar de la tabla.",
+        zh: "请在表格中选择要删除的排班记录。",
+        fr: "Veuillez sélectionner l'enregistrement à supprimer du tableau.",
+        de: "Bitte wählen Sie den zu löschenden Datensatz aus der Tabelle aus.",
+        ru: "Пожалуйста, выберите запись из таблицы для удаления.",
+        ar: "يرجى تحديد السجل المراد حذفه من الجدول.",
+        ku: "Ji kerema xwe qeyda ku dê were jêbirin ji tabloyê hilbijêrin."
+    },
+    "Msg_ScheduleDeleteConfirm": {
+        tr: "Bu vardiya çizelge kaydını silmek istediğinize emin misiniz?",
+        en: "Are you sure you want to delete this shift schedule record?",
+        es: "¿Está seguro de que desea eliminar este registro de horario de turno?",
+        zh: "确定要删除此排班记录吗？",
+        fr: "Êtes-vous sûr de vouloir supprimer cet enregistrement de planning ?",
+        de: "Möchten Sie diesen Schichtplan-Eintrag wirklich löschen?",
+        ru: "Вы уверены, что хотите удалить эту запись графика смен?",
+        ar: "هل أنت متأكد أنك تريد حذف سجل جدول الوردية هذا؟",
+        ku: "Gelo hûn piştrast in ku dixwazin vê qeyda nobetê jê bibin?"
+    },
+    "Msg_ScheduleDeleted": {
+        tr: "Vardiya çizelgesi silindi.",
+        en: "Shift schedule deleted.",
+        es: "Horario de turno eliminado.",
+        zh: "排班记录已删除。",
+        fr: "Planning de shift supprimé.",
+        de: "Schichtplan gelöscht.",
+        ru: "График смен удален.",
+        ar: "تم حذف جدول الوردية.",
+        ku: "Çîzelgeya nobetê hate jêbirin."
+    }
+};
+
+fs.writeFileSync('C:/Users/SaidNurs/Desktop/v5/zkteco/scratch/msg_translations.json', JSON.stringify(msgTranslations, null, 2), 'utf8');
+console.log('Saved msg translations.');

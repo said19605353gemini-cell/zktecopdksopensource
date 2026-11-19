@@ -1,16 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "xkXAOMcTO5Y=",
+  "dgSpecHash": "TSr8vCZqWaA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\SaidNurs\\Desktop\\zkteco\\ZkPdksApp.csproj",
+  "projectFilePath": "C:\\Users\\SaidNurs\\Desktop\\v5\\zkteco\\ZkPdksApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SaidNurs\\.nuget\\packages\\closedxml\\0.105.1\\closedxml.0.105.1.nupkg.sha512",
     "C:\\Users\\SaidNurs\\.nuget\\packages\\closedxml.parser\\2.0.0\\closedxml.parser.2.0.0.nupkg.sha512",
-    "C:\\Users\\SaidNurs\\.nuget\\packages\\costura.fody\\6.2.0\\costura.fody.6.2.0.nupkg.sha512",
     "C:\\Users\\SaidNurs\\.nuget\\packages\\documentformat.openxml\\3.1.1\\documentformat.openxml.3.1.1.nupkg.sha512",
     "C:\\Users\\SaidNurs\\.nuget\\packages\\documentformat.openxml.framework\\3.1.1\\documentformat.openxml.framework.3.1.1.nupkg.sha512",
     "C:\\Users\\SaidNurs\\.nuget\\packages\\excelnumberformat\\1.1.0\\excelnumberformat.1.1.0.nupkg.sha512",
-    "C:\\Users\\SaidNurs\\.nuget\\packages\\fody\\6.9.3\\fody.6.9.3.nupkg.sha512",
     "C:\\Users\\SaidNurs\\.nuget\\packages\\materialdesigncolors\\2.1.4\\materialdesigncolors.2.1.4.nupkg.sha512",
     "C:\\Users\\SaidNurs\\.nuget\\packages\\materialdesignthemes\\4.9.0\\materialdesignthemes.4.9.0.nupkg.sha512",
     "C:\\Users\\SaidNurs\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",

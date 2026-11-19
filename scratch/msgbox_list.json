@@ -1,0 +1,298 @@
+[
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "$\"Takvim en son hareket verisi olan döneme ({latestDate.Value:yyyy / MMMM}) ayarlandı ve rapor hesaplandı.\", \r\n                    \"Dönem Güncellendi\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Veritabanında henüz kayıtlı bir geçiş logu bulunmuyor.\", \"Bilgi\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "$\"{country.Flag} {country.Name} Canlı Tarih & Saati İnternetten Alındı:\\n\" +\r\n                                    $\"• Tarih / Saat: {targetTime:dd.MM.yyyy HH:mm:ss} ({country.TimeZoneId})\\n\" +\r\n                                    $\"• Takvim {targetTime:yyyy / MMMM} dönemine odaklandı.{deviceSyncMsg}\", \r\n                                    \"İnternet Saat ve Takvim Senkronizasyonu\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "$\"DİKKAT: İnternet bağlantısı kurulamadı veya zaman sunucusu yanıt vermedi!\\n\\n\" +\r\n                                    $\"Güvenlik amacıyla BİLGİSAYARINIZIN SİSTEM SAATİ KULLANILDI:\\n\" +\r\n                                    $\"• Bilgisayar Saati: {targetTime:dd.MM.yyyy HH:mm:ss}\\n\" +\r\n                                    $\"• Takvim ve cihaz saati bilgisayar saatine göre ayarlandı.{deviceSyncMsg}\", \r\n                                    \"İnternet Yok - Bilgisayar Saati Kullanıldı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Saat alınırken hata oluştu:\\n\" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "$\"{year} yılı için {country.Flag} {country.Name} resmi tatilleri başarıyla internetten çekildi ve güncellendi ({count} tatil günü).\", \r\n                    \"Tatiller Güncellendi\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Resmi tatiller çekilirken bir hata oluştu:\\n\" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Cihaz bağlı değil. Lütfen önce cihaz IP ve portunu kontrol edip 'Cihaza Bağlan' butonuna basınız.\", \"Uyarı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "$\"Cihazın tarihi ve saati Türkiye canlı internet verisine göre başarıyla güncellendi!\\n\\n\" +\r\n                                        $\"• Ayarlanan Tarih / Saat: {targetTime:dd.MM.yyyy HH:mm:ss} (Türkiye UTC+3)\\n\" +\r\n                                        $\"• Kaynak: Canlı İnternet Zaman Sunucusu\\n\" +\r\n                                        $\"• Donanım RTC Çipi: Senkronize edildi.\",\r\n                                        \"Cihaz Saati & Tarihi Güncellendi\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "$\"UYARI: İnternet bağlantısı yok veya zaman sunucusu verisi bozuk!\\n\\n\" +\r\n                                        $\"Cihaz BİLGİSAYARINIZIN SİSTEM SAATİNE göre güncellendi:\\n\" +\r\n                                        $\"• Ayarlanan Tarih / Saat: {targetTime:dd.MM.yyyy HH:mm:ss} (Bilgisayar Saati)\\n\" +\r\n                                        $\"• Bilgisayarınızın tarih/saatinin doğru olduğundan emin olunuz.\",\r\n                                        \"İnternet Yok - Bilgisayar Saatiyle Güncellendi\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Cihaza saat ve tarih güncelleme komutu gönderildi fakat onay alınamadı. Cihaz bağlantısını kontrol edin.\", \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Cihaz güncellenirken hata oluştu:\\n\" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "$\"Gece/Gündüz vardiya ve mesai raporu hesaplandı: {ReportList.Count} satır bulundu.\", \"Mesai Raporu\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"ZKTeco cihazına başarıyla bağlanıldı!\", \"Bağlantı Kuruldu\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Cihaza bağlanılamadı. IP ve ağ erişiminizi kontrol edin.\", \"Bağlantı Hatası\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Bağlantı sırasında hata oluştu:\\n\" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Lütfen önce cihaza bağlanın.\", \"Uyarı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "$\"{fetchedList.Count} adet geçiş logu çekildi, 12 öncesi/sonrası mesai kuralları hesaplandı.\", \"Başarılı\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Loglar alınırken hata: \" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Vardiya Çizelgesi açılırken hata: \" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Düzensiz Basımlar ekranı açılırken hata: \" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Dışa aktarılacak kayıt bulunmuyor.\", \"Uyarı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Gece/Gündüz ayrılmış detaylı mesai raporu Excel olarak kaydedildi!\\n\" + sfd.FileName, \"Başarılı\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Excel oluşturma hatası: \" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Hata oluştu: \" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Dışa aktarılacak kayıt bulunmuyor.\", \"Uyarı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Excel raporu kaydedildi!\\n\" + sfd.FileName, \"Başarılı\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Excel hatası: \" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Lütfen önce bir personel seçiniz.\", \"Uyarı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Seçilen personele ait gün gün çalışma kaydı bulunmuyor.\", \"Uyarı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "$\"'{emp.Name}' personeline ait gün gün çalışma ve mesai raporu Excel olarak kaydedildi!\\n{sfd.FileName}\", \"Başarılı\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Excel oluşturma hatası: \" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Dışa aktarılacak puantaj verisi bulunmuyor.\", \"Uyarı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Tüm personelin gün gün detaylı puantaj ve mesai raporu Excel olarak kaydedildi!\\n\" + sfd.FileName, \"Başarılı\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "MainWindow.xaml.cs",
+    "call": "\"Excel oluşturma hatası: \" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "EmployeeWindow.xaml.cs",
+    "call": "\"Cihaz ID ve Ad Soyad alanları zorunludur.\", \"Uyarı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "EmployeeWindow.xaml.cs",
+    "call": "\"Personel özlük kartı başarıyla kaydedildi.\", \"Bilgi\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "EmployeeWindow.xaml.cs",
+    "call": "$\"{selected.Name} personelini silmek istediğinize emin misiniz?\", \"Silme Onayı\",\n                    MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)\n                {\n                    dbService.DeleteEmployee(selected.Badgenumber"
+  },
+  {
+    "file": "EmployeeWindow.xaml.cs",
+    "call": "\"Lütfen silinecek personeli seçin.\", \"Uyarı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "EmployeeWindow.xaml.cs",
+    "call": "\"Cihaz bağlı değil. Lütfen önce ana ekrandan cihaza bağlanın.\", \"Hata\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "EmployeeWindow.xaml.cs",
+    "call": "$\"{count} adet personel cihazdan çekilerek özlük kayıtları oluşturuldu.\", \"Başarılı\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "EmployeeWindow.xaml.cs",
+    "call": "\"Personeller çekilirken hata oluştu: \" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "GroupManagementWindow.xaml.cs",
+    "call": "\"Lütfen bir grup adı giriniz.\", \"Uyarı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "GroupManagementWindow.xaml.cs",
+    "call": "$\"'{selected.Name}' grubunu silmek istediğinize emin misiniz?\", \"Onay\", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)\n                {\n                    dbService.DeleteGroup(selected.Id"
+  },
+  {
+    "file": "GroupManagementWindow.xaml.cs",
+    "call": "\"Lütfen silmek için tablodan bir grup seçiniz.\", \"Bilgi\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "GroupManagementWindow.xaml.cs",
+    "call": "\"Lütfen bir istihdam türü / statü adı giriniz.\", \"Uyarı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "GroupManagementWindow.xaml.cs",
+    "call": "$\"'{selected.Name}' istihdam türünü silmek istediğinize emin misiniz?\", \"Onay\", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)\n                {\n                    dbService.DeleteEmploymentType(selected.Id"
+  },
+  {
+    "file": "GroupManagementWindow.xaml.cs",
+    "call": "\"Lütfen silmek için tablodan bir statü / tür seçiniz.\", \"Bilgi\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "ShiftWindow.xaml.cs",
+    "call": "\"Vardiya / kural adı zorunludur.\", \"Uyarı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "ShiftWindow.xaml.cs",
+    "call": "\"Başlangıç ve bitiş saatleri geçerli formatta olmalıdır (Örn: 08:30:00).\", \"Uyarı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "ShiftWindow.xaml.cs",
+    "call": "\"Eski mesai programı geçmiş veriler için aynen korundu!\\n\\nYeni mesai programı bugünden/bundan sonraki dönemler için yeni bir kural olarak başarıyla eklendi.\", \"Yeni Mesai Programı Oluşturuldu\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "ShiftWindow.xaml.cs",
+    "call": "\"Mesai programı güncellendi ve geçmiş/yeni tüm puantaj hesaplamalarına yansıtıldı.\", \"Bilgi\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "ShiftWindow.xaml.cs",
+    "call": "\"Lütfen tablodan silmek istediğiniz vardiyayı seçiniz.\", \"Bilgi\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "ShiftWindow.xaml.cs",
+    "call": "\"Bu vardiya kuralını silmek istediğinize emin misiniz?\", \"Vardiya Silme Onayı\", MessageBoxButton.YesNo, MessageBoxImage.Question"
+  },
+  {
+    "file": "ShiftWindow.xaml.cs",
+    "call": "\"Vardiya silindi.\", \"Bilgi\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "ShiftScheduleWindow.xaml.cs",
+    "call": "\"Lütfen bir personel seçiniz.\", \"Uyarı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "ShiftScheduleWindow.xaml.cs",
+    "call": "\"Lütfen uygulanacak vardiyayı seçiniz.\", \"Uyarı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "ShiftScheduleWindow.xaml.cs",
+    "call": "\"Lütfen başlangıç tarihini seçiniz.\", \"Uyarı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "ShiftScheduleWindow.xaml.cs",
+    "call": "\"Bitiş tarihi başlangıç tarihinden önce olamaz.\", \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "ShiftScheduleWindow.xaml.cs",
+    "call": "\"Tarih bazlı vardiya çizelgesi kaydedildi!\\nPuantaj hesaplamalarında bu tarihlerde otomatik olarak seçilen vardiya programı geçerli olacaktır.\", \"Başarılı\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "ShiftScheduleWindow.xaml.cs",
+    "call": "\"Lütfen silinecek kaydı tablodan seçiniz.\", \"Bilgi\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "ShiftScheduleWindow.xaml.cs",
+    "call": "\"Bu vardiya çizelge kaydını silmek istediğinize emin misiniz?\", \"Silme Onayı\", MessageBoxButton.YesNo, MessageBoxImage.Question"
+  },
+  {
+    "file": "ShiftScheduleWindow.xaml.cs",
+    "call": "\"Vardiya çizelgesi silindi.\", \"Bilgi\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "IrregularPunchesWindow.xaml.cs",
+    "call": "\"Dışa aktarılacak düzensiz basım kaydı bulunmuyor.\", \"Bilgi\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "IrregularPunchesWindow.xaml.cs",
+    "call": "\"Düzensiz basım listesi başarıyla Excel'e aktarıldı!\\n\" + sfd.FileName, \"Başarılı\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "IrregularPunchesWindow.xaml.cs",
+    "call": "\"Excel oluşturma hatası: \" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "DeviceSyncConfigWindow.xaml.cs",
+    "call": "\"Cihaz bağlı değil. Lütfen ana ekrandan önce cihaza bağlanın.\", \"Bağlantı Uyarısı\", MessageBoxButton.OK, MessageBoxImage.Warning"
+  },
+  {
+    "file": "DeviceSyncConfigWindow.xaml.cs",
+    "call": "$\"Cihaz saati başarıyla güncellendi!\\n\\n\" +\r\n                                    $\"Hedef Ülke: {country.Flag} {country.Name}\\n\" +\r\n                                    $\"Saat Dilimi: {country.TimeZoneId}\\n\" +\r\n                                    $\"Yeni Cihaz Saati: {targetTime:yyyy-MM-dd HH:mm:ss}\\n\" +\r\n                                    $\"Kaynak: {(timeResult.IsFromInternet ? \"Canlı İnternet Saati\" : \"Yerel Saat Dönüşümü\")}\", \r\n                                    \"Cihaz Saati Eşitlendi\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "DeviceSyncConfigWindow.xaml.cs",
+    "call": "\"Cihaza saat gönderilirken hata oluştu. Bağlantıyı kontrol edin.\", \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "DeviceSyncConfigWindow.xaml.cs",
+    "call": "\"Hata oluştu:\\n\" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "DeviceSyncConfigWindow.xaml.cs",
+    "call": "$\"{country.Flag} {country.Name} ({year}) yılına ait {count} adet resmi tatil başarıyla çekildi ve puantaja yansıtıldı.\", \r\n                    \"Resmi Tatiller Güncellendi\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "DeviceSyncConfigWindow.xaml.cs",
+    "call": "\"Tatiller çekilirken hata oluştu:\\n\" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  },
+  {
+    "file": "DeviceSyncConfigWindow.xaml.cs",
+    "call": "$\"Takvim ve Rapor odağı başarıyla güncellendi!\\n\\n\" +\r\n                                $\"Hedef Ülke: {country.Flag} {country.Name}\\n\" +\r\n                                $\"Tarih / Saat: {targetTime:yyyy-MM-dd HH:mm:ss}\\n\" +\r\n                                $\"Odak Dönemi: {targetTime.Year} / {targetTime.Month}. Ay\", \r\n                                \"Takvim Eşitlendi\", MessageBoxButton.OK, MessageBoxImage.Information"
+  },
+  {
+    "file": "DeviceSyncConfigWindow.xaml.cs",
+    "call": "\"Takvim güncellenirken hata oluştu:\\n\" + ex.Message, \"Hata\", MessageBoxButton.OK, MessageBoxImage.Error"
+  }
+]

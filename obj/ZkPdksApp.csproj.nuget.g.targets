@@ -4,7 +4,5 @@
     <Import Project="$(NuGetPackageRoot)stub.system.data.sqlite.core.netframework\1.0.118\buildTransitive\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('$(NuGetPackageRoot)stub.system.data.sqlite.core.netframework\1.0.118\buildTransitive\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
     <Import Project="$(NuGetPackageRoot)screl.zkemkeeper\1.1.0\build\Screl.ZKemKeeper.targets" Condition="Exists('$(NuGetPackageRoot)screl.zkemkeeper\1.1.0\build\Screl.ZKemKeeper.targets')" />
     <Import Project="$(NuGetPackageRoot)materialdesignthemes\4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('$(NuGetPackageRoot)materialdesignthemes\4.9.0\build\MaterialDesignThemes.targets')" />
-    <Import Project="$(NuGetPackageRoot)fody\6.9.3\build\Fody.targets" Condition="Exists('$(NuGetPackageRoot)fody\6.9.3\build\Fody.targets')" />
-    <Import Project="$(NuGetPackageRoot)costura.fody\6.2.0\build\Costura.Fody.targets" Condition="Exists('$(NuGetPackageRoot)costura.fody\6.2.0\build\Costura.Fody.targets')" />
   </ImportGroup>
 </Project>

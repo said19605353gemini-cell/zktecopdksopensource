@@ -1,0 +1,13 @@
+﻿================================================================================
+[CRASH DUMP] - 2026-11-19 15:22:39.750
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.IO.FileNotFoundException
+Mesaj          : {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 8007007e Belirtilen modül bulunamadı. (HRESULT özel durum döndürdü: 0x8007007E).
+HResult        : 0x8007007E
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\v5\zkteco\ZkService.cs içinde: satır 48
+================================================================================

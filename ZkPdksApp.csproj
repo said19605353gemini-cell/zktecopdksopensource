@@ -4,15 +4,39 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net48</TargetFramework>
     <UseWPF>true</UseWPF>
-    <PlatformTarget>x86</PlatformTarget>
+    <Platforms>x86;x64;ARM64;AnyCPU</Platforms>
+    <Configurations>Debug;Release</Configurations>
+    <PlatformTarget Condition="'$(PlatformTarget)' == ''">x86</PlatformTarget>
     <LangVersion>latest</LangVersion>
     <RootNamespace>ZkPdksApp</RootNamespace>
     <AssemblyName>ZkPdksApp</AssemblyName>
+    <ApplicationIcon>zkteco.ico</ApplicationIcon>
+    <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="zkteco.ico" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(Platform)' == 'x86'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Platform)' == 'x64'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Platform)' == 'ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Platform)' == 'AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="ClosedXML" Version="0.105.1" />
-    <PackageReference Include="Costura.Fody" Version="6.2.0" />
     <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
     <PackageReference Include="MaterialDesignColors" Version="2.1.4" />
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.118" />
@@ -33,6 +57,22 @@
         <EmbedInteropTypes>false</EmbedInteropTypes>
       </ReferencePath>
     </ItemGroup>
+  </Target>
+
+  <Target Name="MoveDllsToDllerFolder" AfterTargets="Build">
+    <ItemGroup>
+      <OutputDlls Include="$(TargetDir)*.dll" />
+      <X86Files Include="$(TargetDir)x86\*.*" />
+      <X64Files Include="$(TargetDir)x64\*.*" />
+    </ItemGroup>
+    <MakeDir Directories="$(TargetDir)dller" Condition="!Exists('$(TargetDir)dller')" />
+    <MakeDir Directories="$(TargetDir)dller\x86" Condition="Exists('$(TargetDir)x86')" />
+    <MakeDir Directories="$(TargetDir)dller\x64" Condition="Exists('$(TargetDir)x64')" />
+    <Move SourceFiles="@(OutputDlls)" DestinationFolder="$(TargetDir)dller" OverwriteReadOnlyFiles="true" ContinueOnError="true" />
+    <Move SourceFiles="@(X86Files)" DestinationFolder="$(TargetDir)dller\x86" OverwriteReadOnlyFiles="true" ContinueOnError="true" Condition="Exists('$(TargetDir)x86')" />
+    <Move SourceFiles="@(X64Files)" DestinationFolder="$(TargetDir)dller\x64" OverwriteReadOnlyFiles="true" ContinueOnError="true" Condition="Exists('$(TargetDir)x64')" />
+    <RemoveDir Directories="$(TargetDir)x86" Condition="Exists('$(TargetDir)x86')" ContinueOnError="true" />
+    <RemoveDir Directories="$(TargetDir)x64" Condition="Exists('$(TargetDir)x64')" ContinueOnError="true" />
   </Target>
 
 </Project>

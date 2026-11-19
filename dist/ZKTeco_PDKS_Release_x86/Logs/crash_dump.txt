@@ -1,0 +1,42 @@
+﻿================================================================================
+[CRASH DUMP] - 2026-11-19 15:23:18.259
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.BadImageFormatException
+Mesaj          : {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 800700c1  geçerli bir Win32 uygulaması değil. (HRESULT özel durum döndürdü: 0x800700C1).
+HResult        : 0x800700C1
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver()
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-19 15:23:29.376
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.BadImageFormatException
+Mesaj          : {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 800700c1  geçerli bir Win32 uygulaması değil. (HRESULT özel durum döndürdü: 0x800700C1).
+HResult        : 0x800700C1
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver()
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-19 15:23:34.579
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.BadImageFormatException
+Mesaj          : {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 800700c1  geçerli bir Win32 uygulaması değil. (HRESULT özel durum döndürdü: 0x800700C1).
+HResult        : 0x800700C1
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver()
+================================================================================

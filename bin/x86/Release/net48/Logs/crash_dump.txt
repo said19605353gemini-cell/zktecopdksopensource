@@ -1,0 +1,180 @@
+﻿================================================================================
+[CRASH DUMP] - 2026-11-19 14:44:43.295
+Konum / Bağlam : MainWindow InitializeComponent
+Hata Türü      : System.Windows.Markup.XamlParseException
+Mesaj          : 'System.Windows.Baml2006.TypeConverterMarkupExtension' öğesinde değer sağlama işlemi özel durum döndürdü.
+HResult        : 0x80131501
+StackTrace     :
+   konum: System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   konum: System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   konum: System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   konum: System.Windows.Application.LoadComponent(Object component, Uri resourceLocator)
+   konum: ZkPdksApp.MainWindow.InitializeComponent() C:\Users\SaidNurs\Desktop\v5\zkteco\MainWindow.xaml içinde: satır 1
+   konum: ZkPdksApp.MainWindow..ctor() C:\Users\SaidNurs\Desktop\v5\zkteco\MainWindow.xaml.cs içinde: satır 42
+--- Inner Exception ---
+Tür            : System.IO.IOException
+Mesaj          : 'zkteco.ico' kaynağının yeri belirlenemiyor.
+StackTrace     :
+   konum: MS.Internal.AppModel.ResourcePart.GetStreamCore(FileMode mode, FileAccess access)
+   konum: System.IO.Packaging.PackagePart.GetStream(FileMode mode, FileAccess access)
+   konum: System.IO.Packaging.PackWebResponse.CachedResponse.GetResponseStream()
+   konum: System.IO.Packaging.PackWebResponse.GetResponseStream()
+   konum: System.IO.Packaging.PackWebResponse.get_ContentType()
+   konum: System.Windows.Media.Imaging.BitmapDecoder.SetupDecoderFromUriOrStream(Uri uri, Stream stream, BitmapCacheOption cacheOption, Guid& clsId, Boolean& isOriginalWritable, Stream& uriStream, UnmanagedMemoryStream& unmanagedMemoryStream, SafeFileHandle& safeFilehandle)
+   konum: System.Windows.Media.Imaging.BitmapDecoder.CreateFromUriOrStream(Uri baseUri, Uri uri, Stream stream, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption, RequestCachePolicy uriCachePolicy, Boolean insertInDecoderCache)
+   konum: System.Windows.Media.Imaging.BitmapFrame.CreateFromUriOrStream(Uri baseUri, Uri uri, Stream stream, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption, RequestCachePolicy uriCachePolicy)
+   konum: System.Windows.Media.ImageSourceConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   konum: System.Windows.Baml2006.TypeConverterMarkupExtension.ProvideValue(IServiceProvider serviceProvider)
+   konum: MS.Internal.Xaml.Runtime.ClrObjectRuntime.CallProvideValue(MarkupExtension me, IServiceProvider serviceProvider)
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-19 14:44:43.519
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.BadImageFormatException
+Mesaj          : {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 800700c1  geçerli bir Win32 uygulaması değil. (HRESULT özel durum döndürdü: 0x800700C1).
+HResult        : 0x800700C1
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\v5\zkteco\ZkService.cs içinde: satır 48
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-19 14:44:43.525
+Konum / Bağlam : MainWindow ctor Body
+Hata Türü      : System.NullReferenceException
+Mesaj          : Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+HResult        : 0x80004003
+StackTrace     :
+   konum: ZkPdksApp.MainWindow.InitDateComboboxes() C:\Users\SaidNurs\Desktop\v5\zkteco\MainWindow.xaml.cs içinde: satır 87
+   konum: ZkPdksApp.MainWindow..ctor() C:\Users\SaidNurs\Desktop\v5\zkteco\MainWindow.xaml.cs içinde: satır 63
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-19 14:44:43.526
+Konum / Bağlam : DispatcherUnhandledException (WPF Arayüz Hatası)
+Hata Türü      : System.Windows.Markup.XamlParseException
+Mesaj          : 'ZkPdksApp.MainWindow' başlatma işlemi özel durum döndürdü.
+HResult        : 0x80131501
+StackTrace     :
+   konum: System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   konum: System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   konum: System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   konum: System.Windows.Application.LoadBamlStreamWithSyncInfo(Stream stream, ParserContext pc)
+   konum: System.Windows.Application.LoadComponent(Uri resourceLocator, Boolean bSkipJournaledProperties)
+   konum: System.Windows.Application.DoStartup()
+   konum: System.Windows.Application.<.ctor>b__1_0(Object unused)
+   konum: System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   konum: System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+--- Inner Exception ---
+Tür            : System.InvalidOperationException
+Mesaj          : Aynı örnekte iç içe geçmiş BeginInit çağrıları olamaz.
+StackTrace     :
+   konum: System.Windows.FrameworkElement.BeginInit()
+   konum: MS.Internal.Xaml.Runtime.ClrObjectRuntime.InitializationGuard(XamlType xamlType, Object obj, Boolean begin)
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-19 14:49:31.620
+Konum / Bağlam : MainWindow InitializeComponent
+Hata Türü      : System.Windows.Markup.XamlParseException
+Mesaj          : 'System.Windows.Baml2006.TypeConverterMarkupExtension' öğesinde değer sağlama işlemi özel durum döndürdü.
+HResult        : 0x80131501
+StackTrace     :
+   konum: System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   konum: System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   konum: System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   konum: System.Windows.Application.LoadComponent(Object component, Uri resourceLocator)
+   konum: ZkPdksApp.MainWindow.InitializeComponent() C:\Users\SaidNurs\Desktop\v5\zkteco\MainWindow.xaml içinde: satır 1
+   konum: ZkPdksApp.MainWindow..ctor() C:\Users\SaidNurs\Desktop\v5\zkteco\MainWindow.xaml.cs içinde: satır 42
+--- Inner Exception ---
+Tür            : System.IO.IOException
+Mesaj          : 'zkteco.ico' kaynağının yeri belirlenemiyor.
+StackTrace     :
+   konum: MS.Internal.AppModel.ResourcePart.GetStreamCore(FileMode mode, FileAccess access)
+   konum: System.IO.Packaging.PackagePart.GetStream(FileMode mode, FileAccess access)
+   konum: System.IO.Packaging.PackWebResponse.CachedResponse.GetResponseStream()
+   konum: System.IO.Packaging.PackWebResponse.GetResponseStream()
+   konum: System.IO.Packaging.PackWebResponse.get_ContentType()
+   konum: System.Windows.Media.Imaging.BitmapDecoder.SetupDecoderFromUriOrStream(Uri uri, Stream stream, BitmapCacheOption cacheOption, Guid& clsId, Boolean& isOriginalWritable, Stream& uriStream, UnmanagedMemoryStream& unmanagedMemoryStream, SafeFileHandle& safeFilehandle)
+   konum: System.Windows.Media.Imaging.BitmapDecoder.CreateFromUriOrStream(Uri baseUri, Uri uri, Stream stream, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption, RequestCachePolicy uriCachePolicy, Boolean insertInDecoderCache)
+   konum: System.Windows.Media.Imaging.BitmapFrame.CreateFromUriOrStream(Uri baseUri, Uri uri, Stream stream, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption, RequestCachePolicy uriCachePolicy)
+   konum: System.Windows.Media.ImageSourceConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   konum: System.Windows.Baml2006.TypeConverterMarkupExtension.ProvideValue(IServiceProvider serviceProvider)
+   konum: MS.Internal.Xaml.Runtime.ClrObjectRuntime.CallProvideValue(MarkupExtension me, IServiceProvider serviceProvider)
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-19 14:49:31.823
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.BadImageFormatException
+Mesaj          : {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 800700c1  geçerli bir Win32 uygulaması değil. (HRESULT özel durum döndürdü: 0x800700C1).
+HResult        : 0x800700C1
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\v5\zkteco\ZkService.cs içinde: satır 48
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-19 14:49:31.827
+Konum / Bağlam : MainWindow ctor Body
+Hata Türü      : System.NullReferenceException
+Mesaj          : Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+HResult        : 0x80004003
+StackTrace     :
+   konum: ZkPdksApp.MainWindow.InitDateComboboxes() C:\Users\SaidNurs\Desktop\v5\zkteco\MainWindow.xaml.cs içinde: satır 87
+   konum: ZkPdksApp.MainWindow..ctor() C:\Users\SaidNurs\Desktop\v5\zkteco\MainWindow.xaml.cs içinde: satır 63
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-19 14:49:31.828
+Konum / Bağlam : DispatcherUnhandledException (WPF Arayüz Hatası)
+Hata Türü      : System.Windows.Markup.XamlParseException
+Mesaj          : 'ZkPdksApp.MainWindow' başlatma işlemi özel durum döndürdü.
+HResult        : 0x80131501
+StackTrace     :
+   konum: System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   konum: System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   konum: System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   konum: System.Windows.Application.LoadBamlStreamWithSyncInfo(Stream stream, ParserContext pc)
+   konum: System.Windows.Application.LoadComponent(Uri resourceLocator, Boolean bSkipJournaledProperties)
+   konum: System.Windows.Application.DoStartup()
+   konum: System.Windows.Application.<.ctor>b__1_0(Object unused)
+   konum: System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   konum: System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+--- Inner Exception ---
+Tür            : System.InvalidOperationException
+Mesaj          : Aynı örnekte iç içe geçmiş BeginInit çağrıları olamaz.
+StackTrace     :
+   konum: System.Windows.FrameworkElement.BeginInit()
+   konum: MS.Internal.Xaml.Runtime.ClrObjectRuntime.InitializationGuard(XamlType xamlType, Object obj, Boolean begin)
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-19 14:51:46.360
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.BadImageFormatException
+Mesaj          : {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 800700c1  geçerli bir Win32 uygulaması değil. (HRESULT özel durum döndürdü: 0x800700C1).
+HResult        : 0x800700C1
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\v5\zkteco\ZkService.cs içinde: satır 48
+================================================================================
+================================================================================
+[CRASH DUMP] - 2026-11-19 15:00:36.622
+Konum / Bağlam : ZkService.InitializeDriver
+Hata Türü      : System.BadImageFormatException
+Mesaj          : {00853A19-BD51-419B-9269-2DABE57EB61F} CLSID değerine bileşen için COM sınıfı fabrikasını alma, yandaki hata nedeniyle başarısız oldu: 800700c1  geçerli bir Win32 uygulaması değil. (HRESULT özel durum döndürdü: 0x800700C1).
+HResult        : 0x800700C1
+StackTrace     :
+   konum: System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   konum: System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   konum: System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   konum: System.Activator.CreateInstance(Type type)
+   konum: ZkService.InitializeDriver() C:\Users\SaidNurs\Desktop\v5\zkteco\ZkService.cs içinde: satır 48
+================================================================================

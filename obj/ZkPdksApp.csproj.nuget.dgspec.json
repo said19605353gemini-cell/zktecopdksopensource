@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SaidNurs\\Desktop\\zkteco\\ZkPdksApp.csproj": {}
+    "C:\\Users\\SaidNurs\\Desktop\\v5\\zkteco\\ZkPdksApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SaidNurs\\Desktop\\zkteco\\ZkPdksApp.csproj": {
+    "C:\\Users\\SaidNurs\\Desktop\\v5\\zkteco\\ZkPdksApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SaidNurs\\Desktop\\zkteco\\ZkPdksApp.csproj",
+        "projectUniqueName": "C:\\Users\\SaidNurs\\Desktop\\v5\\zkteco\\ZkPdksApp.csproj",
         "projectName": "ZkPdksApp",
-        "projectPath": "C:\\Users\\SaidNurs\\Desktop\\zkteco\\ZkPdksApp.csproj",
+        "projectPath": "C:\\Users\\SaidNurs\\Desktop\\v5\\zkteco\\ZkPdksApp.csproj",
         "packagesPath": "C:\\Users\\SaidNurs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SaidNurs\\Desktop\\zkteco\\obj\\",
+        "outputPath": "C:\\Users\\SaidNurs\\Desktop\\v5\\zkteco\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SaidNurs\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,10 +52,6 @@
               "target": "Package",
               "version": "[0.105.1, )"
             },
-            "Costura.Fody": {
-              "target": "Package",
-              "version": "[6.2.0, )"
-            },
             "MaterialDesignColors": {
               "target": "Package",
               "version": "[2.1.4, )"
@@ -77,6 +73,12 @@
         }
       },
       "runtimes": {
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
         "win-x86": {
           "#import": []
         }

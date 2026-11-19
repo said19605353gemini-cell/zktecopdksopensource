@@ -22,25 +22,31 @@
                     <TextBox x:Name="txtName" Width="170" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Ad Soyad *" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
                     <TextBox x:Name="txtTcNo" Width="130" Margin="0,0,12,10" materialDesign:HintAssist.Hint="T.C. Kimlik No" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
                     <TextBox x:Name="txtCard" Width="110" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Kart No (RFID)" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <TextBox x:Name="txtPhone" Width="120" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Telefon" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtPhone" Width="120" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Şahsi Telefon" ToolTip="Personelin şahsi cep telefonu" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtCompanyPhone" Width="120" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Firma Telefonu" ToolTip="Şirket / kurumsal dahili veya hat" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
                     
-                    <ComboBox x:Name="cbStatus" Width="110" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Durum">
+                    <ComboBox x:Name="cbStatus" Width="100" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Durum">
                         <ComboBoxItem Content="Aktif" IsSelected="True"/>
                         <ComboBoxItem Content="Pasif (Ayrıldı)"/>
-                        <ComboBoxItem Content="Taşeron"/>
-                        <ComboBoxItem Content="Ziyaretçi"/>
+                        <ComboBoxItem Content="İzinli"/>
                     </ComboBox>
+
+                    <ComboBox x:Name="cbEmploymentType" Width="135" Margin="0,0,12,10" materialDesign:HintAssist.Hint="İstihdam Türü / Statü" IsEditable="True"/>
                 </WrapPanel>
 
-                <!-- Hiyerarşi & Vardiya Seçimi -->
+                <!-- Hiyerarşi, Tarihler & Vardiya Seçimi -->
                 <WrapPanel Orientation="Horizontal" Margin="0,0,0,10">
-                    <TextBox x:Name="txtCompany" Width="130" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Şirket" Text="Merkez A.Ş." Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <TextBox x:Name="txtBranch" Width="130" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Şube" Text="Ana Şube" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <TextBox x:Name="txtDept" Width="130" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Departman" Text="Genel" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <TextBox x:Name="txtUnit" Width="120" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Birim" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <TextBox x:Name="txtTitle" Width="130" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Unvan" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtCompany" Width="120" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Şirket" Text="Merkez A.Ş." Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtBranch" Width="120" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Şube" Text="Ana Şube" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtDept" Width="120" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Departman" Text="Genel" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtUnit" Width="110" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Birim" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox x:Name="txtTitle" Width="120" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Unvan" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
                     
-                    <ComboBox x:Name="cbShifts" Width="200" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Atanan Vardiya" DisplayMemberPath="Name" SelectedValuePath="Id"/>
+                    <ComboBox x:Name="cbGroup" Width="120" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Grup / Departman" IsEditable="True"/>
+                    <ComboBox x:Name="cbShifts" Width="150" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Atanan Vardiya" DisplayMemberPath="Name" SelectedValuePath="Id"/>
+
+                    <DatePicker x:Name="dpHireDate" Width="125" Margin="0,0,12,10" materialDesign:HintAssist.Hint="İşe Giriş (Aktif)" ToolTip="Personelin işe başlama ve aktif edilme tarihi"/>
+                    <DatePicker x:Name="dpLeaveDate" Width="125" Margin="0,0,12,10" materialDesign:HintAssist.Hint="Ayrılış (Pasif)" ToolTip="Personelin işten ayrılış ve pasif edilme tarihi"/>
                 </WrapPanel>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,5,0,0">
@@ -60,16 +66,24 @@
                     <Button Content="Seçileni Sil" Click="BtnDelete_Click" Style="{StaticResource MaterialDesignFlatAccentButton}" Margin="20,0,0,0"/>
                 </StackPanel>
                 <DataGrid x:Name="dgEmployees" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False"
-                          SelectionChanged="DgEmployees_SelectionChanged" SelectionMode="Single">
+                          SelectionChanged="DgEmployees_SelectionChanged" SelectionMode="Single"
+                          ScrollViewer.CanContentScroll="True"
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Cihaz ID" Binding="{Binding Badgenumber}" Width="90"/>
                         <DataGridTextColumn Header="Ad Soyad" Binding="{Binding Name}" Width="160"/>
-                        <DataGridTextColumn Header="Durum" Binding="{Binding Status}" Width="100"/>
+                        <DataGridTextColumn Header="Grup" Binding="{Binding GroupName}" Width="110"/>
+                        <DataGridTextColumn Header="Tür" Binding="{Binding EmploymentType}" Width="100"/>
+                        <DataGridTextColumn Header="Durum" Binding="{Binding Status}" Width="85"/>
+                        <DataGridTextColumn Header="Giriş / Aktif Tarihi" Binding="{Binding HireDate}" Width="110"/>
+                        <DataGridTextColumn Header="Çıkış / Pasif Tarihi" Binding="{Binding LeaveDate}" Width="110"/>
                         <DataGridTextColumn Header="Departman" Binding="{Binding Department}" Width="120"/>
                         <DataGridTextColumn Header="Unvan" Binding="{Binding Title}" Width="110"/>
                         <DataGridTextColumn Header="Kart No" Binding="{Binding CardNo}" Width="100"/>
                         <DataGridTextColumn Header="T.C. No" Binding="{Binding TcNo}" Width="110"/>
-                        <DataGridTextColumn Header="Telefon" Binding="{Binding Phone}" Width="110"/>
+                        <DataGridTextColumn Header="Şahsi Tel" Binding="{Binding Phone}" Width="110"/>
+                        <DataGridTextColumn Header="Firma Tel" Binding="{Binding CompanyPhone}" Width="110"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </DockPanel>
