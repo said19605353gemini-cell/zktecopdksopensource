@@ -1,6 +1,7 @@
 gemini gravity ile yapıldı
 aşağıda yazdığım hedeflerim çoğunu tamamladım.
-
+amacım giriş çıkışları mesaileri düzgün olsun.
+iş veren hakkını çalışanına verebilsin.
 
 🌟 Öne Çıkan Temel Özellikler
 1. ⚡ Büyük Veri & Yüksek Performans Mimarisi (1.000+ Personel & 200.000+ Log)
